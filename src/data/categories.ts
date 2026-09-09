@@ -20,6 +20,7 @@ export const OCCASIONS = [
   "Casual",
   "Date",
   "Date Night",
+  "Evening",
   "Night Out",
   "Formal",
   "Home",
