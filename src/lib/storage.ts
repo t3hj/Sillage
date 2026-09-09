@@ -91,7 +91,11 @@ export function rateFragrance(
     ...data,
     collection: data.collection.map((c) =>
       c.fragrance.id === id
-        ? { ...c, rating: { ...c.rating, ...rating }, notes: notes ?? c.notes }
+        ? {
+            ...c,
+            rating: { ...c.rating, ...rating },
+            ...(notes === undefined ? {} : { notes }),
+          }
         : c,
     ),
   };
