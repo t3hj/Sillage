@@ -11,7 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CollectionRouteImport } from './routes/collection'
+import { Route as DiscoverRouteImport } from './routes/discover'
+import { Route as JournalRouteImport } from './routes/journal'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as WishlistRouteImport } from './routes/wishlist'
+import { Route as FragranceIdRouteImport } from './routes/fragrance.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,40 +27,98 @@ const CollectionRoute = CollectionRouteImport.update({
   path: '/collection',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DiscoverRoute = DiscoverRouteImport.update({
+  id: '/discover',
+  path: '/discover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JournalRoute = JournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WishlistRoute = WishlistRouteImport.update({
   id: '/wishlist',
   path: '/wishlist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FragranceIdRoute = FragranceIdRouteImport.update({
+  id: '/fragrance/$id',
+  path: '/fragrance/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/discover': typeof DiscoverRoute
+  '/journal': typeof JournalRoute
+  '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
+  '/fragrance/$id': typeof FragranceIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/discover': typeof DiscoverRoute
+  '/journal': typeof JournalRoute
+  '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
+  '/fragrance/$id': typeof FragranceIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/discover': typeof DiscoverRoute
+  '/journal': typeof JournalRoute
+  '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
+  '/fragrance/$id': typeof FragranceIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/collection' | '/wishlist'
+  fullPaths:
+    | '/'
+    | '/collection'
+    | '/discover'
+    | '/journal'
+    | '/settings'
+    | '/wishlist'
+    | '/fragrance/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/collection' | '/wishlist'
-  id: '__root__' | '/' | '/collection' | '/wishlist'
+  to:
+    | '/'
+    | '/collection'
+    | '/discover'
+    | '/journal'
+    | '/settings'
+    | '/wishlist'
+    | '/fragrance/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/collection'
+    | '/discover'
+    | '/journal'
+    | '/settings'
+    | '/wishlist'
+    | '/fragrance/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CollectionRoute: typeof CollectionRoute
+  DiscoverRoute: typeof DiscoverRoute
+  JournalRoute: typeof JournalRoute
+  SettingsRoute: typeof SettingsRoute
   WishlistRoute: typeof WishlistRoute
+  FragranceIdRoute: typeof FragranceIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +137,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CollectionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/discover': {
+      id: '/discover'
+      path: '/discover'
+      fullPath: '/discover'
+      preLoaderRoute: typeof DiscoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journal': {
+      id: '/journal'
+      path: '/journal'
+      fullPath: '/journal'
+      preLoaderRoute: typeof JournalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/wishlist': {
       id: '/wishlist'
       path: '/wishlist'
       fullPath: '/wishlist'
       preLoaderRoute: typeof WishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fragrance/$id': {
+      id: '/fragrance/$id'
+      path: '/fragrance/$id'
+      fullPath: '/fragrance/$id'
+      preLoaderRoute: typeof FragranceIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -88,7 +178,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CollectionRoute: CollectionRoute,
+  DiscoverRoute: DiscoverRoute,
+  JournalRoute: JournalRoute,
+  SettingsRoute: SettingsRoute,
   WishlistRoute: WishlistRoute,
+  FragranceIdRoute: FragranceIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
