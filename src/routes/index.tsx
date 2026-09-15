@@ -136,7 +136,7 @@ function TodayPage() {
             <FragranceCard
               key={item.fragrance.id}
               fragrance={item.fragrance}
-              className={i === 0 ? "border-primary/60" : undefined}
+              className={i === 0 ? "border-primary/60" : ""}
               subtitle={
                 <ul className="space-y-0.5 text-muted-foreground">
                   {reasons.map((r) => (
