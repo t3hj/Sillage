@@ -25,10 +25,6 @@ const NAV = [
   { to: "/settings", label: "Settings", icon: Cog },
 ] as const;
 
-// Bottom bar is limited to the five most-used destinations; the rest stay in
-// the desktop nav and are linked contextually from other pages.
-const MOBILE_NAV = ["/", "/collection", "/discover", "/guide", "/settings"];
-
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
@@ -69,24 +65,30 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <main className="mx-auto max-w-5xl px-4 pb-28 pt-6 md:pb-16">{children}</main>
 
-      <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur md:hidden">
-        <div className="mx-auto flex max-w-5xl justify-between px-2 py-1.5">
-          {NAV.filter((n) => MOBILE_NAV.includes(n.to)).map(({ to, label, icon: Icon }) => {
-            const active = to === "/" ? pathname === "/" : pathname.startsWith(to);
-            return (
-              <Link
-                key={to}
-                to={to}
-                className={cn(
-                  "flex flex-1 flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-[11px]",
-                  active ? "text-primary" : "text-muted-foreground",
-                )}
-              >
-                <Icon className="size-5" />
-                {label}
-              </Link>
-            );
-          })}
+      <nav
+        className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur md:hidden"
+        aria-label="Primary"
+      >
+        <div className="mx-auto max-w-5xl overflow-x-auto">
+          <div className="flex justify-between px-1 py-1.5">
+            {NAV.map(({ to, label, icon: Icon }) => {
+              const active = to === "/" ? pathname === "/" : pathname.startsWith(to);
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "flex min-w-16 shrink-0 flex-col items-center gap-0.5 rounded-lg px-2 py-1.5 text-[10px]",
+                    active ? "text-primary" : "text-muted-foreground",
+                  )}
+                >
+                  <Icon className="size-5" />
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </nav>
     </div>
