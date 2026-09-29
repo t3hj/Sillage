@@ -50,8 +50,7 @@ export function saveData(data: SillageData) {
   }
 }
 
-export const uid = () =>
-  `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+export const uid = () => `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 
 /* ---------- pure updaters ---------- */
 
@@ -75,9 +74,7 @@ export function updateFragrance(data: SillageData, fragrance: Fragrance): Sillag
     collection: data.collection.map((c) =>
       c.fragrance.id === fragrance.id ? { ...c, fragrance } : c,
     ),
-    wishlist: data.wishlist.map((w) =>
-      w.fragrance.id === fragrance.id ? { ...w, fragrance } : w,
-    ),
+    wishlist: data.wishlist.map((w) => (w.fragrance.id === fragrance.id ? { ...w, fragrance } : w)),
   };
 }
 

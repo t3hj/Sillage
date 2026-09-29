@@ -37,7 +37,10 @@ self.addEventListener("fetch", (event) => {
   }
 
   // Hashed build assets: cache first (they are content-addressed).
-  if (/\/assets\//.test(url.pathname) || /\.(css|js|woff2|png|svg|webmanifest)$/.test(url.pathname)) {
+  if (
+    /\/assets\//.test(url.pathname) ||
+    /\.(css|js|woff2|png|svg|webmanifest)$/.test(url.pathname)
+  ) {
     event.respondWith(
       caches.match(event.request).then(
         (cached) =>

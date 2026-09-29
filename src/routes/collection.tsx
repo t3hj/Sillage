@@ -124,7 +124,10 @@ function CollectionPage() {
     }
   }, [filtered, sort, wearCounts, lastWorn]);
 
-  const stats = useMemo(() => wearStats(data.collection, data.wears), [data.collection, data.wears]);
+  const stats = useMemo(
+    () => wearStats(data.collection, data.wears),
+    [data.collection, data.wears],
+  );
 
   const highestRated = useMemo(
     () =>
@@ -144,7 +147,10 @@ function CollectionPage() {
   }, [data.collection]);
 
   const chip = (active: boolean) =>
-    cn("cursor-pointer rounded-full font-normal", active ? "bg-primary text-primary-foreground" : "");
+    cn(
+      "cursor-pointer rounded-full font-normal",
+      active ? "bg-primary text-primary-foreground" : "",
+    );
 
   return (
     <div className="space-y-6">

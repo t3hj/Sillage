@@ -46,10 +46,7 @@ const CODES: Record<number, string> = {
 export const describeCode = (code: number) => CODES[code] ?? "Unsettled";
 
 /** Open-Meteo — free, keyless, no account required. */
-export async function fetchWeather(
-  latitude: number,
-  longitude: number,
-): Promise<WeatherNow> {
+export async function fetchWeather(latitude: number, longitude: number): Promise<WeatherNow> {
   const url =
     `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
     `&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,is_day` +
@@ -91,7 +88,8 @@ export function weatherTags(w: WeatherNow): Weather[] {
   else if (t >= 8) tags.push("Cool");
   else tags.push("Cold");
 
-  const raining = w.precipitation > 0.1 || [51, 53, 55, 61, 63, 65, 80, 81, 82, 95, 96, 99].includes(w.code);
+  const raining =
+    w.precipitation > 0.1 || [51, 53, 55, 61, 63, 65, 80, 81, 82, 95, 96, 99].includes(w.code);
   if (raining) tags.push("Rainy");
   if (w.humidity >= 70) tags.push("Humid");
   if (w.humidity <= 45) tags.push("Dry");
@@ -100,8 +98,7 @@ export function weatherTags(w: WeatherNow): Weather[] {
 
 export function seasonForDate(date: Date, southern = false) {
   const m = date.getMonth();
-  const northern =
-    m <= 1 || m === 11 ? "Winter" : m <= 4 ? "Spring" : m <= 7 ? "Summer" : "Autumn";
+  const northern = m <= 1 || m === 11 ? "Winter" : m <= 4 ? "Spring" : m <= 7 ? "Summer" : "Autumn";
   if (!southern) return northern as "Winter" | "Spring" | "Summer" | "Autumn";
   const flip = { Winter: "Summer", Spring: "Autumn", Summer: "Winter", Autumn: "Spring" } as const;
   return flip[northern as keyof typeof flip];

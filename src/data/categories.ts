@@ -1,16 +1,7 @@
 export const SEASONS = ["Spring", "Summer", "Autumn", "Winter"] as const;
 export type Season = (typeof SEASONS)[number];
 
-export const WEATHERS = [
-  "Hot",
-  "Warm",
-  "Mild",
-  "Cool",
-  "Cold",
-  "Rainy",
-  "Humid",
-  "Dry",
-] as const;
+export const WEATHERS = ["Hot", "Warm", "Mild", "Cool", "Cold", "Rainy", "Humid", "Dry"] as const;
 export type Weather = (typeof WEATHERS)[number];
 
 export const OCCASIONS = [

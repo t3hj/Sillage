@@ -35,7 +35,11 @@ function ComparePage() {
 
   // Collection first, then the rest of the catalogue.
   const pool = useMemo(
-    () => [...data.collection.map((c) => c.fragrance), ...data.wishlist.map((w) => w.fragrance), ...CATALOGUE],
+    () => [
+      ...data.collection.map((c) => c.fragrance),
+      ...data.wishlist.map((w) => w.fragrance),
+      ...CATALOGUE,
+    ],
     [data.collection, data.wishlist],
   );
   const seen = new Set<string>();

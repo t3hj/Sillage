@@ -84,10 +84,7 @@ function GuidePage() {
   const active = tag && options.includes(tag) ? tag : null;
 
   const results = useMemo(
-    () =>
-      active
-        ? CATALOGUE.filter((f) => fragranceHas(group, f, active))
-        : [],
+    () => (active ? CATALOGUE.filter((f) => fragranceHas(group, f, active)) : []),
     [group, active],
   );
 

@@ -61,13 +61,29 @@ describe("recommend", () => {
     const fiveDaysAgo = new Date(Date.now() - 5 * 86_400_000).toISOString();
     const recent = recommend(
       [item],
-      [{ id: "w0", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: fiveDaysAgo }],
+      [
+        {
+          id: "w0",
+          fragranceId: "test-a",
+          fragranceName: "Test A",
+          brand: "Brand A",
+          date: fiveDaysAgo,
+        },
+      ],
       ctx,
     )[0]!.score;
     const threeWeeksAgo = new Date(Date.now() - 25 * 86_400_000).toISOString();
     const stale = recommend(
       [item],
-      [{ id: "w1", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: threeWeeksAgo }],
+      [
+        {
+          id: "w1",
+          fragranceId: "test-a",
+          fragranceName: "Test A",
+          brand: "Brand A",
+          date: threeWeeksAgo,
+        },
+      ],
       ctx,
     )[0]!.score;
     expect(stale).toBeGreaterThan(recent);
@@ -83,7 +99,11 @@ describe("recommend", () => {
 
   it("penalises heavy fragrances in heat", () => {
     const light = collectionItem({ intensity: "Light", seasons: ["Summer"], weather: ["Hot"] });
-    const heavy = collectionItem({ intensity: "Very Strong", seasons: ["Summer"], weather: ["Hot"] });
+    const heavy = collectionItem({
+      intensity: "Very Strong",
+      seasons: ["Summer"],
+      weather: ["Hot"],
+    });
     const picks = recommend([light, heavy], [], {
       ...ctx,
       season: "Summer",
@@ -139,7 +159,14 @@ describe("wearStats", () => {
 
 describe("weather mapping", () => {
   it("maps temperature bands", () => {
-    const w = { temperature: 30, humidity: 50, precipitation: 0, code: 0, isDay: true, description: "" };
+    const w = {
+      temperature: 30,
+      humidity: 50,
+      precipitation: 0,
+      code: 0,
+      isDay: true,
+      description: "",
+    };
     expect(weatherTags(w)).toContain("Hot");
     expect(weatherTags({ ...w, temperature: 2 })).toContain("Cold");
     expect(weatherTags({ ...w, temperature: 12 })).toContain("Cool");
@@ -147,14 +174,28 @@ describe("weather mapping", () => {
   });
 
   it("flags rain and humidity", () => {
-    const w = { temperature: 20, humidity: 80, precipitation: 2, code: 61, isDay: true, description: "" };
+    const w = {
+      temperature: 20,
+      humidity: 80,
+      precipitation: 2,
+      code: 61,
+      isDay: true,
+      description: "",
+    };
     const tags = weatherTags(w);
     expect(tags).toContain("Rainy");
     expect(tags).toContain("Humid");
   });
 
   it("flags dry air", () => {
-    const w = { temperature: 20, humidity: 30, precipitation: 0, code: 0, isDay: true, description: "" };
+    const w = {
+      temperature: 20,
+      humidity: 30,
+      precipitation: 0,
+      code: 0,
+      isDay: true,
+      description: "",
+    };
     expect(weatherTags(w)).toContain("Dry");
   });
 });

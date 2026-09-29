@@ -65,13 +65,16 @@ function ScanPage() {
 
   useEffect(() => stop, [stop]);
 
-  const present = useCallback((value: string) => {
-    stop();
-    const m = matchScannedValue(value);
-    setScanned(value);
-    setMatches(m);
-    setState(m.length > 0 ? "result" : "unknown");
-  }, [stop]);
+  const present = useCallback(
+    (value: string) => {
+      stop();
+      const m = matchScannedValue(value);
+      setScanned(value);
+      setMatches(m);
+      setState(m.length > 0 ? "result" : "unknown");
+    },
+    [stop],
+  );
 
   const startCamera = useCallback(async () => {
     setError("");
@@ -93,8 +96,12 @@ function ScanPage() {
         await videoRef.current.play();
       }
       const detector = new (
-        window as unknown as { BarcodeDetector: new (o?: object) => { detect: (s: CanvasImageSource) => Promise<{ rawValue: string }[]> }
-      }).BarcodeDetector();
+        window as unknown as {
+          BarcodeDetector: new (o?: object) => {
+            detect: (s: CanvasImageSource) => Promise<{ rawValue: string }[]>;
+          };
+        }
+      ).BarcodeDetector();
       setState("scanning");
       const tick = async () => {
         if (!videoRef.current || videoRef.current.readyState < 2) {
@@ -134,12 +141,23 @@ function ScanPage() {
       {state === "camera" || state === "scanning" ? (
         <div className="space-y-3">
           <div className="overflow-hidden rounded-2xl border border-border bg-black">
-            <video ref={videoRef} className="max-h-[60vh] w-full object-contain" muted playsInline />
+            <video
+              ref={videoRef}
+              className="max-h-[60vh] w-full object-contain"
+              muted
+              playsInline
+            />
           </div>
           <p className="text-center text-sm text-muted-foreground">
             {state === "scanning" ? "Looking for a code…" : "Starting camera…"}
           </p>
-          <Button variant="outline" onClick={() => { stop(); setState("idle"); }}>
+          <Button
+            variant="outline"
+            onClick={() => {
+              stop();
+              setState("idle");
+            }}
+          >
             Stop camera
           </Button>
         </div>
@@ -170,7 +188,10 @@ function ScanPage() {
       )}
 
       {error ? (
-        <p role="alert" className="rounded-xl border border-destructive/40 bg-destructive/10 p-3 text-sm">
+        <p
+          role="alert"
+          className="rounded-xl border border-destructive/40 bg-destructive/10 p-3 text-sm"
+        >
           {error}
         </p>
       ) : null}

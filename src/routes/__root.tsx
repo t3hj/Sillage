@@ -138,11 +138,9 @@ function RootComponent() {
 
   useEffect(() => {
     if ("serviceWorker" in navigator && import.meta.env.PROD) {
-      navigator.serviceWorker
-        .register(`${import.meta.env.BASE_URL}sw.js`)
-        .catch(() => {
-          /* offline support is best-effort */
-        });
+      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
+        /* offline support is best-effort */
+      });
     }
   }, []);
 

@@ -74,7 +74,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Aquatic",
     subfamily: "Marine Woody",
-    description: "Salty marine freshness darkened with incense and patchouli. Elegant and slightly moody.",
+    description:
+      "Salty marine freshness darkened with incense and patchouli. Elegant and slightly moody.",
     topNotes: ["Bergamot", "Marine Notes"],
     middleNotes: ["Geranium", "Sage", "Rosemary"],
     baseNotes: ["Incense", "Patchouli"],
@@ -100,7 +101,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Chypre",
     subfamily: "Fruity Chypre",
-    description: "Smoky pineapple and birch over a dry musky base. The reference 'statement' fruity chypre.",
+    description:
+      "Smoky pineapple and birch over a dry musky base. The reference 'statement' fruity chypre.",
     topNotes: ["Pineapple", "Blackcurrant", "Bergamot", "Apple"],
     middleNotes: ["Birch", "Patchouli", "Rose", "Jasmine"],
     baseNotes: ["Musk", "Oakmoss", "Ambergris", "Vanilla"],
@@ -150,7 +152,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Woody",
     subfamily: "Powdery Iris",
-    description: "Powdery iris, cocoa-ish woods and vanilla. Formal, romantic and unmistakably grown-up.",
+    description:
+      "Powdery iris, cocoa-ish woods and vanilla. Formal, romantic and unmistakably grown-up.",
     topNotes: ["Lavender"],
     middleNotes: ["Iris", "Ambrette", "Pear"],
     baseNotes: ["Virginia Cedar", "Vetiver"],
@@ -227,7 +230,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Toilette",
     family: "Fougère",
     subfamily: "Sweet Lavender",
-    description: "Lavender, mint and vanilla in the classic sailor bottle. A blueprint for sweet fougères.",
+    description:
+      "Lavender, mint and vanilla in the classic sailor bottle. A blueprint for sweet fougères.",
     topNotes: ["Mint", "Lavender", "Bergamot", "Cardamom"],
     middleNotes: ["Cinnamon", "Cumin", "Orange Blossom"],
     baseNotes: ["Vanilla", "Tonka Bean", "Sandalwood", "Amber"],
@@ -304,7 +308,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Oriental",
     subfamily: "Spicy Gourmand",
-    description: "Pipe tobacco, vanilla and dried fruit. Thick, warm and best reserved for cold nights.",
+    description:
+      "Pipe tobacco, vanilla and dried fruit. Thick, warm and best reserved for cold nights.",
     topNotes: ["Tobacco Leaf", "Spices"],
     middleNotes: ["Vanilla", "Cacao", "Tonka Bean", "Tobacco Blossom"],
     baseNotes: ["Dried Fruits", "Woody Notes"],
@@ -329,7 +334,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Woody",
     subfamily: "Oud",
-    description: "A polite, smooth oud with sandalwood and cardamom. Quiet luxury rather than a statement.",
+    description:
+      "A polite, smooth oud with sandalwood and cardamom. Quiet luxury rather than a statement.",
     topNotes: ["Rosewood", "Cardamom", "Chinese Pepper"],
     middleNotes: ["Oud", "Sandalwood", "Vetiver"],
     baseNotes: ["Tonka Bean", "Vanilla", "Amber"],
@@ -354,7 +360,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Amber",
     subfamily: "Amber Floral",
-    description: "Saffron, jasmine and a burnt-sugar ambergris trail. Enormous projection from very little.",
+    description:
+      "Saffron, jasmine and a burnt-sugar ambergris trail. Enormous projection from very little.",
     topNotes: ["Saffron", "Jasmine"],
     middleNotes: ["Amberwood", "Ambergris"],
     baseNotes: ["Fir Resin", "Cedar"],
@@ -380,7 +387,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Amber",
     subfamily: "Vanilla Amber",
-    description: "Warm benzoin, tonka and vanilla — a soft golden amber for evenings in cold weather.",
+    description:
+      "Warm benzoin, tonka and vanilla — a soft golden amber for evenings in cold weather.",
     topNotes: ["Amber", "Labdanum"],
     middleNotes: ["Benzoin", "Tonka Bean"],
     baseNotes: ["Vanilla", "Cedar"],
@@ -406,7 +414,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Toilette",
     family: "Aromatic",
     subfamily: "Metallic Lavender",
-    description: "Cool metallic lavender with coal-like woods. Clean, sharp and easy to wear anywhere.",
+    description:
+      "Cool metallic lavender with coal-like woods. Clean, sharp and easy to wear anywhere.",
     topNotes: ["Bergamot", "Lavender"],
     middleNotes: ["Coal", "Patchouli"],
     baseNotes: ["Ambroxan", "Metallic Notes"],
@@ -431,7 +440,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Toilette",
     family: "Woody",
     subfamily: "Mineral Citrus",
-    description: "Flinty grapefruit, vetiver and mineral woods. Understated and very wearable at work.",
+    description:
+      "Flinty grapefruit, vetiver and mineral woods. Understated and very wearable at work.",
     topNotes: ["Grapefruit", "Orange"],
     middleNotes: ["Pepper", "Flint", "Geranium"],
     baseNotes: ["Vetiver", "Cedar", "Benzoin"],
@@ -559,7 +569,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Fougère",
     subfamily: "Lavender Vanilla",
-    description: "Lavender and orange blossom over vanilla. A modern feminine fougère with real presence.",
+    description:
+      "Lavender and orange blossom over vanilla. A modern feminine fougère with real presence.",
     topNotes: ["Lavender", "Mandarin", "Blackcurrant"],
     middleNotes: ["Orange Blossom", "Jasmine", "Lavender"],
     baseNotes: ["Vanilla", "Musk", "Cedar", "Ambergris"],
@@ -634,7 +645,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Woody",
     subfamily: "Sandalwood Leather",
-    description: "Dry sandalwood, iris and leather with a smoky cardamom edge. Distinctive and unisex.",
+    description:
+      "Dry sandalwood, iris and leather with a smoky cardamom edge. Distinctive and unisex.",
     topNotes: ["Cardamom", "Violet"],
     middleNotes: ["Iris", "Ambrox", "Papyrus"],
     baseNotes: ["Sandalwood", "Cedar", "Leather", "Musk"],
@@ -659,7 +671,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Gourmand",
     subfamily: "Patchouli Gourmand",
-    description: "The original gourmand — chocolate, caramel and patchouli. Polarising and enormous.",
+    description:
+      "The original gourmand — chocolate, caramel and patchouli. Polarising and enormous.",
     topNotes: ["Bergamot", "Melon", "Coconut"],
     middleNotes: ["Honey", "Red Berries", "Plum", "Caramel"],
     baseNotes: ["Patchouli", "Chocolate", "Vanilla", "Tonka Bean"],
@@ -734,7 +747,8 @@ export const CATALOGUE: Fragrance[] = [
     concentration: "Eau de Parfum",
     family: "Chypre",
     subfamily: "Fruity Woody",
-    description: "A friendly take on smoky pineapple and vetiver. Strong performance for the money.",
+    description:
+      "A friendly take on smoky pineapple and vetiver. Strong performance for the money.",
     topNotes: ["Bergamot", "Pink Pepper", "Clary Sage"],
     middleNotes: ["Vetiver", "Leather", "Patchouli"],
     baseNotes: ["Akigalawood", "Ambroxan", "Cacao"],

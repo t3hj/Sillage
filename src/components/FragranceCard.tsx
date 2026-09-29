@@ -22,9 +22,7 @@ export function FragranceCard({
       )}
     >
       <Link to="/fragrance/$id" params={{ id: fragrance.id }} className="block">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">
-          {fragrance.brand}
-        </p>
+        <p className="text-xs uppercase tracking-widest text-muted-foreground">{fragrance.brand}</p>
         <h3
           className="mt-1 text-lg font-semibold leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
@@ -32,9 +30,7 @@ export function FragranceCard({
           {fragrance.name}
         </h3>
         <p className="mt-1 text-xs text-muted-foreground">
-          {[fragrance.concentration, fragrance.family, fragrance.year]
-            .filter(Boolean)
-            .join(" · ")}
+          {[fragrance.concentration, fragrance.family, fragrance.year].filter(Boolean).join(" · ")}
         </p>
         {subtitle ? <div className="mt-2 text-sm">{subtitle}</div> : null}
         <div className="mt-3 flex flex-wrap gap-1.5">

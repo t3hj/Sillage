@@ -72,9 +72,7 @@ function FragrancePage() {
 
   const history = useMemo(
     () =>
-      data.wears
-        .filter((w) => w.fragranceId === id)
-        .sort((a, b) => b.date.localeCompare(a.date)),
+      data.wears.filter((w) => w.fragranceId === id).sort((a, b) => b.date.localeCompare(a.date)),
     [data.wears, id],
   );
 
@@ -265,9 +263,7 @@ function FragrancePage() {
                   step={1}
                   value={rating[key] ?? 0}
                   onChange={(e) =>
-                    update((d) =>
-                      rateFragrance(d, fragrance.id, { [key]: Number(e.target.value) }),
-                    )
+                    update((d) => rateFragrance(d, fragrance.id, { [key]: Number(e.target.value) }))
                   }
                   className="w-full accent-primary"
                 />
@@ -295,9 +291,7 @@ function FragrancePage() {
               <li key={w.id}>
                 {new Date(w.date).toLocaleDateString()}
                 {w.activity ? ` · ${w.activity}` : ""}
-                {typeof w.temperature === "number"
-                  ? ` · ${Math.round(w.temperature)}°C`
-                  : ""}
+                {typeof w.temperature === "number" ? ` · ${Math.round(w.temperature)}°C` : ""}
               </li>
             ))}
           </ul>

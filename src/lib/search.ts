@@ -35,8 +35,7 @@ function tokenScore(token: string, haystack: string[]): number {
     else if (word.includes(token) && token.length > 2) best = Math.max(best, 0.7);
     else if (token.length > 3) {
       const d = distance(token, word);
-      if (d <= Math.max(1, Math.floor(token.length / 4)))
-        best = Math.max(best, 0.65 - d * 0.05);
+      if (d <= Math.max(1, Math.floor(token.length / 4))) best = Math.max(best, 0.65 - d * 0.05);
     }
   }
   return best;

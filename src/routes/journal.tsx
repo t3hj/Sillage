@@ -176,9 +176,7 @@ function JournalPage() {
                 {[
                   fmt(w.date),
                   w.activity,
-                  typeof w.temperature === "number"
-                    ? `${Math.round(w.temperature)}°C`
-                    : undefined,
+                  typeof w.temperature === "number" ? `${Math.round(w.temperature)}°C` : undefined,
                   w.condition,
                 ]
                   .filter(Boolean)
