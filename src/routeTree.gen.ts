@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CollectionRouteImport } from './routes/collection'
+import { Route as CompareRouteImport } from './routes/compare'
 import { Route as DiscoverRouteImport } from './routes/discover'
+import { Route as GuideRouteImport } from './routes/guide'
 import { Route as JournalRouteImport } from './routes/journal'
+import { Route as ScanRouteImport } from './routes/scan'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as WishlistRouteImport } from './routes/wishlist'
 import { Route as FragranceIdRouteImport } from './routes/fragrance.$id'
@@ -27,14 +30,29 @@ const CollectionRoute = CollectionRouteImport.update({
   path: '/collection',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DiscoverRoute = DiscoverRouteImport.update({
   id: '/discover',
   path: '/discover',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuideRoute = GuideRouteImport.update({
+  id: '/guide',
+  path: '/guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JournalRoute = JournalRouteImport.update({
   id: '/journal',
   path: '/journal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanRoute = ScanRouteImport.update({
+  id: '/scan',
+  path: '/scan',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SettingsRoute = SettingsRouteImport.update({
@@ -56,8 +74,11 @@ const FragranceIdRoute = FragranceIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/compare': typeof CompareRoute
   '/discover': typeof DiscoverRoute
+  '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
   '/fragrance/$id': typeof FragranceIdRoute
@@ -65,8 +86,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/compare': typeof CompareRoute
   '/discover': typeof DiscoverRoute
+  '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
   '/fragrance/$id': typeof FragranceIdRoute
@@ -75,8 +99,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/collection': typeof CollectionRoute
+  '/compare': typeof CompareRoute
   '/discover': typeof DiscoverRoute
+  '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
   '/fragrance/$id': typeof FragranceIdRoute
@@ -86,8 +113,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/collection'
+    | '/compare'
     | '/discover'
+    | '/guide'
     | '/journal'
+    | '/scan'
     | '/settings'
     | '/wishlist'
     | '/fragrance/$id'
@@ -95,8 +125,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/collection'
+    | '/compare'
     | '/discover'
+    | '/guide'
     | '/journal'
+    | '/scan'
     | '/settings'
     | '/wishlist'
     | '/fragrance/$id'
@@ -104,8 +137,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/collection'
+    | '/compare'
     | '/discover'
+    | '/guide'
     | '/journal'
+    | '/scan'
     | '/settings'
     | '/wishlist'
     | '/fragrance/$id'
@@ -114,8 +150,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CollectionRoute: typeof CollectionRoute
+  CompareRoute: typeof CompareRoute
   DiscoverRoute: typeof DiscoverRoute
+  GuideRoute: typeof GuideRoute
   JournalRoute: typeof JournalRoute
+  ScanRoute: typeof ScanRoute
   SettingsRoute: typeof SettingsRoute
   WishlistRoute: typeof WishlistRoute
   FragranceIdRoute: typeof FragranceIdRoute
@@ -137,6 +176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CollectionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/discover': {
       id: '/discover'
       path: '/discover'
@@ -144,11 +190,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiscoverRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guide': {
+      id: '/guide'
+      path: '/guide'
+      fullPath: '/guide'
+      preLoaderRoute: typeof GuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/journal': {
       id: '/journal'
       path: '/journal'
       fullPath: '/journal'
       preLoaderRoute: typeof JournalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan': {
+      id: '/scan'
+      path: '/scan'
+      fullPath: '/scan'
+      preLoaderRoute: typeof ScanRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/settings': {
@@ -178,8 +238,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CollectionRoute: CollectionRoute,
+  CompareRoute: CompareRoute,
   DiscoverRoute: DiscoverRoute,
+  GuideRoute: GuideRoute,
   JournalRoute: JournalRoute,
+  ScanRoute: ScanRoute,
   SettingsRoute: SettingsRoute,
   WishlistRoute: WishlistRoute,
   FragranceIdRoute: FragranceIdRoute,

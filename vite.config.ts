@@ -6,10 +6,34 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+/**
+ * Two build targets:
+ * - Default: the existing Cloudflare SSR target used by Lovable previews.
+ * - GitHub Pages: when running in CI (the Pages workflow sets CI=true), build a
+ *   fully static site under the /Sillage/ base path.
+ */
+const githubPages = !!process.env.CI;
+
 export default defineConfig({
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
-  },
+  vite: githubPages
+    ? {
+        base: "/Sillage/",
+      }
+    : undefined,
+  nitro: githubPages
+    ? {
+        preset: "static",
+      }
+    : undefined,
+  tanstackStart: githubPages
+    ? {
+        prerender: {
+          enabled: true,
+          autoStaticPathsDiscovery: true,
+          crawlLinks: true,
+        },
+      }
+    : {
+        server: { entry: "server" },
+      },
 });

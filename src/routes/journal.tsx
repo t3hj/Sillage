@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useSillage } from "@/hooks/useSillage";
 import { removeWear } from "@/lib/storage";
 import { wearStats } from "@/lib/recommend";
@@ -36,16 +37,28 @@ const fmt = (iso: string) =>
 
 function JournalPage() {
   const { data, update, hydrated } = useSillage();
+  const [query, setQuery] = useState("");
+  const [activity, setActivity] = useState("");
+  const [date, setDate] = useState("");
+
+  const activities = useMemo(
+    () => [...new Set(data.wears.map((w) => w.activity).filter(Boolean))] as string[],
+    [data.wears],
+  );
 
   const stats = useMemo(
     () => wearStats(data.collection, data.wears),
     [data.collection, data.wears],
   );
 
-  const sorted = useMemo(
-    () => [...data.wears].sort((a, b) => b.date.localeCompare(a.date)),
-    [data.wears],
-  );
+  const sorted = useMemo(() => {
+    const q = query.toLowerCase();
+    return [...data.wears]
+      .filter((w) => (q ? `${w.fragranceName} ${w.brand}`.toLowerCase().includes(q) : true))
+      .filter((w) => (activity ? w.activity === activity : true))
+      .filter((w) => (date ? w.date.startsWith(date) : true))
+      .sort((a, b) => b.date.localeCompare(a.date));
+  }, [data.wears, query, activity, date]);
 
   return (
     <div className="space-y-8">
@@ -105,6 +118,49 @@ function JournalPage() {
         </section>
       ) : null}
 
+      <div className="flex flex-wrap gap-2">
+        <Input
+          className="w-full sm:w-64"
+          placeholder="Filter by fragrance…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          aria-label="Filter journal by fragrance"
+        />
+        <select
+          className="rounded-lg border border-border bg-background px-3 py-2 text-sm"
+          value={activity}
+          onChange={(e) => setActivity(e.target.value)}
+          aria-label="Filter journal by activity"
+        >
+          <option value="">Any activity</option>
+          {activities.map((a) => (
+            <option key={a} value={a!}>
+              {a}
+            </option>
+          ))}
+        </select>
+        <input
+          type="date"
+          className="rounded-lg border border-border bg-background px-3 py-2 text-sm"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          aria-label="Filter journal by date"
+        />
+        {(query || activity || date) && (
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              setQuery("");
+              setActivity("");
+              setDate("");
+            }}
+          >
+            Clear
+          </Button>
+        )}
+      </div>
+
       <ul className="space-y-2">
         {sorted.map((w) => (
           <li
@@ -142,6 +198,12 @@ function JournalPage() {
           </li>
         ))}
       </ul>
+
+      {data.wears.length > 0 && sorted.length === 0 ? (
+        <p className="rounded-2xl border border-dashed border-border p-8 text-center text-muted-foreground">
+          No entries match those filters.
+        </p>
+      ) : null}
     </div>
   );
 }

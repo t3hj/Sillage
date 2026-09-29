@@ -1,5 +1,15 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { CalendarDays, Compass, Heart, Home, Settings as Cog, Sparkles } from "lucide-react";
+import {
+  CalendarDays,
+  Compass,
+  GitCompareArrows,
+  Heart,
+  Home,
+  ScanLine,
+  Settings as Cog,
+  Sparkles,
+  BookOpen,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -7,10 +17,17 @@ const NAV = [
   { to: "/", label: "Today", icon: Home },
   { to: "/collection", label: "Collection", icon: Sparkles },
   { to: "/discover", label: "Discover", icon: Compass },
+  { to: "/scan", label: "Scan", icon: ScanLine },
+  { to: "/guide", label: "Guide", icon: BookOpen },
+  { to: "/compare", label: "Compare", icon: GitCompareArrows },
   { to: "/wishlist", label: "Wishlist", icon: Heart },
   { to: "/journal", label: "Journal", icon: CalendarDays },
   { to: "/settings", label: "Settings", icon: Cog },
 ] as const;
+
+// Bottom bar is limited to the five most-used destinations; the rest stay in
+// the desktop nav and are linked contextually from other pages.
+const MOBILE_NAV = ["/", "/collection", "/discover", "/guide", "/settings"];
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -54,7 +71,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-5xl justify-between px-2 py-1.5">
-          {NAV.map(({ to, label, icon: Icon }) => {
+          {NAV.filter((n) => MOBILE_NAV.includes(n.to)).map(({ to, label, icon: Icon }) => {
             const active = to === "/" ? pathname === "/" : pathname.startsWith(to);
             return (
               <Link
