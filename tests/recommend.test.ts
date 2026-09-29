@@ -219,3 +219,30 @@ describe("season/time helpers", () => {
     expect(timeOfDayFor(new Date(2026, 0, 1, 23, 0))).toBe("Night");
   });
 });
+
+describe("determinism with injected timestamp", () => {
+  it("same inputs + same timestamp → identical scores", () => {
+    const item = collectionItem();
+    const fixed = new Date("2026-03-01T09:00:00Z").getTime();
+    const wears = [
+      { id: "w1", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: "2026-02-01T09:00:00Z" },
+    ];
+    const a = recommend([item], wears, ctx, 5, fixed);
+    const b = recommend([item], wears, ctx, 5, fixed);
+    expect(a[0]?.score).toBe(b[0]?.score);
+  });
+
+  it("a later timestamp increases the score of a previously worn fragrance", () => {
+    const item = collectionItem();
+    const wears = [
+      { id: "w1", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: "2026-02-01T09:00:00Z" },
+    ];
+    const soon = recommend([item], wears, ctx, 5, new Date("2026-02-02T09:00:00Z").getTime())[0]!.score;
+    const later = recommend([item], wears, ctx, 5, new Date("2026-03-15T09:00:00Z").getTime())[0]!.score;
+    expect(later).toBeGreaterThan(soon);
+  });
+
+  it("empty collection yields no recommendations (clear empty state upstream)", () => {
+    expect(recommend([], [], ctx)).toEqual([]);
+  });
+});

@@ -29,8 +29,9 @@ export function recommend(
   wears: WearEntry[],
   ctx: RecommendContext,
   limit = 5,
+  /** Explicit "current time" — inject in tests; defaults to now. */
+  now: number = Date.now(),
 ): Recommendation[] {
-  const now = Date.now();
   const lastWorn = new Map<string, number>();
   for (const w of wears) {
     const t = new Date(w.date).getTime();

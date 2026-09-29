@@ -4,20 +4,50 @@ import type {
   PersonalRating,
   Settings,
   SillageData,
+  WeatherCache,
   WearEntry,
   WishlistItem,
 } from "@/data/types";
 
 const KEY = "sillage.data.v1";
-export const DATA_VERSION = 1;
+export const DATA_VERSION = 2;
 
 export const emptyData = (): SillageData => ({
   version: DATA_VERSION,
   collection: [],
   wishlist: [],
   wears: [],
-  settings: { units: "metric" },
+  settings: { units: "metric", onboarded: false },
 });
+
+/**
+ * Versioned migrations: v1 → v2 adds the weather cache, per-item bottle info
+ * slot and the onboarding flag. Future schema changes append a step here and
+ * bump DATA_VERSION — never mutate historical migration logic.
+ */
+export function migrateData(raw: unknown): SillageData {
+  const parsed = (raw ?? {}) as Partial<SillageData>;
+  let data: SillageData = {
+    ...emptyData(),
+    ...parsed,
+    collection: Array.isArray(parsed.collection) ? parsed.collection : [],
+    wishlist: Array.isArray(parsed.wishlist) ? parsed.wishlist : [],
+    wears: Array.isArray(parsed.wears) ? parsed.wears : [],
+    settings: { units: "metric", ...(parsed.settings ?? {}) },
+    version: 1,
+  };
+
+  if (data.version < 2) {
+    data = {
+      ...data,
+      settings: { ...data.settings, onboarded: data.settings.onboarded ?? false },
+      // Bottle info and the weather cache are additive — nothing to backfill.
+    };
+    data.version = 2;
+  }
+
+  return data;
+}
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -26,16 +56,7 @@ export function loadData(): SillageData {
   try {
     const raw = window.localStorage.getItem(KEY);
     if (!raw) return emptyData();
-    const parsed = JSON.parse(raw) as Partial<SillageData>;
-    return {
-      ...emptyData(),
-      ...parsed,
-      collection: parsed.collection ?? [],
-      wishlist: parsed.wishlist ?? [],
-      wears: parsed.wears ?? [],
-      settings: { units: "metric", ...(parsed.settings ?? {}) },
-      version: DATA_VERSION,
-    };
+    return migrateData(JSON.parse(raw));
   } catch {
     return emptyData();
   }
@@ -120,6 +141,27 @@ export function updateSettings(data: SillageData, settings: Settings): SillageDa
   return { ...data, settings: { ...data.settings, ...settings } };
 }
 
+export function setOnboarded(data: SillageData): SillageData {
+  return { ...data, settings: { ...data.settings, onboarded: true } };
+}
+
+export function updateBottle(
+  data: SillageData,
+  id: string,
+  bottle: CollectionItem["bottle"],
+): SillageData {
+  return {
+    ...data,
+    collection: data.collection.map((c) =>
+      c.fragrance.id === id ? { ...c, bottle } : c,
+    ),
+  };
+}
+
+export function setWeatherCache(data: SillageData, cache: WeatherCache): SillageData {
+  return { ...data, weather: cache };
+}
+
 /* ---------- import / export ---------- */
 
 export function exportJson(data: SillageData): string {
@@ -130,13 +172,5 @@ export function parseImport(raw: string): SillageData {
   const parsed = JSON.parse(raw) as Partial<SillageData>;
   if (!parsed || typeof parsed !== "object") throw new Error("Not a Sillage backup file.");
   if (!Array.isArray(parsed.collection)) throw new Error("Backup is missing a collection.");
-  return {
-    ...emptyData(),
-    ...parsed,
-    collection: parsed.collection,
-    wishlist: parsed.wishlist ?? [],
-    wears: parsed.wears ?? [],
-    settings: { units: "metric", ...(parsed.settings ?? {}) },
-    version: DATA_VERSION,
-  };
+  return migrateData(parsed);
 }

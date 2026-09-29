@@ -47,11 +47,40 @@ export interface PersonalRating {
 }
 
 /** A fragrance that lives in the user's collection (catalogue entry + personal data). */
+/** User's physical bottle metadata (per collection item, not per fragrance). */
+export interface BottleInfo {
+  sizeMl?: number;
+  kind?: "Full bottle" | "Decant" | "Sample";
+  purchaseDate?: string;
+  price?: number;
+  retailer?: string;
+  opened?: boolean;
+  /** Key of the photo stored in IndexedDB (never the image bytes themselves). */
+  photoId?: string;
+}
+
+/** Last successful weather response, kept locally for offline recommendations. */
+export interface WeatherCache {
+  latitude: number;
+  longitude: number;
+  locationName?: string;
+  temperature: number;
+  apparentTemperature: number;
+  humidity: number;
+  precipitation: number;
+  code: number;
+  isDay: boolean;
+  description: string;
+  /** ISO timestamp of the fetch. */
+  updatedAt: string;
+}
+
 export interface CollectionItem {
   fragrance: Fragrance;
   addedAt: string;
   rating?: PersonalRating;
   notes?: string;
+  bottle?: BottleInfo;
 }
 
 export interface WishlistItem {
@@ -77,6 +106,8 @@ export interface Settings {
   latitude?: number;
   longitude?: number;
   units?: "metric";
+  /** False until the first-run onboarding wizard completes. */
+  onboarded?: boolean;
 }
 
 export interface SillageData {
@@ -85,4 +116,5 @@ export interface SillageData {
   wishlist: WishlistItem[];
   wears: WearEntry[];
   settings: Settings;
+  weather?: WeatherCache;
 }
