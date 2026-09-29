@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouter, useRouterState } from "@tanstack/react-router";
 import {
   CalendarDays,
   Compass,
@@ -10,8 +10,9 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { useSillage } from "@/hooks/useSillage";
 
 const NAV = [
   { to: "/", label: "Today", icon: Home },
@@ -27,6 +28,15 @@ const NAV = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const router = useRouter();
+  const { data, hydrated } = useSillage();
+
+  // First-run gate: send fresh users to the onboarding wizard once.
+  useEffect(() => {
+    if (hydrated && !data.settings.onboarded && pathname !== "/onboarding") {
+      void router.navigate({ to: "/onboarding" });
+    }
+  }, [hydrated, data.settings.onboarded, pathname, router]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">

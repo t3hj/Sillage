@@ -142,7 +142,13 @@ describe("storage migration v1 → v2", () => {
       ],
       wishlist: [{ fragrance: { id: "b" }, addedAt: "2024-01-02T00:00:00Z" }],
       wears: [
-        { id: "w1", fragranceId: "a", fragranceName: "A", brand: "B", date: "2024-01-03T00:00:00Z" },
+        {
+          id: "w1",
+          fragranceId: "a",
+          fragranceName: "A",
+          brand: "B",
+          date: "2024-01-03T00:00:00Z",
+        },
       ],
       settings: { units: "metric", latitude: 51.5, longitude: -0.1 },
     };
@@ -183,7 +189,12 @@ describe("v2 fields", () => {
   it("stores bottle info per collection item", () => {
     let data = emptyData();
     data = { ...data, collection: [collectionItem()] };
-    data = updateBottle(data, "test-a", { sizeMl: 100, kind: "Full bottle", opened: true, price: 95 });
+    data = updateBottle(data, "test-a", {
+      sizeMl: 100,
+      kind: "Full bottle",
+      opened: true,
+      price: 95,
+    });
     expect(data.collection[0]?.bottle?.sizeMl).toBe(100);
     expect(data.collection[0]?.bottle?.opened).toBe(true);
   });

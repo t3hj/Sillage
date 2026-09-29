@@ -225,7 +225,13 @@ describe("determinism with injected timestamp", () => {
     const item = collectionItem();
     const fixed = new Date("2026-03-01T09:00:00Z").getTime();
     const wears = [
-      { id: "w1", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: "2026-02-01T09:00:00Z" },
+      {
+        id: "w1",
+        fragranceId: "test-a",
+        fragranceName: "Test A",
+        brand: "Brand A",
+        date: "2026-02-01T09:00:00Z",
+      },
     ];
     const a = recommend([item], wears, ctx, 5, fixed);
     const b = recommend([item], wears, ctx, 5, fixed);
@@ -235,10 +241,18 @@ describe("determinism with injected timestamp", () => {
   it("a later timestamp increases the score of a previously worn fragrance", () => {
     const item = collectionItem();
     const wears = [
-      { id: "w1", fragranceId: "test-a", fragranceName: "Test A", brand: "Brand A", date: "2026-02-01T09:00:00Z" },
+      {
+        id: "w1",
+        fragranceId: "test-a",
+        fragranceName: "Test A",
+        brand: "Brand A",
+        date: "2026-02-01T09:00:00Z",
+      },
     ];
-    const soon = recommend([item], wears, ctx, 5, new Date("2026-02-02T09:00:00Z").getTime())[0]!.score;
-    const later = recommend([item], wears, ctx, 5, new Date("2026-03-15T09:00:00Z").getTime())[0]!.score;
+    const soon = recommend([item], wears, ctx, 5, new Date("2026-02-02T09:00:00Z").getTime())[0]!
+      .score;
+    const later = recommend([item], wears, ctx, 5, new Date("2026-03-15T09:00:00Z").getTime())[0]!
+      .score;
     expect(later).toBeGreaterThan(soon);
   });
 

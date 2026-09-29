@@ -16,18 +16,13 @@ import {
   type Weather,
 } from "@/data/categories";
 import type { Fragrance } from "@/data/types";
+import { buildFragrancePayload, type FragranceDraft } from "@/lib/fragrance-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-
-const slug = (s: string) =>
-  s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
 
 function Chips<T extends string>({
   label,
@@ -102,12 +97,6 @@ function Single<T extends string>({
   );
 }
 
-const list = (s: string) =>
-  s
-    .split(",")
-    .map((v) => v.trim())
-    .filter(Boolean);
-
 export function FragranceForm({
   initial,
   onSubmit,
@@ -144,31 +133,26 @@ export function FragranceForm({
       setError("A name and a brand are required.");
       return;
     }
-    const yearNum = Number(year);
-    const fragrance: Fragrance = {
-      id: initial?.id ?? `custom-${slug(`${brand}-${name}`)}-${Date.now().toString(36)}`,
-      name: name.trim(),
-      brand: brand.trim(),
-      topNotes: list(top),
-      middleNotes: list(middle),
-      baseNotes: list(base),
+    const draft: FragranceDraft = {
+      name,
+      brand,
+      year,
+      concentration,
+      family,
+      description,
+      top,
+      middle,
+      base,
       seasons,
       weather,
       occasions,
-      timeOfDay: times,
+      times,
       vibes,
       longevity,
       sillage,
       intensity,
-      custom: initial?.custom ?? true,
-      ...(year && !Number.isNaN(yearNum) ? { year: yearNum } : {}),
-      ...(concentration ? { concentration } : {}),
-      ...(family ? { family } : {}),
-      ...(description.trim() ? { description: description.trim() } : {}),
-      ...(initial?.gender ? { gender: initial.gender } : {}),
-      ...(initial?.perfumer ? { perfumer: initial.perfumer } : {}),
     };
-    onSubmit(fragrance);
+    onSubmit(buildFragrancePayload(initial, draft));
   };
 
   return (

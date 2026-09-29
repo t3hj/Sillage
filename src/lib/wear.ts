@@ -4,13 +4,15 @@ import { logWear } from "@/lib/storage";
 export interface WearContext {
   item: CollectionItem;
   activity?: string;
-  weather?: WeatherCache | {
-    temperature: number;
-    apparentTemperature?: number;
-    humidity: number;
-    code: number;
-    description: string;
-  };
+  weather?:
+    | WeatherCache
+    | {
+        temperature: number;
+        apparentTemperature?: number;
+        humidity: number;
+        code: number;
+        description: string;
+      };
   note?: string;
   /** Injectable for testability; defaults to now. */
   now?: Date;

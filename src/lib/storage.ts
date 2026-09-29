@@ -89,6 +89,13 @@ export function removeFromCollection(data: SillageData, id: string): SillageData
   return { ...data, collection: data.collection.filter((c) => c.fragrance.id !== id) };
 }
 
+/** Batch add (used by onboarding and CSV/JSON import). Duplicates are skipped. */
+export function addManyToCollection(data: SillageData, fragrances: Fragrance[]): SillageData {
+  let next = data;
+  for (const f of fragrances) next = addToCollection(next, f);
+  return next;
+}
+
 export function updateFragrance(data: SillageData, fragrance: Fragrance): SillageData {
   return {
     ...data,
@@ -152,9 +159,7 @@ export function updateBottle(
 ): SillageData {
   return {
     ...data,
-    collection: data.collection.map((c) =>
-      c.fragrance.id === id ? { ...c, bottle } : c,
-    ),
+    collection: data.collection.map((c) => (c.fragrance.id === id ? { ...c, bottle } : c)),
   };
 }
 

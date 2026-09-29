@@ -36,18 +36,64 @@ function DiscoverPage() {
   const { data, update } = useSillage();
   const [query, setQuery] = useState("");
   const [family, setFamily] = useState<string | null>(null);
+  const [brand, setBrand] = useState<string | null>(null);
+  const [note, setNote] = useState<string | null>(null);
+  const [gender, setGender] = useState<"Masculine" | "Feminine" | "Unisex" | null>(null);
+  const [sort, setSort] = useState<"Name" | "Brand" | "Newest" | "Oldest">("Brand");
   const [manual, setManual] = useState(false);
+  const [limit, setLimit] = useState(48);
 
   const owned = useMemo(
     () => new Set(data.collection.map((c) => c.fragrance.id)),
     [data.collection],
   );
 
+  const brands = useMemo(
+    () => [...new Set(CATALOGUE.map((f) => f.brand))].sort((a, b) => a.localeCompare(b)),
+    [],
+  );
+
+  const noteFacet = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const f of CATALOGUE)
+      for (const n of [...f.topNotes, ...f.middleNotes, ...f.baseNotes])
+        counts.set(n, (counts.get(n) ?? 0) + 1);
+    return [...counts.entries()]
+      .filter(([, n]) => n >= 2)
+      .sort((a, b) => b[1]! - a[1]!)
+      .slice(0, 40)
+      .map(([n]) => n);
+  }, []);
+
+  // Search mode shows scored matches across the entire catalogue; browse mode
+  // applies facet filters and sorts, with pagination instead of a hard cap.
+  const searching = query.trim().length > 0;
   const results = useMemo(() => {
+    if (searching) return searchFragrances(CATALOGUE, query);
     let list = CATALOGUE;
     if (family) list = list.filter((f) => f.family === family);
-    return searchFragrances(list, query).slice(0, 60);
-  }, [query, family]);
+    if (brand) list = list.filter((f) => f.brand === brand);
+    if (note)
+      list = list.filter((f) =>
+        [...f.topNotes, ...f.middleNotes, ...f.baseNotes].some((n) =>
+          n.toLowerCase().includes(note.toLowerCase()),
+        ),
+      );
+    if (gender) list = list.filter((f) => f.gender === gender);
+    const sorted = [...list].sort((a, b) => {
+      switch (sort) {
+        case "Name":
+          return a.name.localeCompare(b.name);
+        case "Newest":
+          return (b.year ?? 0) - (a.year ?? 0);
+        case "Oldest":
+          return (a.year ?? 9999) - (b.year ?? 9999);
+        default:
+          return a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name);
+      }
+    });
+    return sorted;
+  }, [searching, query, family, brand, note, gender, sort]);
 
   return (
     <div className="space-y-6">
@@ -82,9 +128,12 @@ function DiscoverPage() {
         <>
           <div className="space-y-3">
             <Input
-              placeholder="Search by name, brand, note or vibe…"
+              placeholder="Search all fragrances by name, brand, note or vibe…"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setLimit(48);
+              }}
             />
             <div className="flex flex-wrap gap-1.5">
               {FAMILIES.map((f) => (
@@ -98,7 +147,72 @@ function DiscoverPage() {
                 </Badge>
               ))}
             </div>
+            <div className="flex flex-wrap gap-1.5" aria-label="Filter by brand">
+              {brands.map((b) => (
+                <Badge
+                  key={b}
+                  variant={brand === b ? "default" : "outline"}
+                  className="cursor-pointer rounded-full font-normal"
+                  onClick={() => setBrand(brand === b ? null : b)}
+                >
+                  {b}
+                </Badge>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-1.5" aria-label="Filter by note">
+              {noteFacet.map((n) => (
+                <Badge
+                  key={n}
+                  variant={note === n ? "default" : "outline"}
+                  className="cursor-pointer rounded-full font-normal"
+                  onClick={() => setNote(note === n ? null : n)}
+                >
+                  {n}
+                </Badge>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              {(["Masculine", "Feminine", "Unisex"] as const).map((g) => (
+                <Badge
+                  key={g}
+                  variant={gender === g ? "default" : "outline"}
+                  className="cursor-pointer rounded-full font-normal"
+                  onClick={() => setGender(gender === g ? null : g)}
+                >
+                  {g}
+                </Badge>
+              ))}
+              <span className="ml-auto text-xs text-muted-foreground">Sort:</span>
+              {(["Brand", "Name", "Newest", "Oldest"] as const).map((s) => (
+                <Badge
+                  key={s}
+                  variant={sort === s ? "default" : "outline"}
+                  className="cursor-pointer rounded-full font-normal"
+                  onClick={() => setSort(s)}
+                >
+                  {s}
+                </Badge>
+              ))}
+            </div>
+            {(family || brand || note || gender) && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  setFamily(null);
+                  setBrand(null);
+                  setNote(null);
+                  setGender(null);
+                }}
+              >
+                Clear filters
+              </Button>
+            )}
           </div>
+
+          <p className="text-sm text-muted-foreground" aria-live="polite">
+            {results.length} fragrance{results.length === 1 ? "" : "s"}
+          </p>
 
           {results.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-border p-10 text-center">
@@ -110,41 +224,52 @@ function DiscoverPage() {
               </Button>
             </div>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {results.map((f) => (
-                <FragranceCard
-                  key={f.id}
-                  fragrance={f}
-                  footer={
-                    owned.has(f.id) ? (
-                      <span className="text-sm text-muted-foreground">In your collection</span>
-                    ) : (
-                      <>
-                        <Button
-                          size="sm"
-                          onClick={() => {
-                            update((d) => addToCollection(d, f));
-                            toast.success(`${f.name} added`);
-                          }}
-                        >
-                          I own this
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => {
-                            update((d) => addToWishlist(d, f));
-                            toast(`${f.name} saved to wishlist`);
-                          }}
-                        >
-                          Wishlist
-                        </Button>
-                      </>
-                    )
-                  }
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {results.slice(0, limit).map((f) => (
+                  <FragranceCard
+                    key={f.id}
+                    fragrance={f}
+                    footer={
+                      owned.has(f.id) ? (
+                        <span className="text-sm text-muted-foreground">In your collection</span>
+                      ) : (
+                        <>
+                          <Button
+                            size="sm"
+                            onClick={() => {
+                              update((d) => addToCollection(d, f));
+                              toast.success(`${f.name} added`);
+                            }}
+                          >
+                            I own this
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => {
+                              update((d) => addToWishlist(d, f));
+                              toast(`${f.name} saved to wishlist`);
+                            }}
+                          >
+                            Wishlist
+                          </Button>
+                        </>
+                      )
+                    }
+                  />
+                ))}
+              </div>
+              {results.length > limit ? (
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setLimit((l) => l + 48)}
+                >
+                  Show more ({results.length - limit} remaining)
+                </Button>
+              ) : null}
+            </>
           )}
         </>
       )}

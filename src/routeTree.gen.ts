@@ -15,6 +15,7 @@ import { Route as CompareRouteImport } from './routes/compare'
 import { Route as DiscoverRouteImport } from './routes/discover'
 import { Route as GuideRouteImport } from './routes/guide'
 import { Route as JournalRouteImport } from './routes/journal'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as ScanRouteImport } from './routes/scan'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as WishlistRouteImport } from './routes/wishlist'
@@ -50,6 +51,11 @@ const JournalRoute = JournalRouteImport.update({
   path: '/journal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ScanRoute = ScanRouteImport.update({
   id: '/scan',
   path: '/scan',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/discover': typeof DiscoverRoute
   '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/onboarding': typeof OnboardingRoute
   '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/discover': typeof DiscoverRoute
   '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/onboarding': typeof OnboardingRoute
   '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/discover': typeof DiscoverRoute
   '/guide': typeof GuideRoute
   '/journal': typeof JournalRoute
+  '/onboarding': typeof OnboardingRoute
   '/scan': typeof ScanRoute
   '/settings': typeof SettingsRoute
   '/wishlist': typeof WishlistRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/discover'
     | '/guide'
     | '/journal'
+    | '/onboarding'
     | '/scan'
     | '/settings'
     | '/wishlist'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/discover'
     | '/guide'
     | '/journal'
+    | '/onboarding'
     | '/scan'
     | '/settings'
     | '/wishlist'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/discover'
     | '/guide'
     | '/journal'
+    | '/onboarding'
     | '/scan'
     | '/settings'
     | '/wishlist'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   DiscoverRoute: typeof DiscoverRoute
   GuideRoute: typeof GuideRoute
   JournalRoute: typeof JournalRoute
+  OnboardingRoute: typeof OnboardingRoute
   ScanRoute: typeof ScanRoute
   SettingsRoute: typeof SettingsRoute
   WishlistRoute: typeof WishlistRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/scan': {
       id: '/scan'
       path: '/scan'
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   DiscoverRoute: DiscoverRoute,
   GuideRoute: GuideRoute,
   JournalRoute: JournalRoute,
+  OnboardingRoute: OnboardingRoute,
   ScanRoute: ScanRoute,
   SettingsRoute: SettingsRoute,
   WishlistRoute: WishlistRoute,
