@@ -1,9 +1,8 @@
 // Dedicated Vite config for GitHub Pages static builds.
 //
-// The shared config (vite.config.ts) targets Cloudflare SSR via the Lovable
-// wrapper, whose injected nitro plugin is incompatible with nitro's `static`
-// preset. This config builds the same app with TanStack Start's own plugins in
-// static prerender mode, which produces a fully static site in .output/public.
+// The shared config (vite.config.ts) targets a standard TanStack Start SSR
+// build; this one builds the same app in static prerender mode, which produces
+// a fully static site in .output/public.
 //
 // Usage: npm run build:pages
 import { defineConfig } from "vite";

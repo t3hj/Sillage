@@ -105,10 +105,10 @@ validation. Components never touch `localStorage` directly.
 
 ```sh
 npm install
-npm run dev          # dev server (SSR via the Lovable/Cloudflare config)
+npm run dev          # dev server
 npm test             # run the vitest suite
 npm run lint         # eslint
-npm run build        # production build (Cloudflare SSR target)
+npm run build        # production build (TanStack Start + nitro)
 ```
 
 ## Build & deploy to GitHub Pages
