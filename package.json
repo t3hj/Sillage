@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "build:pages": "vite build -c vite.pages.config.ts && node scripts/prepare-pages.mjs",
+    "catalogue:import": "node --experimental-strip-types --no-warnings scripts/import-scento.mjs",
+    "catalogue": "node --experimental-strip-types --no-warnings scripts/build-catalogue.mjs",
+    "build": "npm run catalogue && vite build",
+    "build:pages": "npm run catalogue && vite build -c vite.pages.config.ts && node scripts/prepare-pages.mjs",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",

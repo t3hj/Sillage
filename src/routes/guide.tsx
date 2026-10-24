@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { FragranceCard } from "@/components/FragranceCard";
-import { CATALOGUE } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
+import type { Fragrance } from "@/data/types";
 import {
   OCCASIONS,
   PERFORMANCES,
@@ -42,7 +43,7 @@ type Group = "Season" | "Weather" | "Occasion" | "Time" | "Vibe" | "Performance"
 
 const GROUPS: Group[] = ["Season", "Weather", "Occasion", "Time", "Vibe", "Performance"];
 
-function tagsFor(group: Group): string[] {
+function tagsFor(group: Group): readonly string[] {
   switch (group) {
     case "Season":
       return SEASONS;
@@ -59,7 +60,7 @@ function tagsFor(group: Group): string[] {
   }
 }
 
-function fragranceHas(group: Group, f: (typeof CATALOGUE)[number], tag: string) {
+function fragranceHas(group: Group, f: Fragrance, tag: string) {
   switch (group) {
     case "Season":
       return f.seasons.includes(tag as Season);
@@ -77,6 +78,7 @@ function fragranceHas(group: Group, f: (typeof CATALOGUE)[number], tag: string) 
 }
 
 function GuidePage() {
+  const { fragrances: catalogue } = useCatalogue();
   const [group, setGroup] = useState<Group>("Season");
   const [tag, setTag] = useState<string | null>("Spring");
 
@@ -84,8 +86,8 @@ function GuidePage() {
   const active = tag && options.includes(tag) ? tag : null;
 
   const results = useMemo(
-    () => (active ? CATALOGUE.filter((f) => fragranceHas(group, f, active)) : []),
-    [group, active],
+    () => (active ? catalogue.filter((f) => fragranceHas(group, f, active)) : []),
+    [catalogue, group, active],
   );
 
   return (

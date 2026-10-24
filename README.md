@@ -35,8 +35,9 @@ services — including no AI services.**
   are sent — never any collection data.
 - Recommendations are computed locally with a deterministic scoring function — no AI
   service is involved. The same inputs always produce the same recommendation.
-- The catalogue is hand-written editorial data. Nothing is scraped from Fragrantica,
-  Parfumo or any other proprietary database.
+- The catalogue is hand-written editorial data plus an openly licensed dataset (Scento,
+  CC BY 4.0). Nothing is scraped from Fragrantica, Parfumo or any other proprietary
+  database.
 
 > **Security note:** an Anthropic API key was previously present in a local `.env` file
 > in this repository's working copy. It was never committed to git history, but if you
@@ -45,15 +46,18 @@ services — including no AI services.**
 
 ## Fragrance data
 
-`src/data/fragrances.ts` holds a curated starter catalogue (~35 fragrances). Every entry
-is short, written for this project, and limited to widely published facts (brand, launch
-year, headline notes, perfumer). Wearability fields (seasons, weather, occasions, vibes)
-are editorial judgements and are fully editable in the app — nothing is scraped, and no
-proprietary dataset is bundled.
+The catalogue has two layers, both under `catalogue/` (see `catalogue/README.md`):
 
-To extend the catalogue, append objects to `CATALOGUE` using the same shape
-(see `src/data/types.ts` for the `Fragrance` model). Anything you add manually in the
-app is stored locally and never leaves your device.
+- `catalogue/data/` — ~38 hand-written entries, bundled with the app.
+- `catalogue/imported/` — ~1,300 entries generated from the open
+  [Scento Perfume Database](https://www.scento.com/perfume-database) (CC BY 4.0) by
+  `npm run catalogue:import`. Scento supplies notes, family, character, seasons, time of
+  day and descriptions. Occasions, weather and strength are **estimated** by Sillage and
+  labelled as such; gender is not provided and is left empty. Attribution is shown in
+  Settings and on each imported fragrance (`catalogue/NOTICE.md`).
+
+A GitHub Action refreshes the import monthly and opens a pull request. Anything you add
+manually in the app is stored locally and never leaves your device.
 
 ## How recommendations work
 
@@ -128,7 +132,7 @@ repository sub-path.
 npm test
 ```
 
-35 unit tests cover fuzzy search, the recommendation engine (weather/season/occasion
+85 unit tests cover fuzzy search, the recommendation engine (weather/season/occasion
 matching, recent-wear penalty, rating influence, determinism), weather-tag mapping,
 season/time derivation, duplicate detection, and backup import validation.
 
@@ -141,9 +145,10 @@ shows an error state instead of silently stale data.
 
 ## Adding fragrance data
 
-Append well-formed entries to `CATALOGUE` in `src/data/fragrances.ts`. Only include
-facts that are legally shareable (short factual metadata you write yourself). Do not
-bulk-copy descriptions or note pyramids from commercial databases.
+Append well-formed entries to a JSON file in `catalogue/data/` and run `npm run catalogue`
+to validate. Only include facts that are legally shareable (short factual metadata you
+write yourself). Do not bulk-copy descriptions or note pyramids from commercial
+databases. Do not hand-edit `catalogue/imported/` — it is regenerated.
 
 ## Licensing
 

@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CATALOGUE_BY_ID } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
+import { DATA_SOURCES } from "@/data/sources";
+import { noteInfo } from "@/data/notes";
+import { findSimilar } from "@/lib/similar";
 import type { Fragrance, PersonalRating } from "@/data/types";
 import { useSillage } from "@/hooks/useSillage";
 import {
@@ -47,28 +50,79 @@ const RATING_KEYS: { key: keyof PersonalRating; label: string }[] = [
   { key: "compliments", label: "Compliments" },
 ];
 
-function Notes({ title, notes }: { title: string; notes: string[] }) {
+function Notes({
+  title,
+  notes,
+  selected,
+  onSelect,
+}: {
+  title: string;
+  notes: string[];
+  selected: string | null;
+  onSelect: (note: string | null) => void;
+}) {
   if (notes.length === 0) return null;
   return (
     <div>
       <p className="text-xs uppercase tracking-widest text-muted-foreground">{title}</p>
-      <p className="mt-1 text-sm">{notes.join(", ")}</p>
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
+        {notes.map((n) => (
+          <button
+            key={n}
+            type="button"
+            aria-pressed={selected === n}
+            onClick={() => onSelect(selected === n ? null : n)}
+            className={`rounded-full border px-2.5 py-0.5 text-sm transition-colors ${
+              selected === n
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border hover:bg-accent"
+            }`}
+          >
+            {n}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function NotePanel({ note }: { note: string }) {
+  const info = noteInfo(note);
+  return (
+    <div className="rounded-2xl border border-border bg-card p-4 text-sm" role="status">
+      <p className="font-semibold">{info?.name ?? note}</p>
+      {info?.smell ? (
+        <p className="mt-1 leading-relaxed">{info.smell}</p>
+      ) : (
+        <p className="mt-1 text-muted-foreground">No description for this note yet.</p>
+      )}
+      {info && (info.family || info.origin) ? (
+        <p className="mt-1 text-xs text-muted-foreground">
+          {[info.family, info.origin && `${info.origin} origin`].filter(Boolean).join(" · ")}
+        </p>
+      ) : null}
     </div>
   );
 }
 
 function FragrancePage() {
+  const { byId, fragrances: catalogue, settled } = useCatalogue();
   const { id } = Route.useParams();
   const navigate = useNavigate();
   const { data, update, hydrated } = useSillage();
   const [editing, setEditing] = useState(false);
+  const [selectedNote, setSelectedNote] = useState<string | null>(null);
 
   const owned = data.collection.find((c) => c.fragrance.id === id);
   const wished = data.wishlist.find((w) => w.fragrance.id === id);
-  const fragrance: Fragrance | undefined =
-    owned?.fragrance ?? wished?.fragrance ?? CATALOGUE_BY_ID.get(id);
+  const fragrance: Fragrance | undefined = owned?.fragrance ?? wished?.fragrance ?? byId.get(id);
 
   const [notes, setNotes] = useState(owned?.notes ?? "");
+
+  const similar = useMemo(
+    () => (fragrance ? findSimilar(fragrance, catalogue, 6) : []),
+    [fragrance, catalogue],
+  );
 
   const history = useMemo(
     () =>
@@ -80,7 +134,7 @@ function FragrancePage() {
     return (
       <div className="rounded-2xl border border-dashed border-border p-10 text-center">
         <p className="text-muted-foreground">
-          {hydrated ? "That fragrance isn’t here." : "Loading…"}
+          {hydrated && settled ? "That fragrance isn’t here." : "Loading…"}
         </p>
         <Button asChild className="mt-4">
           <Link to="/discover">Back to discover</Link>
@@ -188,14 +242,36 @@ function FragrancePage() {
       </div>
 
       <section className="grid gap-4 sm:grid-cols-3">
-        <Notes title="Top notes" notes={fragrance.topNotes} />
-        <Notes title="Heart notes" notes={fragrance.middleNotes} />
-        <Notes title="Base notes" notes={fragrance.baseNotes} />
+        <Notes
+          title="Top notes"
+          notes={fragrance.topNotes}
+          selected={selectedNote}
+          onSelect={setSelectedNote}
+        />
+        <Notes
+          title="Heart notes"
+          notes={fragrance.middleNotes}
+          selected={selectedNote}
+          onSelect={setSelectedNote}
+        />
+        <Notes
+          title="Base notes"
+          notes={fragrance.baseNotes}
+          selected={selectedNote}
+          onSelect={setSelectedNote}
+        />
       </section>
+      {selectedNote ? <NotePanel note={selectedNote} /> : null}
 
       <section className="grid gap-6 sm:grid-cols-2">
         <div className="space-y-3 rounded-2xl border border-border bg-card p-5">
           <h2 className="text-lg font-semibold">When to wear it</h2>
+          {fragrance.estimated?.length ? (
+            <p className="text-xs text-muted-foreground">
+              Seasons and time of day come from the source. Weather and occasions are estimated from
+              the scent profile.
+            </p>
+          ) : null}
           {(
             [
               ["Seasons", fragrance.seasons],
@@ -224,6 +300,11 @@ function FragrancePage() {
 
         <div className="space-y-2 rounded-2xl border border-border bg-card p-5">
           <h2 className="text-lg font-semibold">Performance</h2>
+          {fragrance.estimated?.includes("longevity") ? (
+            <p className="text-xs text-muted-foreground">
+              Estimated from the concentration, not measured.
+            </p>
+          ) : null}
           {(
             [
               ["Longevity", fragrance.longevity],
@@ -283,6 +364,28 @@ function FragrancePage() {
         </section>
       ) : null}
 
+      {similar.length > 0 ? (
+        <section className="space-y-3">
+          <h2 className="text-lg font-semibold">Smells similar</h2>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {similar.map((s) => (
+              <li key={s.id}>
+                <Link
+                  to="/fragrance/$id"
+                  params={{ id: s.id }}
+                  className="block rounded-xl border border-border bg-card px-4 py-3 transition-colors hover:bg-accent"
+                >
+                  <span className="block text-xs uppercase tracking-widest text-muted-foreground">
+                    {s.brand}
+                  </span>
+                  <span className="block font-medium">{s.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {history.length > 0 ? (
         <section className="space-y-2">
           <h2 className="text-lg font-semibold">You’ve worn this {history.length} times</h2>
@@ -296,6 +399,30 @@ function FragrancePage() {
             ))}
           </ul>
         </section>
+      ) : null}
+
+      {fragrance.source && DATA_SOURCES[fragrance.source] ? (
+        <p className="text-xs text-muted-foreground">
+          Fragrance data from{" "}
+          <a
+            className="underline"
+            href={fragrance.sourceUrl ?? DATA_SOURCES[fragrance.source]!.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {DATA_SOURCES[fragrance.source]!.name}
+          </a>{" "}
+          (
+          <a
+            className="underline"
+            href={DATA_SOURCES[fragrance.source]!.licenseUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {DATA_SOURCES[fragrance.source]!.license}
+          </a>
+          ).
+        </p>
       ) : null}
     </div>
   );

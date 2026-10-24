@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CATALOGUE } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
 import type { Fragrance } from "@/data/types";
 import { useSillage } from "@/hooks/useSillage";
 import { addManyToCollection, setOnboarded } from "@/lib/storage";
@@ -23,6 +23,7 @@ export const Route = createFileRoute("/onboarding")({
 type Choice = null | "add" | "browse" | "empty";
 
 function OnboardingPage() {
+  const { fragrances: catalogue } = useCatalogue();
   const { update } = useSillage();
   const navigate = useNavigate();
   const [choice, setChoice] = useState<Choice>(null);
@@ -30,7 +31,10 @@ function OnboardingPage() {
   const [selected, setSelected] = useState<string[]>([]);
 
   const selectedSet = useMemo(() => new Set(selected), [selected]);
-  const results = useMemo(() => searchFragrances(CATALOGUE, query).slice(0, 24), [query]);
+  const results = useMemo(
+    () => searchFragrances(catalogue, query).slice(0, 24),
+    [catalogue, query],
+  );
 
   const complete = (withFragrances: Fragrance[]) => {
     update((d) => setOnboarded(addManyToCollection(d, withFragrances)));
@@ -129,7 +133,7 @@ function OnboardingPage() {
             </Button>
             <Button
               disabled={selected.length === 0}
-              onClick={() => complete(CATALOGUE.filter((f) => selectedSet.has(f.id)))}
+              onClick={() => complete(catalogue.filter((f) => selectedSet.has(f.id)))}
             >
               Add {selected.length || ""} to My Collection
             </Button>

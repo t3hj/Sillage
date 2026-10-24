@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CATALOGUE } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
 import type { Fragrance } from "@/data/types";
 import { useSillage } from "@/hooks/useSillage";
 import { searchFragrances } from "@/lib/search";
@@ -29,6 +29,7 @@ export const Route = createFileRoute("/compare")({
 const MAX = 3;
 
 function ComparePage() {
+  const { fragrances: catalogue } = useCatalogue();
   const { data } = useSillage();
   const [picked, setPicked] = useState<string[]>([]);
   const [query, setQuery] = useState("");
@@ -38,9 +39,9 @@ function ComparePage() {
     () => [
       ...data.collection.map((c) => c.fragrance),
       ...data.wishlist.map((w) => w.fragrance),
-      ...CATALOGUE,
+      ...catalogue,
     ],
-    [data.collection, data.wishlist],
+    [data.collection, data.wishlist, catalogue],
   );
   const seen = new Set<string>();
   const unique = pool.filter((f) => (seen.has(f.id) ? false : (seen.add(f.id), true)));

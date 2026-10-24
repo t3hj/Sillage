@@ -6,7 +6,7 @@ import { FragranceForm } from "@/components/FragranceForm";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { CATALOGUE } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
 import { FAMILIES } from "@/data/categories";
 import { useSillage } from "@/hooks/useSillage";
 import { addToCollection, addToWishlist } from "@/lib/storage";
@@ -32,14 +32,20 @@ export const Route = createFileRoute("/discover")({
   component: DiscoverPage,
 });
 
+/** Hand-written entries carry no popularity rank; they are curated well-known fragrances, so slot them near the top. */
+const HAND_WRITTEN_RANK = 100;
+const rank = (f: { popularity?: number; source?: string }) =>
+  f.popularity ?? (f.source ? 10_000 : HAND_WRITTEN_RANK);
+
 function DiscoverPage() {
+  const { fragrances: catalogue } = useCatalogue();
   const { data, update } = useSillage();
   const [query, setQuery] = useState("");
   const [family, setFamily] = useState<string | null>(null);
   const [brand, setBrand] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
   const [gender, setGender] = useState<"Masculine" | "Feminine" | "Unisex" | null>(null);
-  const [sort, setSort] = useState<"Name" | "Brand" | "Newest" | "Oldest">("Brand");
+  const [sort, setSort] = useState<"Popular" | "Name" | "Brand" | "Newest" | "Oldest">("Popular");
   const [manual, setManual] = useState(false);
   const [limit, setLimit] = useState(48);
 
@@ -49,13 +55,13 @@ function DiscoverPage() {
   );
 
   const brands = useMemo(
-    () => [...new Set(CATALOGUE.map((f) => f.brand))].sort((a, b) => a.localeCompare(b)),
-    [],
+    () => [...new Set(catalogue.map((f) => f.brand))].sort((a, b) => a.localeCompare(b)),
+    [catalogue],
   );
 
   const noteFacet = useMemo(() => {
     const counts = new Map<string, number>();
-    for (const f of CATALOGUE)
+    for (const f of catalogue)
       for (const n of [...f.topNotes, ...f.middleNotes, ...f.baseNotes])
         counts.set(n, (counts.get(n) ?? 0) + 1);
     return [...counts.entries()]
@@ -63,14 +69,14 @@ function DiscoverPage() {
       .sort((a, b) => b[1]! - a[1]!)
       .slice(0, 40)
       .map(([n]) => n);
-  }, []);
+  }, [catalogue]);
 
   // Search mode shows scored matches across the entire catalogue; browse mode
   // applies facet filters and sorts, with pagination instead of a hard cap.
   const searching = query.trim().length > 0;
   const results = useMemo(() => {
-    if (searching) return searchFragrances(CATALOGUE, query);
-    let list = CATALOGUE;
+    if (searching) return searchFragrances(catalogue, query);
+    let list = catalogue;
     if (family) list = list.filter((f) => f.family === family);
     if (brand) list = list.filter((f) => f.brand === brand);
     if (note)
@@ -82,6 +88,10 @@ function DiscoverPage() {
     if (gender) list = list.filter((f) => f.gender === gender);
     const sorted = [...list].sort((a, b) => {
       switch (sort) {
+        case "Popular":
+          return (
+            rank(a) - rank(b) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name)
+          );
         case "Name":
           return a.name.localeCompare(b.name);
         case "Newest":
@@ -93,7 +103,7 @@ function DiscoverPage() {
       }
     });
     return sorted;
-  }, [searching, query, family, brand, note, gender, sort]);
+  }, [catalogue, searching, query, family, brand, note, gender, sort]);
 
   return (
     <div className="space-y-6">
@@ -103,7 +113,7 @@ function DiscoverPage() {
             Discover
           </h1>
           <p className="text-sm text-muted-foreground">
-            {CATALOGUE.length} fragrances in the built-in catalogue
+            {catalogue.length} fragrances in the catalogue
           </p>
         </div>
         <Button variant={manual ? "outline" : "default"} onClick={() => setManual(!manual)}>
@@ -147,18 +157,19 @@ function DiscoverPage() {
                 </Badge>
               ))}
             </div>
-            <div className="flex flex-wrap gap-1.5" aria-label="Filter by brand">
+            <select
+              aria-label="Filter by brand"
+              value={brand ?? ""}
+              onChange={(e) => setBrand(e.target.value || null)}
+              className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+            >
+              <option value="">All brands ({brands.length})</option>
               {brands.map((b) => (
-                <Badge
-                  key={b}
-                  variant={brand === b ? "default" : "outline"}
-                  className="cursor-pointer rounded-full font-normal"
-                  onClick={() => setBrand(brand === b ? null : b)}
-                >
+                <option key={b} value={b}>
                   {b}
-                </Badge>
+                </option>
               ))}
-            </div>
+            </select>
             <div className="flex flex-wrap gap-1.5" aria-label="Filter by note">
               {noteFacet.map((n) => (
                 <Badge
@@ -183,7 +194,7 @@ function DiscoverPage() {
                 </Badge>
               ))}
               <span className="ml-auto text-xs text-muted-foreground">Sort:</span>
-              {(["Brand", "Name", "Newest", "Oldest"] as const).map((s) => (
+              {(["Popular", "Brand", "Name", "Newest", "Oldest"] as const).map((s) => (
                 <Badge
                   key={s}
                   variant={sort === s ? "default" : "outline"}

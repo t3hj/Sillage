@@ -33,7 +33,14 @@ export interface Fragrance {
   perfumer?: string;
   similar?: string[];
   image?: string;
+  /** Where the entry's data comes from, e.g. "Scento". Shown as attribution. */
   source?: string;
+  /** Link back to the source's page for this fragrance. */
+  sourceUrl?: string;
+  /** 1 = best known. Used for the "Popular" sort; absent when unknown. */
+  popularity?: number;
+  /** Fields that were estimated by the importer rather than sourced, e.g. ["occasions", "longevity"]. */
+  estimated?: string[];
   custom?: boolean;
 }
 
@@ -78,6 +85,8 @@ export interface WeatherCache {
 export interface CollectionItem {
   fragrance: Fragrance;
   addedAt: string;
+  /** True once the user has edited the details; such items never auto-update from the catalogue. */
+  edited?: boolean;
   rating?: PersonalRating;
   notes?: string;
   bottle?: BottleInfo;
@@ -86,6 +95,7 @@ export interface CollectionItem {
 export interface WishlistItem {
   fragrance: Fragrance;
   addedAt: string;
+  edited?: boolean;
 }
 
 export interface WearEntry {

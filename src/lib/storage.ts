@@ -1,3 +1,4 @@
+import { CATALOGUE_BY_ID } from "@/data/fragrances";
 import type {
   CollectionItem,
   Fragrance,
@@ -10,7 +11,7 @@ import type {
 } from "@/data/types";
 
 const KEY = "sillage.data.v1";
-export const DATA_VERSION = 2;
+export const DATA_VERSION = 3;
 
 export const emptyData = (): SillageData => ({
   version: DATA_VERSION,
@@ -22,8 +23,10 @@ export const emptyData = (): SillageData => ({
 
 /**
  * Versioned migrations: v1 → v2 adds the weather cache, per-item bottle info
- * slot and the onboarding flag. Future schema changes append a step here and
- * bump DATA_VERSION — never mutate historical migration logic.
+ * slot and the onboarding flag. v2 → v3 adds the per-item `edited` flag so
+ * catalogue updates can flow into owned bottles without overwriting the user's
+ * own edits. Future schema changes append a step here and bump DATA_VERSION —
+ * never mutate historical migration logic.
  */
 export function migrateData(raw: unknown): SillageData {
   const parsed = (raw ?? {}) as Partial<SillageData>;
@@ -46,7 +49,50 @@ export function migrateData(raw: unknown): SillageData {
     data.version = 2;
   }
 
+  if (data.version < 3) {
+    // Before v3 there was no way to tell edited items from untouched ones, so
+    // treat any snapshot that differs from the bundled catalogue as edited.
+    // This errs on the safe side: worst case an item simply never auto-updates.
+    const flag = <T extends { fragrance: Fragrance; edited?: boolean }>(item: T): T => {
+      if (item.edited !== undefined) return item;
+      const base = CATALOGUE_BY_ID.get(item.fragrance.id);
+      const differs = !base || item.fragrance.custom || !sameFragrance(base, item.fragrance);
+      return differs ? { ...item, edited: true } : item;
+    };
+    data = {
+      ...data,
+      collection: data.collection.map(flag),
+      wishlist: data.wishlist.map(flag),
+      version: 3,
+    };
+  }
+
   return data;
+}
+
+const sameFragrance = (a: Fragrance, b: Fragrance) => JSON.stringify(a) === JSON.stringify(b);
+
+/**
+ * Refresh owned/wishlisted bottles from the latest catalogue. Items the user
+ * edited, or custom ones they created, are never touched. Ratings, notes and
+ * bottle info live outside `fragrance`, so they are always preserved. Returns
+ * the same object when nothing changed so callers can skip saving.
+ */
+export function syncWithCatalogue(
+  data: SillageData,
+  byId: ReadonlyMap<string, Fragrance>,
+): SillageData {
+  let changed = false;
+  const refresh = <T extends { fragrance: Fragrance; edited?: boolean }>(item: T): T => {
+    if (item.edited || item.fragrance.custom) return item;
+    const latest = byId.get(item.fragrance.id);
+    if (!latest || sameFragrance(latest, item.fragrance)) return item;
+    changed = true;
+    return { ...item, fragrance: latest };
+  };
+  const collection = data.collection.map(refresh);
+  const wishlist = data.wishlist.map(refresh);
+  return changed ? { ...data, collection, wishlist } : data;
 }
 
 const isBrowser = () => typeof window !== "undefined";
@@ -100,9 +146,11 @@ export function updateFragrance(data: SillageData, fragrance: Fragrance): Sillag
   return {
     ...data,
     collection: data.collection.map((c) =>
-      c.fragrance.id === fragrance.id ? { ...c, fragrance } : c,
+      c.fragrance.id === fragrance.id ? { ...c, fragrance, edited: true } : c,
     ),
-    wishlist: data.wishlist.map((w) => (w.fragrance.id === fragrance.id ? { ...w, fragrance } : w)),
+    wishlist: data.wishlist.map((w) =>
+      w.fragrance.id === fragrance.id ? { ...w, fragrance, edited: true } : w,
+    ),
   };
 }
 
@@ -159,7 +207,11 @@ export function updateBottle(
 ): SillageData {
   return {
     ...data,
-    collection: data.collection.map((c) => (c.fragrance.id === id ? { ...c, bottle } : c)),
+    collection: data.collection.map((c) => {
+      if (c.fragrance.id !== id) return c;
+      const { bottle: _old, ...rest } = c;
+      return bottle ? { ...rest, bottle } : rest;
+    }),
   };
 }
 

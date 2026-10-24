@@ -3,7 +3,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { FragranceCard } from "@/components/FragranceCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CATALOGUE, CATALOGUE_BY_ID } from "@/data/fragrances";
+import { CATALOGUE } from "@/data/fragrances";
+import { useCatalogue } from "@/hooks/useCatalogue";
 import type { Fragrance } from "@/data/types";
 import { searchFragrances } from "@/lib/search";
 
@@ -28,25 +29,27 @@ export const Route = createFileRoute("/scan")({
 type ScanState = "idle" | "camera" | "scanning" | "result" | "unknown";
 
 /** Decode a scanned value into catalogue candidates, without pretending to know more than we do. */
-export function matchScannedValue(value: string): Fragrance[] {
+export function matchScannedValue(value: string, catalogue: Fragrance[] = CATALOGUE): Fragrance[] {
   const v = value.trim();
   if (!v) return [];
+  const byId = new Map(catalogue.map((f) => [f.id, f]));
   // Sillage-generated codes look like sillage:<fragrance-id> or a link containing the id.
   const idMatch = /sillage[/:]([a-z0-9-]+)/i.exec(v);
   if (idMatch) {
-    const f = CATALOGUE_BY_ID.get(idMatch[1]!.toLowerCase());
+    const f = byId.get(idMatch[1]!.toLowerCase());
     if (f) return [f];
   }
   // A bare catalogue id.
-  const direct = CATALOGUE_BY_ID.get(v.toLowerCase());
+  const direct = byId.get(v.toLowerCase());
   if (direct) return [direct];
   // A plain product code (EAN/UPC) is never guessable — no fake identification.
   if (/^\d{8,14}$/.test(v)) return [];
   // Otherwise treat it as a text query.
-  return searchFragrances(CATALOGUE, v).slice(0, 4);
+  return searchFragrances(catalogue, v).slice(0, 4);
 }
 
 function ScanPage() {
+  const { fragrances: catalogue } = useCatalogue();
   const [state, setState] = useState<ScanState>("idle");
   const [error, setError] = useState("");
   const [scanned, setScanned] = useState("");
@@ -68,7 +71,7 @@ function ScanPage() {
   const present = useCallback(
     (value: string) => {
       stop();
-      const m = matchScannedValue(value);
+      const m = matchScannedValue(value, catalogue);
       setScanned(value);
       setMatches(m);
       setState(m.length > 0 ? "result" : "unknown");

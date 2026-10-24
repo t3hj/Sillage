@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { AppShell } from "@/components/AppShell";
 import { SillageProvider } from "@/hooks/useSillage";
+import { CatalogueProvider } from "@/hooks/useCatalogue";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -103,9 +104,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.svg`, type: "image/svg+xml" },
+      { rel: "manifest", href: `${import.meta.env.BASE_URL}manifest.webmanifest` },
       { name: "theme-color", content: "#0e0d0b" },
     ],
   }),
@@ -142,13 +143,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SillageProvider>
-        <AppShell>
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </AppShell>
-        <Toaster richColors position="top-center" />
-      </SillageProvider>
+      <CatalogueProvider>
+        <SillageProvider>
+          <AppShell>
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </AppShell>
+          <Toaster richColors position="top-center" />
+        </SillageProvider>
+      </CatalogueProvider>
     </QueryClientProvider>
   );
 }

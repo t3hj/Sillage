@@ -63,6 +63,7 @@ export const CONCENTRATIONS = [
   "Eau de Parfum",
   "Parfum",
   "Extrait de Parfum",
+  "Elixir",
 ] as const;
 
 export const FAMILIES = [
@@ -78,6 +79,8 @@ export const FAMILIES = [
   "Fougère",
   "Leather",
   "Aquatic",
+  "Fruity",
+  "Musk",
 ] as const;
 
 export const STRENGTHS = ["Light", "Moderate", "Strong", "Very Strong"] as const;

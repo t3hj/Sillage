@@ -1,3 +1,4 @@
+import { DATA_SOURCES } from "@/data/sources";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -173,6 +174,32 @@ function SettingsPage() {
             />
           </div>
         </div>
+      </section>
+
+      <section className="space-y-2 rounded-2xl border border-border bg-card p-5">
+        <h2 className="text-lg font-semibold">Data sources</h2>
+        <p className="text-sm text-muted-foreground">
+          Most of the fragrance catalogue and the note descriptions come from the{" "}
+          <a
+            className="underline"
+            href={DATA_SOURCES["Scento"]!.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {DATA_SOURCES["Scento"]!.name}
+          </a>{" "}
+          by Scento, used under{" "}
+          <a
+            className="underline"
+            href={DATA_SOURCES["Scento"]!.licenseUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {DATA_SOURCES["Scento"]!.license}
+          </a>
+          . Occasions, weather and strength ratings on imported entries are estimates made by
+          Sillage.
+        </p>
       </section>
 
       <section className="space-y-3 rounded-2xl border border-destructive/40 bg-card p-5">

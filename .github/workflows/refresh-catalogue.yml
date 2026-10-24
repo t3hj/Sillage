@@ -1,0 +1,43 @@
+name: Refresh catalogue
+
+# Monthly: re-import the open Scento dataset and open a pull request if anything changed.
+# One-time repo setting needed: Settings → Actions → General → Workflow permissions →
+# "Allow GitHub Actions to create and approve pull requests".
+on:
+  schedule:
+    - cron: "17 4 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run catalogue:import
+      - run: npm test
+      - name: Open pull request if the data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- catalogue; then
+            echo "Catalogue unchanged."
+            exit 0
+          fi
+          branch="catalogue-refresh-$(date +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add catalogue
+          git commit -m "Refresh catalogue from Scento"
+          git push origin "$branch"
+          gh pr create --title "Refresh catalogue from Scento" \
+            --body "Automated monthly re-import. Tests pass; review the diff before merging."

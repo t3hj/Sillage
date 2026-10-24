@@ -8,7 +8,8 @@ import {
   type ReactNode,
 } from "react";
 import type { SillageData } from "@/data/types";
-import { emptyData, loadData, saveData } from "@/lib/storage";
+import { useCatalogue } from "@/hooks/useCatalogue";
+import { emptyData, loadData, saveData, syncWithCatalogue } from "@/lib/storage";
 
 interface Ctx {
   data: SillageData;
@@ -22,11 +23,22 @@ const SillageContext = createContext<Ctx | null>(null);
 export function SillageProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<SillageData>(emptyData);
   const [hydrated, setHydrated] = useState(false);
+  const { byId } = useCatalogue();
 
   useEffect(() => {
     setData(loadData());
     setHydrated(true);
   }, []);
+
+  // Pull catalogue improvements into owned/wishlisted bottles (never edited or custom ones).
+  useEffect(() => {
+    if (!hydrated) return;
+    setData((prev) => {
+      const next = syncWithCatalogue(prev, byId);
+      if (next !== prev) saveData(next);
+      return next;
+    });
+  }, [hydrated, byId]);
 
   const update = useCallback((fn: (d: SillageData) => SillageData) => {
     setData((prev) => {
