@@ -36,7 +36,7 @@ export function filterFragrances(data, {query='', notes=[], weather='', occasion
       && (category==='saved' ? saved.includes(f.id) : (categories[category] || categories.all)(f));
   });
 }
-export function rankFragrances(data, {weather='Cool', occasion='Work', note='', weatherTags=[], temperature=null, dayKey=''}={}) {
+export function rankFragrances(data, {weather='Cool', occasion='Work', note='', weatherTags=[], temperature=null, dayKey='',personal={}}={}) {
   const quiet = ['Work','University','Gym'].includes(occasion);
   const hot = weather==='Hot' || (Number.isFinite(temperature)&&temperature>=25);
   const dailyOrder=id=>{let hash=0;for(const c of dayKey+id)hash=(hash*31+c.charCodeAt(0))>>>0;return hash;};
@@ -61,8 +61,17 @@ export function rankFragrances(data, {weather='Cool', occasion='Work', note='', 
       if(occasion==='Gym'&&strong){score-=6;caution='Too strong for a typical gym setting; a lighter option is preferable.';}
     }
     if(hot&&strong){score-=f.sillage==='Very Strong'?10:6;caution='A rich, strong trail may feel heavy in this heat.';}
+    const preference=personal[f.id],personalReasons=[];
+    if(preference){
+      if(preference.wornToday){score-=3;personalReasons.push('Already worn today · giving another bottle a turn');}
+      else if(!caution&&weatherMatch&&occasionMatch){
+        if(preference.daysSince===null){score+=.75;personalReasons.push('Not worn yet');}
+        else if(preference.daysSince>=14){score+=1.25;personalReasons.push(`Not worn for ${preference.daysSince} days`);}
+      }
+      if(!caution&&weatherMatch&&occasionMatch&&preference.rating){score+=(preference.rating-3)*.75;personalReasons.push(`Your rating: ${preference.rating} / 5`);}
+    }
     if(!reasons.length) reasons.push('An alternative to explore beyond this setting');
     const label = caution ? 'Use with care' : weatherMatch && occasionMatch && (!note || noteMatch) ? 'Strong match' : (weatherMatch && occasionMatch ? 'Good match' : 'Alternative');
-    return {f, score, reasons:reasons.slice(0,3), caution, label, weatherMatch, occasionMatch, noteMatch:!!noteMatch};
+    return {f, score, reasons:reasons.slice(0,3), personalReasons, caution, label, weatherMatch, occasionMatch, noteMatch:!!noteMatch};
   }).sort((a,b) => b.score - a.score || (dayKey?dailyOrder(a.f.id)-dailyOrder(b.f.id):0) || a.f.name.localeCompare(b.f.name));
 }
