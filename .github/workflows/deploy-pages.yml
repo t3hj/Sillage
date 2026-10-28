@@ -21,9 +21,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
+          node-version: 24
+      - run: node --test explorer/tests/*.test.mjs
+      - name: Restore verified bottle photos
+        run: python3 explorer/scripts/fetch-photos.py
+        continue-on-error: true
       - run: npm run build:pages
       - uses: actions/upload-pages-artifact@v3
         with:

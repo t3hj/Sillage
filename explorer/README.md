@@ -1,8 +1,15 @@
 # Sillage Explorer
 
 The standalone fragrance explorer lives alongside the original React app. It has
-its own source, tests and optional account-state server contract; the existing
-GitHub Pages app remains independent.
+its own source, tests and optional account-state server contract. GitHub Pages
+serves this explorer at https://t3hj.github.io/Sillage/ on every push to main.
+The original React source remains available for separate development.
+
+The Pages workflow runs the explorer tests, restores checksum-verified bottle
+photos where available, and packages only `explorer/dist` into `dist/client`.
+Run `npm run build:pages` from the repository root to create that static output.
+The public collection starts empty; add bottles or import a backup on your device.
+Pages has no account backend, so its collection and journal remain device-local.
 
 ## Run locally
 
