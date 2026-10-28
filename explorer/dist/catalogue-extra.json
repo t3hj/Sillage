@@ -1,0 +1,2694 @@
+[
+  {
+    "id": "armaf-club-de-nuit-intense-man",
+    "name": "Club de Nuit Intense Man",
+    "brand": "Armaf",
+    "description": "A fresh fruity opening of apple, bergamot and blackcurrant leads to rose, birch and jasmine, with a smoky-musky base of ambergris and patchouli.",
+    "concentration": "Eau de Parfum",
+    "family": "Chypre",
+    "subfamily": "Fruity woods",
+    "topNotes": [
+      "Apple",
+      "Bergamot",
+      "Blackcurrant",
+      "Pineapple",
+      "Lemon"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Birch",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Ambergris",
+      "Patchouli",
+      "Vanilla"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "Date Night",
+      "Night Out",
+      "Outdoor"
+    ],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Warm"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Playful",
+      "Elegant",
+      "Citrus",
+      "Dark"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/club-de-nuit-intense-man-armaf",
+    "popularity": 77,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "azzaro-the-most-wanted-parfum",
+    "name": "The Most Wanted Parfum",
+    "brand": "Azzaro",
+    "description": "Ginger gives a spiced start over a woody heart. Vanilla lends a sweet, warm finish.",
+    "concentration": "Parfum",
+    "family": "Amber",
+    "subfamily": "Spicy vanilla",
+    "topNotes": [
+      "Ginger"
+    ],
+    "middleNotes": [
+      "Wood"
+    ],
+    "baseNotes": [
+      "Vanilla"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Night Out",
+      "Home"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Woody",
+      "Sexy",
+      "Spicy",
+      "Sweet"
+    ],
+    "longevity": "Very Strong",
+    "sillage": "Strong",
+    "intensity": "Very Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/the-most-wanted-parfum-azzaro",
+    "popularity": 727,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "azzaro-the-most-wanted-eau-de-parfum-intense",
+    "name": "The Most Wanted Eau de Parfum Intense",
+    "brand": "Azzaro",
+    "description": "Cardamom adds a bright spice at the start, then caramel turns the heart sweet and glossy. Amberwood closes it warm and dry, balancing the sugar with a woody glow.",
+    "concentration": "Eau de Parfum",
+    "family": "Gourmand",
+    "subfamily": "Oriental",
+    "topNotes": [
+      "Cardamom"
+    ],
+    "middleNotes": [
+      "Caramel"
+    ],
+    "baseNotes": [
+      "Amberwood"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Evening",
+      "Night"
+    ],
+    "vibes": [
+      "Sexy",
+      "Sweet",
+      "Spicy"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/azzaro-the-most-wanted-eau-de-parfum-intense",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository; curated wearing estimates"
+  },
+  {
+    "id": "tom-ford-noir-extreme",
+    "name": "Noir Extreme",
+    "brand": "Tom Ford",
+    "description": "Mandarin, saffron and cardamom open spiced and glowing. Orange blossom and jasmine soften the heart, while vanilla, sandalwood and amber give a rich, creamy base.",
+    "concentration": "Eau de Parfum",
+    "family": "Floral",
+    "subfamily": "Oriental",
+    "topNotes": [
+      "Mandarin",
+      "Neroli",
+      "Saffron",
+      "Cardamom",
+      "Nutmeg"
+    ],
+    "middleNotes": [
+      "Kulfi",
+      "Orange Blossom",
+      "Jasmine",
+      "Rose",
+      "Mastic"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Sandalwood",
+      "Amber",
+      "Wood"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Casual",
+      "Date",
+      "Evening",
+      "Date Night",
+      "Night Out",
+      "Home"
+    ],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Elegant",
+      "Sexy",
+      "Spicy",
+      "Sweet"
+    ],
+    "longevity": "Strong",
+    "sillage": "Moderate",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/noir-extreme-tom-ford",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "montblanc-legend-spirit",
+    "name": "Legend Spirit",
+    "brand": "Montblanc",
+    "description": "A fresh, clean men's scent: grapefruit, bergamot and pink pepper over watery lavender and cardamom, resting on white musk, pale woods, cashmere and oakmoss.",
+    "concentration": "Eau de Toilette",
+    "family": "Aquatic",
+    "subfamily": "Fresh woody",
+    "topNotes": [
+      "Grapefruit",
+      "Bergamot",
+      "Pink Pepper"
+    ],
+    "middleNotes": [
+      "Aquatic Accord",
+      "Lavender",
+      "Cardamom"
+    ],
+    "baseNotes": [
+      "Musk",
+      "White Woods",
+      "Cashmere Wood",
+      "Oakmoss"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Gym",
+      "Outdoor"
+    ],
+    "weather": [
+      "Hot",
+      "Warm",
+      "Mild",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Spicy",
+      "Citrus",
+      "Woody"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/montblanc-legend-spirit",
+    "popularity": 287,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "versace-dylan-blue-pour-homme",
+    "name": "Dylan Blue Pour Homme",
+    "brand": "Versace",
+    "description": "Aquatic accord, fig, bergamot and grapefruit open fresh. Violet leaf, patchouli, papyrus and pepper follow, and musk, tonka bean, saffron and frankincense add warm depth.",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Oriental",
+    "topNotes": [
+      "Aquatic Accord",
+      "Fig",
+      "Bergamot",
+      "Grapefruit"
+    ],
+    "middleNotes": [
+      "Violet Leaf",
+      "Patchouli",
+      "Papyrus",
+      "Pepper",
+      "Ambroxan"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Tonka Bean",
+      "Saffron",
+      "Frankincense"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Sexy",
+      "Fresh",
+      "Spicy",
+      "Citrus"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/versace-dylan-blue-pour-homme",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository; curated wearing estimates"
+  },
+  {
+    "id": "versace-eros-eau-de-parfum",
+    "name": "Eros Eau de Parfum",
+    "brand": "Versace",
+    "description": "Lemon, mandarin, mint and apple open cool and green. Geranium and clary sage add a herbal heart, and cedarwood, vetiver, patchouli, sandalwood and vanilla make a woody, sweet base.",
+    "concentration": "Eau de Parfum",
+    "family": "Aromatic",
+    "topNotes": [
+      "Lemon",
+      "Mandarin",
+      "Mint",
+      "Apple"
+    ],
+    "middleNotes": [
+      "Geranium",
+      "Clary Sage",
+      "Ambermax"
+    ],
+    "baseNotes": [
+      "Cedarwood",
+      "Vetiver",
+      "Patchouli",
+      "Sandalwood",
+      "Vanilla"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Casual"
+    ],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Woody",
+      "Fresh",
+      "Citrus"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/eros-eau-de-parfum-versace",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "subfamily": "Sweet woody",
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "dior-sauvage-elixir",
+    "name": "Sauvage Elixir",
+    "brand": "Dior",
+    "description": "A dense blend of spice and lavender resting on woody depth. Herbal, warm and concentrated, with a fresh edge that lingers around the spice.",
+    "concentration": "Elixir",
+    "family": "Aromatic",
+    "subfamily": "Spicy lavender",
+    "topNotes": [],
+    "middleNotes": [
+      "Spice",
+      "Lavender",
+      "Wood"
+    ],
+    "baseNotes": [],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Formal",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Spicy",
+      "Woody"
+    ],
+    "longevity": "Very Strong",
+    "sillage": "Very Strong",
+    "intensity": "Very Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/sauvage-elixir-by-dior",
+    "popularity": 1113,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "armani-emporio-armani-stronger-with-you-intensely",
+    "name": "Emporio Armani Stronger With You Intensely",
+    "brand": "Giorgio Armani",
+    "description": "Pink pepper and juniper open sharp, lavender, cinnamon and sage add herbal spice, and vanilla, tonka bean and chestnut make a sweet, nutty base.",
+    "concentration": "Eau de Parfum",
+    "family": "Gourmand",
+    "subfamily": "Warm spicy",
+    "topNotes": [],
+    "middleNotes": [
+      "Vanilla",
+      "Spices",
+      "Woody Notes"
+    ],
+    "baseNotes": [],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home",
+      "Night Out"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Sexy",
+      "Sweet",
+      "Spicy"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.armanibeauty.co.uk/perfume/mens-perfumes/stronger-with-you/emporio-armani-stronger-with-you-intensely/ww-00180-arm.html?dwvar_ww-00180-arm_size=100ml",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Armani Beauty key notes; curated wearing estimates",
+    "notesAreFlat": true
+  },
+  {
+    "id": "lattafa-khamrah",
+    "name": "Khamrah",
+    "brand": "Lattafa",
+    "year": 2022,
+    "description": "A dessert-like spiced gourmand: cinnamon, nutmeg and bergamot lead into dates, praline and tuberose, then a long vanilla, tonka, myrrh and benzoin base.",
+    "family": "Gourmand",
+    "subfamily": "Spiced amber",
+    "topNotes": [
+      "Cinnamon",
+      "Nutmeg",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Dates",
+      "Praline",
+      "Tuberose",
+      "Mahonial"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Tonka Bean",
+      "Amberwood",
+      "Myrrh",
+      "Benzoin",
+      "Akigalawood"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Sexy",
+      "Sweet",
+      "Woody",
+      "Spicy"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Strong",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://lattafa.com/product/khamrah/",
+    "popularity": 74,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "concentration": "Eau de Parfum",
+    "profileOrigin": "Scento repository notes; curated wearing estimates"
+  },
+  {
+    "id": "burberry-hero-eau-de-parfum",
+    "name": "Hero Eau de Parfum",
+    "brand": "Burberry",
+    "description": "Resinous and woody, with a cool pine needle top that gives way to the balm of benzoin. Cedarwood rounds out the base, leaving a green, warm and quietly smoky finish.",
+    "concentration": "Eau de Parfum",
+    "family": "Amber",
+    "subfamily": "Aromatic",
+    "topNotes": [
+      "Pine Needle"
+    ],
+    "middleNotes": [
+      "Benzoin"
+    ],
+    "baseNotes": [
+      "Cedarwood"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal"
+    ],
+    "weather": [
+      "Cool",
+      "Cold",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Dark",
+      "Fresh",
+      "Woody",
+      "Sexy"
+    ],
+    "longevity": "Strong",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/burberry-hero-eau-de-parfum",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository; curated wearing estimates"
+  },
+  {
+    "id": "burberry-hero-eau-de-toilette",
+    "name": "Hero Eau de Toilette",
+    "brand": "Burberry",
+    "description": "Bergamot is bright and clean over a heart of cedarwood. Pepper and juniper in the base add a dry, herbal sharpness, keeping the whole scent fresh and woody.",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Citrus",
+    "topNotes": [
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Cedarwood"
+    ],
+    "baseNotes": [
+      "Pepper",
+      "Juniper"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "University",
+      "Gym",
+      "Outdoor",
+      "Evening"
+    ],
+    "weather": [
+      "Warm",
+      "Hot",
+      "Mild",
+      "Cool",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Woody",
+      "Fresh",
+      "Citrus"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/burberry-hero-eau-de-toilette",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "burberry-hero-parfum",
+    "name": "Hero Parfum",
+    "brand": "Burberry",
+    "description": "Cypress opens green and cool, with amyris adding a smooth, dry wood in the heart. Cedarwood closes it, a fresh, quiet woody scent with an outdoor feel.",
+    "concentration": "Parfum",
+    "family": "Woody",
+    "topNotes": [
+      "Cypress"
+    ],
+    "middleNotes": [
+      "Amyris"
+    ],
+    "baseNotes": [
+      "Cedarwood"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "University",
+      "Outdoor",
+      "Evening",
+      "Formal"
+    ],
+    "weather": [
+      "Warm",
+      "Hot",
+      "Mild",
+      "Cool",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Woody",
+      "Fresh"
+    ],
+    "longevity": "Very Strong",
+    "sillage": "Strong",
+    "intensity": "Very Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/burberry-hero-parfum",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "subfamily": "Not supplied",
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "armani-armani-code",
+    "name": "Armani Code",
+    "brand": "Giorgio Armani",
+    "description": "Green mandarin opens into warm nutmeg and a smooth tonka base, bringing freshness to an ambery fougère.",
+    "concentration": "Eau de Parfum",
+    "family": "Amber",
+    "topNotes": [
+      "Green Mandarin"
+    ],
+    "middleNotes": [
+      "Nutmeg"
+    ],
+    "baseNotes": [
+      "Tonka Bean"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Work",
+      "Date Night",
+      "Evening",
+      "Formal"
+    ],
+    "weather": [
+      "Cool",
+      "Mild"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day"
+    ],
+    "vibes": [
+      "Citrus",
+      "Fresh"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Armani Beauty",
+    "sourceUrl": "https://www.armanibeauty.co.uk/perfume/fragrance-festival/armani-code-eau-de-parfum/3614273636445.html",
+    "popularity": 89,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "subfamily": "Spiced tonka woods",
+    "profileOrigin": "Armani Beauty current EDP profile; wearing suggestions estimated",
+    "notesAreFlat": false
+  },
+  {
+    "id": "armani-armani-code-eau-de-toilette",
+    "name": "Armani Code Eau de Toilette",
+    "brand": "Giorgio Armani",
+    "description": "A clean lavandin heart, brightened by mandarin. Tonka bean and cedarwood add a sweet, woody softness at the base.",
+    "concentration": "Eau de Toilette",
+    "family": "Aromatic",
+    "subfamily": "Citrus",
+    "topNotes": [
+      "Mandarin"
+    ],
+    "middleNotes": [
+      "Lavandin"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Cedarwood"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "University",
+      "Gym",
+      "Outdoor",
+      "Date",
+      "Evening",
+      "Date Night",
+      "Home"
+    ],
+    "weather": [
+      "Warm",
+      "Hot",
+      "Mild",
+      "Cool",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Citrus",
+      "Sweet"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/armani-armani-code-eau-de-toilette",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "armani-armani-code-parfum",
+    "name": "Armani Code Parfum",
+    "brand": "Giorgio Armani",
+    "description": "Rosemary and lavender round off mandarin and bergamot, then settle on a deep, sweet base of torrefied tonka bean and vanilla.",
+    "concentration": "Parfum",
+    "family": "Aromatic",
+    "subfamily": "Citrus",
+    "topNotes": [
+      "Mandarin",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Rosemary",
+      "Lavender"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Vanilla"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "University",
+      "Outdoor",
+      "Date",
+      "Evening",
+      "Date Night",
+      "Formal",
+      "Home"
+    ],
+    "weather": [
+      "Warm",
+      "Hot",
+      "Mild",
+      "Cool",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Citrus",
+      "Sweet"
+    ],
+    "longevity": "Very Strong",
+    "sillage": "Strong",
+    "intensity": "Very Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/armani-code-parfum-giorgio-armani",
+    "popularity": 518,
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "prada-luna-rossa-ocean",
+    "name": "Luna Rossa Ocean",
+    "brand": "Prada",
+    "description": "Grapefruit lifts a hushed blend of incense and vanilla bean, citrusy at first and resinous underneath.",
+    "concentration": "Eau de Parfum",
+    "family": "Citrus",
+    "subfamily": "Amber",
+    "topNotes": [],
+    "middleNotes": [
+      "Grapefruit",
+      "Incense",
+      "Vanilla"
+    ],
+    "baseNotes": [],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "University",
+      "Outdoor",
+      "Date",
+      "Evening",
+      "Date Night",
+      "Night Out",
+      "Formal",
+      "Home"
+    ],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Sexy",
+      "Citrus",
+      "Sweet",
+      "Dark"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/luna-rossa-ocean-prada",
+    "popularity": 145,
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "valentino-uomo-born-in-roma-intense",
+    "name": "Uomo Born in Roma Intense",
+    "brand": "Valentino",
+    "description": "Vanilla is sharpened by lavandin and anchored in earthy vetiver, sweet yet herbal and dry.",
+    "concentration": "Eau de Parfum",
+    "family": "Aromatic",
+    "subfamily": "Woody",
+    "topNotes": [],
+    "middleNotes": [
+      "Vanilla",
+      "Lavandin",
+      "Vetiver"
+    ],
+    "baseNotes": [],
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Sweet",
+      "Woody"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/valentino-uomo-born-in-roma-intense-valentino",
+    "popularity": 105,
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository; curated wearing estimates",
+    "notesAreFlat": true
+  },
+  {
+    "id": "valentino-donna-born-in-roma-intense",
+    "name": "Donna Born in Roma Intense",
+    "brand": "Valentino",
+    "description": "Jasmine in a sweet cloud of vanilla, held warm by resinous benzoin. A soft floral with a creamy, amber-like finish.",
+    "concentration": "Eau de Parfum",
+    "family": "Floral",
+    "subfamily": "Amber",
+    "topNotes": [
+      "Vanilla"
+    ],
+    "middleNotes": [
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Benzoin"
+    ],
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "occasions": [
+      "Date",
+      "Evening",
+      "Date Night",
+      "Night Out",
+      "Formal",
+      "Home"
+    ],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "timeOfDay": [
+      "Evening",
+      "Night"
+    ],
+    "vibes": [
+      "Elegant",
+      "Sexy",
+      "Sweet",
+      "Dark"
+    ],
+    "longevity": "Strong",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfumes/valentino-donna-born-in-roma-intense-valentino",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "givenchy-gentleman-eau-de-toilette",
+    "name": "Gentleman Eau de Toilette",
+    "brand": "Givenchy",
+    "description": "Pear and violet leaf open green and fruity, iris and lavender form a powdery, herbal heart, and leather and patchouli close dry and earthy.",
+    "concentration": "Eau de Toilette",
+    "family": "Aromatic",
+    "subfamily": "Floral",
+    "topNotes": [
+      "Pear",
+      "Violet Leaf"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Lavender"
+    ],
+    "baseNotes": [
+      "Leather",
+      "Patchouli"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "University",
+      "Gym",
+      "Outdoor",
+      "Date",
+      "Evening",
+      "Formal",
+      "Home"
+    ],
+    "weather": [
+      "Warm",
+      "Hot",
+      "Mild",
+      "Cool",
+      "Rainy"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Elegant",
+      "Playful"
+    ],
+    "longevity": "Moderate",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Scento",
+    "sourceUrl": "https://www.scento.com/perfume-database/perfumes/givenchy-gentleman-eau-de-toilette",
+    "estimated": [
+      "occasions",
+      "weather",
+      "longevity",
+      "sillage",
+      "intensity"
+    ],
+    "profileOrigin": "Scento dataset in the Sillage repository"
+  },
+  {
+    "id": "afnan-collectors-edp",
+    "name": "Supremacy Collector’s Edition",
+    "brand": "Afnan",
+    "concentration": "Eau de Parfum",
+    "family": "Chypre",
+    "subfamily": "Chypre",
+    "description": "A fruit-led profile with white florals, birch and a musky ambergris base.",
+    "topNotes": [],
+    "middleNotes": [
+      "Pineapple",
+      "Bergamot",
+      "Apple",
+      "Orange Blossom",
+      "Birch",
+      "Amber",
+      "Oakmoss",
+      "Musk",
+      "Ambergris"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Warm"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "Date Night"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://uk.afnan.com/products/supremacy-collectors-edition",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "lattafa-oud-for-glory-edp",
+    "name": "Bade’e Al Oud — Oud for Glory",
+    "brand": "Lattafa",
+    "concentration": "Eau de Parfum",
+    "family": "Woody",
+    "subfamily": "Woody",
+    "description": "A dark oud and spice profile with patchouli and musk.",
+    "topNotes": [],
+    "middleNotes": [
+      "Saffron",
+      "Nutmeg",
+      "Lavender",
+      "Oud",
+      "Patchouli",
+      "Musk"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "occasions": [
+      "Evening",
+      "Formal",
+      "Night Out"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://lattafa.com/product/badee-al-oud-oud-for-glory/",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "french-avenue-liquid-brun-edp",
+    "name": "Liquid Brun",
+    "brand": "French Avenue",
+    "concentration": "Eau de Parfum",
+    "family": "Gourmand",
+    "subfamily": "Gourmand",
+    "description": "Amber and vanilla sweetness built around orange blossom and praline.",
+    "topNotes": [],
+    "middleNotes": [
+      "Orange Blossom",
+      "Vanilla",
+      "Praline"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://frenchavenue.com/products/liquid-brun",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "khadlaj-island-extrait",
+    "name": "Island",
+    "brand": "Khadlaj",
+    "concentration": "Extrait de Parfum",
+    "family": "Gourmand",
+    "subfamily": "Gourmand",
+    "description": "A tropical coconut and pineapple profile with ginger and warm woods.",
+    "topNotes": [],
+    "middleNotes": [
+      "Coconut",
+      "Ginger",
+      "Pineapple",
+      "Sandalwood",
+      "Amber",
+      "Tonka Bean"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Warm",
+      "Mild"
+    ],
+    "occasions": [
+      "Casual",
+      "Outdoor",
+      "Date Night"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://belvish.com/products/khadlaj-island-extrait-de-parfum",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "ysl-myslf-edp",
+    "name": "MYSLF",
+    "brand": "Yves Saint Laurent",
+    "concentration": "Eau de Parfum",
+    "family": "Woody",
+    "subfamily": "Woody",
+    "description": "Bergamot and orange blossom meet a textured woody base.",
+    "topNotes": [],
+    "middleNotes": [
+      "Bergamot",
+      "Orange Blossom",
+      "Patchouli",
+      "Ambrofix"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Mild",
+      "Cool",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.yslbeauty.co.uk/fragrances/fragrances-for-him/myslf/myslf-eau-de-parfum/3614273852739.html",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "armani-acqua-di-gio-parfum",
+    "name": "Acqua di Gio Parfum",
+    "brand": "Giorgio Armani",
+    "description": "Sea notes and bergamot open crisp, lavender and rosemary add a herbal heart, and frankincense with patchouli leave a dry, earthy base.",
+    "concentration": "Parfum",
+    "family": "Aquatic",
+    "topNotes": [
+      "Bergamot",
+      "Ginger",
+      "Marine Notes"
+    ],
+    "middleNotes": [
+      "Geranium",
+      "Rosemary",
+      "Clary Sage"
+    ],
+    "baseNotes": [
+      "Woody Notes",
+      "Patchouli",
+      "Incense"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "occasions": [
+      "Work",
+      "Casual",
+      "Formal",
+      "Date Night",
+      "Outdoor"
+    ],
+    "weather": [
+      "Warm",
+      "Mild",
+      "Cool"
+    ],
+    "timeOfDay": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "vibes": [
+      "Fresh",
+      "Citrus",
+      "Woody"
+    ],
+    "longevity": "Very Strong",
+    "sillage": "Moderate",
+    "intensity": "Very Strong",
+    "source": "Scento",
+    "sourceUrl": "https://www.armanibeauty.co.uk/perfume/fragrance-festival/acqua-di-gio-parfum/3614273954181.html",
+    "estimated": [
+      "intensity",
+      "longevity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "profileOrigin": "Armani Beauty note pyramid; curated wearing estimates",
+    "subfamily": "Marine woody"
+  },
+  {
+    "id": "joop-go-edt",
+    "name": "Go",
+    "brand": "JOOP!",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Woody",
+    "description": "An aromatic woody profile with bitter orange, rhubarb, cypress and musk.",
+    "topNotes": [],
+    "middleNotes": [
+      "Rhubarb",
+      "Pimento",
+      "Bitter Orange",
+      "Cypress",
+      "Violet",
+      "Geranium",
+      "Musk",
+      "Balsam Fir"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Warm",
+      "Mild",
+      "Cool"
+    ],
+    "occasions": [
+      "Casual",
+      "University",
+      "Outdoor"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.boots.com/joop-go-eau-de-toilette-100ml-10064587",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "joop-homme-edt",
+    "name": "Homme",
+    "brand": "JOOP!",
+    "concentration": "Eau de Toilette",
+    "family": "Amber",
+    "subfamily": "Amber",
+    "description": "A sweet floral and amber profile with vanilla and woody notes.",
+    "topNotes": [],
+    "middleNotes": [
+      "Cinnamon",
+      "Orange Blossom",
+      "Jasmine",
+      "Vanilla",
+      "Sandalwood",
+      "Vetiver",
+      "Patchouli"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "occasions": [
+      "Evening",
+      "Night Out",
+      "Date Night"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.boots.com/joop-homme-eau-de-toilette-spray-125ml-10012067",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "beckham-instinct-edp",
+    "name": "Instinct",
+    "brand": "David Beckham",
+    "concentration": "Eau de Parfum",
+    "family": "Fougère",
+    "subfamily": "Fougère",
+    "description": "A citrus fougère. Bergamot is the key opening note supplied by the brand; the remaining note pyramid is left unspecified.",
+    "topNotes": [],
+    "middleNotes": [
+      "Bergamot"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Mild",
+      "Warm",
+      "Cool"
+    ],
+    "occasions": [
+      "Casual",
+      "Work",
+      "University"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.beckham-fragrances.com/en/product/instinct",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "allsaints-shoreditch-leather-edp",
+    "name": "Shoreditch Leather",
+    "brand": "AllSaints",
+    "concentration": "Eau de Parfum",
+    "family": "Leather",
+    "subfamily": "Leather",
+    "description": "Leather and woods with a spicy floral opening and a warm amber dry-down.",
+    "topNotes": [],
+    "middleNotes": [
+      "Rose",
+      "Elemi",
+      "Saffron",
+      "Leather",
+      "Jasmine",
+      "Sandalwood",
+      "Vetiver",
+      "Patchouli",
+      "Amber"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cool",
+      "Cold",
+      "Mild"
+    ],
+    "occasions": [
+      "Evening",
+      "Date Night",
+      "Formal"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.boots.com/allsaints-shoreditch-leather-eau-de-parfum-100ml-10352970",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "rabanne-million-gold-intense",
+    "name": "Million Gold",
+    "brand": "Rabanne",
+    "concentration": "Eau de Parfum Intense",
+    "family": "Woody",
+    "subfamily": "Woody",
+    "description": "Mandarin brightness leads into cedar and sandalwood.",
+    "topNotes": [],
+    "middleNotes": [
+      "Mandarin",
+      "Cedar",
+      "Sandalwood"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Cold"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Night Out"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.selfridges.com/GB/en/product/rabanne-million-gold-eau-de-parfum-intense-100ml_R04375637/",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "penhaligons-sports-car-club-edp",
+    "name": "Sports Car Club",
+    "brand": "Penhaligon’s",
+    "concentration": "Eau de Parfum",
+    "family": "Aromatic",
+    "subfamily": "Aromatic",
+    "description": "Eucalyptus, cypress and patchouli with a touch of pink pepper.",
+    "topNotes": [],
+    "middleNotes": [
+      "Pink Pepper",
+      "Cypress",
+      "Eucalyptus",
+      "Patchouli"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Mild",
+      "Warm",
+      "Cool"
+    ],
+    "occasions": [
+      "Casual",
+      "Outdoor",
+      "Work"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.penhaligons.com/uk/en/p/sports-car-club-eau-de-parfum-100ml--000000000065210830",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "boss-bottled-absolu-intense",
+    "name": "Bottled Absolu",
+    "brand": "Hugo Boss",
+    "concentration": "Parfum Intense",
+    "family": "Woody",
+    "subfamily": "Woody",
+    "description": "Roasted leather, patchouli and myrrh meet cedar, amber and davana.",
+    "topNotes": [],
+    "middleNotes": [
+      "Leather",
+      "Patchouli",
+      "Myrrh",
+      "Cedar",
+      "Amber",
+      "Davana"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "occasions": [
+      "Evening",
+      "Formal",
+      "Date Night"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.hugoboss.com/boss-bottled-absolu-parfum-intense-100ml/hbeu58139181_999.html",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "prada-lhomme-edt",
+    "name": "L’Homme",
+    "brand": "Prada",
+    "concentration": "Eau de Toilette",
+    "family": "Floral",
+    "subfamily": "Floral",
+    "description": "A floral and woody profile built around iris and neroli.",
+    "topNotes": [],
+    "middleNotes": [
+      "Neroli",
+      "Black Pepper",
+      "Cardamom",
+      "Iris",
+      "Violet",
+      "Geranium",
+      "Amber",
+      "Cedar",
+      "Patchouli",
+      "Sandalwood"
+    ],
+    "baseNotes": [],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Formal"
+    ],
+    "seasons": [],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Brand / product listing",
+    "sourceUrl": "https://www.justmylook.com/products/prada-lhomme-eau-de-toilette-100ml",
+    "profileOrigin": "Sourced key notes; wearing suggestions estimated; curated wearing estimates",
+    "estimated": [
+      "intensity",
+      "occasions",
+      "sillage",
+      "weather"
+    ],
+    "notesAreFlat": true
+  },
+  {
+    "id": "cerruti-1881-pour-homme-edt",
+    "name": "1881 Pour Homme",
+    "brand": "Cerruti",
+    "concentration": "Eau de Toilette",
+    "family": "Aromatic",
+    "subfamily": "Herbal citrus woods",
+    "description": "Fresh herbs and citrus unfold into a floral heart and a dry woody, musky base. An understated aromatic style.",
+    "topNotes": [
+      "Bergamot",
+      "Lemon",
+      "Clove",
+      "Basil",
+      "Tarragon",
+      "Cypress",
+      "Rosemary",
+      "Lavender",
+      "Juniper Berry"
+    ],
+    "middleNotes": [
+      "Ylang-Ylang",
+      "Rose",
+      "Blackcurrant"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Woody Musk",
+      "Fir Balsam",
+      "Amber"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Rainy"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Formal",
+      "Outdoor"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "vibes": [],
+    "timeOfDay": [],
+    "longevity": "Not rated",
+    "sillage": "Not rated",
+    "intensity": "Not rated",
+    "source": "Cerruti 1881",
+    "sourceUrl": "https://www.cerruti.com/en-belux/pages/pour-homme",
+    "profileOrigin": "Cerruti official Pour Homme profile; wearing suggestions estimated",
+    "estimated": [
+      "weather",
+      "occasions"
+    ],
+    "notesAreFlat": false
+  },
+  {
+    "id": "prada-luna-rossa-ocean-edt",
+    "name": "Luna Rossa Ocean",
+    "brand": "Prada",
+    "concentration": "Eau de Toilette",
+    "family": "Aromatic",
+    "subfamily": "Fresh iris and woods",
+    "description": "Bright citrus and aromatic herbs soften into powdery iris and a smooth suede accord.",
+    "topNotes": [],
+    "middleNotes": [
+      "Bergamot",
+      "Lavender",
+      "Sage",
+      "Iris",
+      "Suede",
+      "Saffron"
+    ],
+    "baseNotes": [],
+    "notesAreFlat": true,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Prada",
+    "sourceUrl": "https://www.prada.com/ww/en/pradasphere/fragrances/prada-luna-rossa/prada-luna-rossa-ocean.html",
+    "profileOrigin": "Prada fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "ralph-lauren-ralphs-club-edp",
+    "name": "Ralph’s Club",
+    "brand": "Ralph Lauren",
+    "concentration": "Eau de Parfum",
+    "family": "Woody",
+    "subfamily": "Fresh aromatic woods",
+    "description": "A clean aromatic opening meets dry cedar and vetiver: polished woods with an easy evening character.",
+    "topNotes": [],
+    "middleNotes": [
+      "Lavandin",
+      "Clary Sage",
+      "Cedarwood",
+      "Vetiver"
+    ],
+    "baseNotes": [],
+    "notesAreFlat": true,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Evening",
+      "Formal"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Ralph Lauren",
+    "sourceUrl": "https://www.ralphlaurenfragrances.com/en_US/men-ralphs-club/ralphs-club-eau-de-parfum/RLFE007.html",
+    "profileOrigin": "Ralph Lauren fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "hermes-terre-dhermes-parfum",
+    "name": "Terre d’Hermès",
+    "brand": "Hermès",
+    "concentration": "Parfum",
+    "family": "Woody",
+    "subfamily": "Warm citrus woods",
+    "description": "Grapefruit brings brightness to dense cedar and aromatic shiso in a warm, composed woody fragrance.",
+    "topNotes": [],
+    "middleNotes": [
+      "Grapefruit",
+      "Cedar",
+      "Shiso"
+    ],
+    "baseNotes": [],
+    "notesAreFlat": true,
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Rainy"
+    ],
+    "occasions": [
+      "Work",
+      "Formal",
+      "Evening",
+      "Date Night"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Hermès",
+    "sourceUrl": "https://www.hermes.com/uk/en/product/terre-d-hermes-parfum-V107757V0/",
+    "profileOrigin": "Hermès fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "ysl-la-nuit-de-lhomme-edt",
+    "name": "La Nuit de L’Homme",
+    "brand": "Yves Saint Laurent",
+    "concentration": "Eau de Toilette",
+    "family": "Amber",
+    "subfamily": "Soft cardamom woods",
+    "description": "Fresh cardamom settles into smooth cedar and warm coumarin: intimate, softly spiced evening wear.",
+    "topNotes": [],
+    "middleNotes": [
+      "Cardamom",
+      "Cedar",
+      "Coumarin"
+    ],
+    "baseNotes": [],
+    "notesAreFlat": true,
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Cold"
+    ],
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "YSL Beauty",
+    "sourceUrl": "https://www.yslbeauty.co.uk/fragrances/fragrances-for-him/la-nuit-de-l-homme/la-nuit-de-l-homme-eau-de-toilette-spray/426YSL.html",
+    "profileOrigin": "YSL Beauty fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "calvin-klein-man-edt",
+    "name": "Man",
+    "brand": "Calvin Klein",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Aromatic spicy woods",
+    "description": "Herbal citrus and violet leaf lead into dry spice, incense and a woody base.",
+    "topNotes": [
+      "Rosemary",
+      "Mandarin",
+      "Violet Leaf"
+    ],
+    "middleNotes": [
+      "Bay",
+      "Nutmeg",
+      "Incense"
+    ],
+    "baseNotes": [
+      "Cypress",
+      "Guaiac Wood",
+      "Amberwood"
+    ],
+    "notesAreFlat": false,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Calvin Klein",
+    "sourceUrl": "https://www.calvinklein.sa/en/calvin-klein-man-eau-de-toilette-for-men-100ml-99350090193.html",
+    "profileOrigin": "Calvin Klein fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "lacoste-red-edt",
+    "name": "Red",
+    "brand": "Lacoste",
+    "concentration": "Eau de Toilette",
+    "family": "Fougère",
+    "subfamily": "Fruity aromatic woods",
+    "description": "Crisp green apple and pine give this fruity fougère an energetic feel over earthy woods.",
+    "topNotes": [
+      "Apple",
+      "Cedarwood"
+    ],
+    "middleNotes": [
+      "Pine",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Vetiver"
+    ],
+    "notesAreFlat": false,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "University",
+      "Casual",
+      "Outdoor"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Lacoste",
+    "sourceUrl": "https://www.lacoste.com/gb/lacoste/men/accessories/fragrance/LC012A01-000.html",
+    "profileOrigin": "Lacoste fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "afnan-9pm-edp",
+    "name": "9 PM",
+    "brand": "Afnan",
+    "concentration": "Eau de Parfum",
+    "family": "Gourmand",
+    "subfamily": "Sweet vanilla and spice",
+    "description": "Apple and cinnamon open a sweet floral heart, settling into warm vanilla, amber and tonka.",
+    "topNotes": [
+      "Bergamot",
+      "Lavandin",
+      "Cinnamon",
+      "Apple"
+    ],
+    "middleNotes": [
+      "Lily of the Valley",
+      "Orange Blossom"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Amber",
+      "Vanilla",
+      "Tonka Bean"
+    ],
+    "notesAreFlat": false,
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Cold"
+    ],
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Afnan",
+    "sourceUrl": "https://uk.afnan.com/products/9-pm",
+    "profileOrigin": "Afnan fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "afnan-9pm-rebel-edp",
+    "name": "9 PM Rebel",
+    "brand": "Afnan",
+    "concentration": "Eau de Parfum",
+    "family": "Woody",
+    "subfamily": "Fruity amber woods",
+    "description": "Juicy pineapple and apple brighten cedar and oakmoss before a sweet amber, caramel and musky finish.",
+    "topNotes": [
+      "Mandarin",
+      "Pineapple",
+      "Granny Smith Apple"
+    ],
+    "middleNotes": [
+      "Cedarwood",
+      "Oakmoss",
+      "Vanilla"
+    ],
+    "baseNotes": [
+      "Caramel",
+      "Dry Woods",
+      "Ambergris",
+      "Musk"
+    ],
+    "notesAreFlat": false,
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild"
+    ],
+    "occasions": [
+      "Casual",
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "source": "Afnan",
+    "sourceUrl": "https://uk.afnan.com/products/9-pm-rebel",
+    "profileOrigin": "Afnan fragrance profile",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "bonanza-reflection",
+    "name": "Reflection for Men",
+    "brand": "Bonanza Satrangi",
+    "concentration": "Eau de Parfum",
+    "family": "Woody",
+    "subfamily": "Fresh citrus fougère",
+    "description": "Citrus and lavender meet ginger and apple over earthy patchouli and vetiver. A fresh aromatic style for everyday wear.",
+    "topNotes": [
+      "Citrus",
+      "Lavender"
+    ],
+    "middleNotes": [
+      "Ginger",
+      "Apple"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Vetiver"
+    ],
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Mild",
+      "Warm",
+      "Hot"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "longevity": "Not rated",
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "source": "Bonanza Satrangi",
+    "sourceUrl": "https://bonanzasatrangi.com/products/reflc100ml",
+    "profileOrigin": "Bonanza Satrangi notes; EDP shown on official product photo; wearing suggestions estimated",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "valentino-uomo-born-in-roma-ivory-edt",
+    "name": "Uomo Born in Roma Ivory",
+    "brand": "Valentino",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Smoky aromatic woods",
+    "topNotes": [
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Lavandin"
+    ],
+    "baseNotes": [
+      "Fireplace Accord"
+    ],
+    "description": "Bright bergamot and aromatic lavandin soften into a smoky fireplace accord. The men’s Ivory edition balances freshness with a warm finish.",
+    "source": "Selfridges / Valentino",
+    "sourceUrl": "https://www.selfridges.com/GB/en/product/valentino-beauty-born-in-roma-uomo-ivorynbspeau-de-toilette-100ml_R04526314/",
+    "profileOrigin": "Selfridges / Valentino notes; wearing suggestions estimated",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Cold"
+    ],
+    "occasions": [
+      "Casual",
+      "Date Night",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "longevity": "Not rated",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "davidoff-cool-water-caribbean-summer-edt",
+    "name": "Cool Water Caribbean Summer Edition",
+    "brand": "Davidoff",
+    "concentration": "Eau de Toilette",
+    "family": "Citrus",
+    "subfamily": "Fresh citrus herbs",
+    "topNotes": [
+      "Lemon",
+      "Grapefruit",
+      "Mandarin"
+    ],
+    "middleNotes": [
+      "Sage",
+      "Juniper",
+      "Basil"
+    ],
+    "baseNotes": [
+      "Mint",
+      "Sandalwood"
+    ],
+    "description": "A bright citrus opening meets green aromatic herbs and a minty, softly woody finish: an easy warm-weather style.",
+    "source": "Perfumica",
+    "sourceUrl": "https://www.perfumica.com/perfumes/72401/cool-water-caribbean-summer-edition-by-davidoff-for-men",
+    "profileOrigin": "Perfumica notes; wearing suggestions estimated",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "Mild",
+      "Warm",
+      "Hot"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "sillage": "Light",
+    "intensity": "Light",
+    "longevity": "Not rated",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "gucci-guilty-black-pour-homme-edt",
+    "name": "Guilty Black Pour Homme",
+    "brand": "Gucci",
+    "concentration": "Eau de Toilette",
+    "family": "Fougère",
+    "subfamily": "Green aromatic woods",
+    "topNotes": [
+      "Lavender",
+      "Coriander"
+    ],
+    "middleNotes": [
+      "Green Notes",
+      "Orange Blossom",
+      "Neroli"
+    ],
+    "baseNotes": [
+      "Cedar",
+      "Patchouli"
+    ],
+    "description": "Green coriander and lavender lead into fresh neroli and orange blossom over cedar and patchouli.",
+    "source": "Perfume Oasis / Gucci",
+    "sourceUrl": "https://perfumeoasis.co.uk/products/gucci-guilty-black-pour-homme-edt-men",
+    "profileOrigin": "Perfume Oasis / Gucci notes; wearing suggestions estimated",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Evening"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "longevity": "Not rated",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "calvin-klein-obsession-for-men-edt",
+    "name": "Obsession for Men",
+    "brand": "Calvin Klein",
+    "concentration": "Eau de Toilette",
+    "family": "Amber",
+    "subfamily": "Spiced amber woods",
+    "topNotes": [
+      "Mandarin",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Lavender",
+      "Myrrh",
+      "Sage",
+      "Spices"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Musk",
+      "Sandalwood",
+      "Vetiver",
+      "Patchouli"
+    ],
+    "description": "Citrus gives way to aromatic herbs, warm spices and resinous myrrh, finishing in rich amber and woods.",
+    "source": "Calvin Klein",
+    "sourceUrl": "https://www.calvinklein.us/en/obsession-eau-de-toilette-for-men/LX000709.html",
+    "profileOrigin": "Calvin Klein notes; wearing suggestions estimated",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "occasions": [
+      "Evening",
+      "Date Night",
+      "Formal",
+      "Casual"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "longevity": "Not rated",
+    "estimated": [
+      "seasons",
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity"
+    ]
+  },
+  {
+    "id": "givenchy-gentleman-original-edt",
+    "name": "Gentleman Original",
+    "brand": "Givenchy",
+    "concentration": "Eau de Toilette",
+    "family": "Woody",
+    "subfamily": "Spiced patchouli and leather",
+    "description": "Aromatic tarragon and cinnamon lead into earthy patchouli, vetiver and Russian leather: a dry, classic woody fragrance.",
+    "topNotes": [
+      "Tarragon",
+      "Cinnamon"
+    ],
+    "middleNotes": [
+      "Patchouli",
+      "Vetiver"
+    ],
+    "baseNotes": [
+      "Russian Leather Accord"
+    ],
+    "source": "Givenchy Beauty / Paco Perfumerias",
+    "sourceUrl": "https://www.pacoperfumerias.co.uk/givenchy-gentleman-eau-de-toilette-100ml-spray.html",
+    "profileOrigin": "Givenchy Original notes; retailer product barcode 3274872444126",
+    "identitySourceUrl": "https://www.givenchybeauty.com/gb/p/gentleman-original-P000378.html",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Rainy"
+    ],
+    "occasions": [
+      "Work",
+      "Formal",
+      "Evening",
+      "Casual"
+    ],
+    "timeOfDay": [
+      "Day",
+      "Evening"
+    ],
+    "vibes": [],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "longevity": "Not rated",
+    "estimated": [
+      "weather",
+      "occasions",
+      "sillage",
+      "intensity",
+      "seasons"
+    ]
+  }
+]

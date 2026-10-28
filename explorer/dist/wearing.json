@@ -1,0 +1,1047 @@
+{
+  "afnan-collectors-edp": {
+    "occasions": [
+      "Casual",
+      "Work",
+      "University",
+      "Date Night",
+      "Night Out",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Pineapple, birch and moss make this versatile, but its fuller trail suits open air and social settings; use a light hand indoors.",
+    "family": "Chypre",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "lattafa-oud-for-glory-edp": {
+    "occasions": [
+      "Evening",
+      "Formal",
+      "Night Out"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Rainy"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Oud, saffron and patchouli have a dense, dark character for cool evenings and dressed-up occasions.",
+    "family": "Woody",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "french-avenue-liquid-brun-edp": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Vanilla and praline give this a cosy, sweet character for cooler weather and close evening settings.",
+    "family": "Gourmand",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "khadlaj-island-extrait": {
+    "occasions": [
+      "Casual",
+      "Outdoor",
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Coconut, pineapple and sandalwood feel tropical and relaxed; the extrait strength also works for warm evenings.",
+    "family": "Gourmand",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "armaf-club-de-nuit-intense-man": {
+    "occasions": [
+      "Casual",
+      "Outdoor",
+      "Work",
+      "Night Out",
+      "Date Night",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Citrus, smoky birch and musky woods suit casual days, open-air plans and social evenings; restrained application is best for work.",
+    "family": "Chypre",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "joop-go-edt": {
+    "occasions": [
+      "Casual",
+      "University",
+      "Work",
+      "Outdoor",
+      "Gym"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Hot"
+    ],
+    "sillage": "Light",
+    "intensity": "Light",
+    "wearingRationale": "Tart rhubarb, citrus and green woods make a lighter daytime choice for casual plans and shared spaces.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "joop-homme-edt": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Sweet florals, vanilla and spice are better suited to cool evenings than hot shared spaces.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "cerruti-1881-pour-homme-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Formal"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Herbs, citrus and dry woods give a discreet, classic character that spans work, study and relaxed outdoor days.",
+    "family": "Aromatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "beckham-instinct-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "A fresh aromatic style is an easy daytime fit for work, study and casual plans; the published EDP note detail is limited.",
+    "family": "Fougère",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "allsaints-shoreditch-leather-edp": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal",
+      "Night Out"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Leather, rose and earthy woods feel dressed up and atmospheric for evening plans and cooler conditions.",
+    "family": "Leather",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "rabanne-million-gold-intense": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Night Out",
+      "Formal",
+      "Casual"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Cold"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Bright mandarin over rich cedar and sandalwood makes a polished social scent, especially after dark.",
+    "family": "Woody",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "tom-ford-noir-extreme": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home",
+      "Formal",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Kulfi, warm spice and vanilla feel cosy and intimate, with enough woody polish for a formal evening.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "azzaro-the-most-wanted-parfum": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Ginger and rich vanilla woods are warm and assertive: a cool-weather evening choice.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "valentino-uomo-born-in-roma-ivory-edt": {
+    "occasions": [
+      "Casual",
+      "Date Night",
+      "Evening",
+      "Formal"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Bergamot and lavandin add brightness, while the fireplace accord favours cooler days and evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "ysl-myslf-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Formal",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Orange blossom and smooth woods bridge clean daytime wear and relaxed, polished evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "prada-lhomme-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Formal",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Iris and neroli have a clean, powdery character for work, study and understated formal plans.",
+    "family": "Floral",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "bleu-de-chanel-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Formal",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Warm",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Citrus, incense and polished woods are versatile across the working day, dinner and formal settings.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "ysl-y-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Night Out",
+      "Date Night",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Apple, aromatic herbs and amber woods give a fresh but noticeable trail for day-to-evening plans; go easy in shared spaces.",
+    "family": "Aromatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "armani-acqua-di-gio-parfum": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Formal",
+      "Date Night",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Hot"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Marine freshness, aromatic herbs and incense balance warm-weather ease with enough polish for work and evenings.",
+    "family": "Aquatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "montblanc-explorer": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Date Night",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Bergamot and dry vetiver-patchouli woods offer an adaptable daytime and smart-casual style.",
+    "family": "Chypre",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "penhaligons-sports-car-club-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Eucalyptus, cypress and pink pepper give a crisp green style for daytime, work and open-air plans.",
+    "family": "Aromatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "versace-dylan-blue-pour-homme": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Night Out",
+      "Date Night",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Aquatic citrus and aromatic woods make a versatile day-to-evening scent with a little smoky warmth.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "prada-luna-rossa-ocean-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Aromatic freshness and smooth iris-suede tones work for everyday plans and understated evenings.",
+    "family": "Aromatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "montblanc-legend-spirit": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Gym",
+      "Date Night"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Hot",
+      "Humid"
+    ],
+    "sillage": "Light",
+    "intensity": "Light",
+    "wearingRationale": "Citrus, aquatic notes and clean musk make one of the lighter choices for heat, daytime and the gym.",
+    "family": "Aquatic",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "davidoff-cool-water-caribbean-summer-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Gym",
+      "Date Night"
+    ],
+    "weather": [
+      "Mild",
+      "Warm",
+      "Hot",
+      "Humid"
+    ],
+    "sillage": "Light",
+    "intensity": "Light",
+    "wearingRationale": "Bright citrus, mint and aromatic herbs suit warm, active days and lighter shared-space wear.",
+    "family": "Citrus",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "ralph-lauren-ralphs-club-edp": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Formal",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Lavandin, sage and dry woods make a polished style that crosses work, dinner and dressed-up events.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "hermes-terre-dhermes-parfum": {
+    "occasions": [
+      "Work",
+      "Casual",
+      "Formal",
+      "Date Night",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Warm",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Grapefruit, dense cedar and shiso feel composed and earthy for smart days, formal plans and cool evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "gucci-guilty-black-pour-homme-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Green herbs, neroli and cedar are fresh enough for daytime with a smooth, social evening character.",
+    "family": "Fougère",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "versace-eros-eau-de-parfum": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Mint and citrus brighten a sweet vanilla-woody base; it suits social evenings more than intense daytime heat.",
+    "family": "Aromatic",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "valentino-uomo-born-in-roma-intense": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Formal"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Vanilla, lavandin and vetiver make a rich evening fragrance for dates, going out and cool formal events.",
+    "family": "Aromatic",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "burberry-hero-eau-de-parfum": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Pine, benzoin and cedar create warm, resinous woods for cool days and polished evenings.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "armani-armani-code": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Date Night",
+      "Formal",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Mandarin, nutmeg and tonka combine a fresh opening with a soft, dressed-up base for work or dinner.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "ysl-la-nuit-de-lhomme-edt": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Mild"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Soft cardamom and smooth woods have an intimate character for dates, dinner and quieter evening plans.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "dior-sauvage-elixir": {
+    "occasions": [
+      "Formal",
+      "Night Out",
+      "Evening"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Rainy"
+    ],
+    "sillage": "Very Strong",
+    "intensity": "Very Strong",
+    "wearingRationale": "Dense spice, lavender and woods give a powerful trail for cool, open social settings; this is not a gym or office pick.",
+    "family": "Aromatic",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "armani-emporio-armani-stronger-with-you-intensely": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Warm vanilla, spice and woods make a sweet, cosy choice for cooler social plans and evenings at home.",
+    "family": "Gourmand",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "lattafa-khamrah": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Dates, praline and cinnamon are rich and sweet, best suited to cool, cosy settings.",
+    "family": "Gourmand",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "calvin-klein-obsession-for-men-edt": {
+    "occasions": [
+      "Casual",
+      "Evening",
+      "Formal",
+      "Date Night"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Rainy"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Myrrh, spice and amber woods create a classic warm fragrance for cool days and dressed-up evenings.",
+    "family": "Amber",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "givenchy-gentleman-original-edt": {
+    "occasions": [
+      "Work",
+      "Casual",
+      "Formal",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Rainy"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Dry patchouli, tarragon and leather give the Original a classic, earthy style for smart days and evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "boss-bottled-absolu-intense": {
+    "occasions": [
+      "Date Night",
+      "Evening",
+      "Formal",
+      "Night Out",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool",
+      "Rainy"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Leather, myrrh and patchouli make a rich, dark style for cool evenings and formal plans.",
+    "family": "Woody",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "calvin-klein-man-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Herbal freshness, incense and dry woods make an adaptable daytime style that also suits relaxed evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "afnan-9pm-rebel-edp": {
+    "occasions": [
+      "Casual",
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Outdoor"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Juicy fruit over caramel and amber woods gives a playful social style; avoid heavy application in high heat.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "lacoste-red-edt": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Gym"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm"
+    ],
+    "sillage": "Light",
+    "intensity": "Light",
+    "wearingRationale": "Crisp apple, pine and dry woods feel sporty and relaxed for study, casual days and outdoor plans.",
+    "family": "Fougère",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  },
+  "azzaro-the-most-wanted-eau-de-parfum-intense": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Home",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Cardamom, caramel and amberwood have a dense, sweet warmth for cooler evenings.",
+    "family": "Gourmand",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "afnan-9pm-edp": {
+    "occasions": [
+      "Date Night",
+      "Night Out",
+      "Evening",
+      "Casual"
+    ],
+    "weather": [
+      "Cold",
+      "Cool"
+    ],
+    "sillage": "Strong",
+    "intensity": "Strong",
+    "wearingRationale": "Apple, cinnamon and vanilla make an energetic, sweet scent for cool social evenings.",
+    "family": "Gourmand",
+    "seasons": [
+      "Autumn",
+      "Winter",
+      "Spring"
+    ]
+  },
+  "bonanza-reflection": {
+    "occasions": [
+      "Work",
+      "University",
+      "Casual",
+      "Outdoor",
+      "Evening",
+      "Date Night"
+    ],
+    "weather": [
+      "Cool",
+      "Mild",
+      "Warm",
+      "Hot"
+    ],
+    "sillage": "Moderate",
+    "intensity": "Moderate",
+    "wearingRationale": "Citrus, lavender, ginger and vetiver give a clean aromatic style for daytime and easy evenings.",
+    "family": "Woody",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
+  }
+}

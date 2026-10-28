@@ -1,0 +1,8 @@
+# Private deployment identity and personal exports are never source files.
+.openai/
+*.backup.json
+Sillage-backup-*.json
+node_modules/
+__pycache__/
+# Recoverable product images: restore with scripts/fetch-photos.py.
+dist/assets/bottles/
