@@ -1,163 +1,89 @@
 # Sillage
 
-A personal fragrance collection app. Track what you own, log every wear, and get a
-daily suggestion of what to wear based on the live weather and what you have planned.
+[Open Sillage](https://t3hj.github.io/Sillage/)
 
-## Standalone explorer
+A fragrance wardrobe for organising bottles, finding what to wear and keeping a
+wear journal. The live app uses midnight black, cobalt blue and lime accents.
 
-The browser-local fragrance explorer is available in [`explorer/`](explorer/README.md)
-with its own setup instructions and tests. It starts with an empty collection and
-is independent of this app and its GitHub Pages deployment.
+## Use the app
 
-## What it does
+- Add bottles from the catalogue or enter an unlisted fragrance manually.
+- Search notes, compare scents and choose daily picks for the weather and occasion.
+- Use your current location after permission, or select a town/manual weather.
+- Record wears, rate bottles and review your journal.
+- Open **Data & backup** to download or restore a Sillage explorer JSON backup.
+- On iPhone, open in Safari and choose **Share → Add to Home Screen**.
 
-- **Today** — suggestions drawn from your own collection, scored against the current
-  weather, season, time of day and your chosen activity, with the reasoning shown.
-- **Collection** — search, filter and sort everything you own, rate it, log a wear in
-  one tap, and see collection statistics (most worn, never worn, highest rated, favourite
-  family).
-- **Discover** — a built-in curated catalogue, plus a form for adding any bottle by hand.
-- **Scan** — scan a QR code or barcode with your camera. Sillage only identifies codes it
-  can match against its own catalogue; unknown codes are shown as-is with a manual
-  search fallback. It never guesses a fragrance from an arbitrary barcode.
-- **Guide** — browse the catalogue by season, weather, occasion, time of day, vibe or
-  performance.
-- **Compare** — weigh up to three fragrances side by side.
-- **Wishlist** — bottles you want, promoted to your collection when you buy them.
-- **Journal** — full wear history with weather and occasion, filterable by fragrance,
-  activity and date, with most-worn and never-worn statistics.
-- **Settings** — set your location (search or device geolocation), export or restore a
-  backup, clear all data.
+The public app starts with an empty collection. Your bottles, notes, ratings and
+wear history save in the current browser/device. Keep backups before clearing site
+data. GitHub Pages has no account backend, so it does not sync between devices.
+An initial online visit prepares offline collection browsing and manual daily
+picks; live weather needs a connection.
 
-## Cost and privacy
+## Repository layout
 
-**Sillage is completely free to run and requires no API keys, accounts, or paid
-services — including no AI services.**
+| Path | Purpose |
+| --- | --- |
+| `explorer/dist/` | Tracked browser source for the live Pages app |
+| `explorer/tests/` | Explorer tests |
+| `explorer/scripts/` | Restore credited, checksum-verified bottle photos |
+| `explorer/server/` | Optional authenticated account-sync integration |
+| `scripts/build-explorer-pages.mjs` | Package the explorer for Pages |
+| `src/`, `public/`, `tests/` | Original React app, retained for separate development |
+| `catalogue/` | Original app catalogue data, import scripts and attribution |
 
-- All of your data (collection, wishlist, wear history, ratings, notes, settings) lives
-  in your browser's local storage on your own device. Nothing is uploaded anywhere.
-- The only network calls are to [Open-Meteo](https://open-meteo.com), which is free and
-  keyless, for the current weather and place search. Only your approximate coordinates
-  are sent — never any collection data.
-- Recommendations are computed locally with a deterministic scoring function — no AI
-  service is involved. The same inputs always produce the same recommendation.
-- The catalogue is hand-written editorial data plus an openly licensed dataset (Scento,
-  CC BY 4.0). Nothing is scraped from Fragrantica, Parfumo or any other proprietary
-  database.
+The `dist` folder under `explorer/` is source despite its historical name.
+The root `dist/` folder is generated build output and is ignored.
+`.gitignore` is a normal Git configuration file: it excludes dependencies,
+generated output, credentials and personal backup exports.
 
-> **Security note:** an Anthropic API key was previously present in a local `.env` file
-> in this repository's working copy. It was never committed to git history, but if you
-> have seen or cloned that file, **revoke the key at console.anthropic.com**. Sillage
-> itself no longer contains any Anthropic/AI code, and `.env` files are gitignored.
+## Develop the live explorer
 
-## Fragrance data
-
-The catalogue has two layers, both under `catalogue/` (see `catalogue/README.md`):
-
-- `catalogue/data/` — ~38 hand-written entries, bundled with the app.
-- `catalogue/imported/` — ~1,300 entries generated from the open
-  [Scento Perfume Database](https://www.scento.com/perfume-database) (CC BY 4.0) by
-  `npm run catalogue:import`. Scento supplies notes, family, character, seasons, time of
-  day and descriptions. Occasions, weather and strength are **estimated** by Sillage and
-  labelled as such; gender is not provided and is left empty. Attribution is shown in
-  Settings and on each imported fragrance (`catalogue/NOTICE.md`).
-
-A GitHub Action refreshes the import monthly and opens a pull request. Anything you add
-manually in the app is stored locally and never leaves your device.
-
-## How recommendations work
-
-`src/lib/recommend.ts` scores every fragrance in your collection against the current
-context. It is deterministic and runs entirely in the browser:
-
-- **Weather suitability** (~30 pts) — how well the fragrance's weather tags match today's
-  conditions, derived from temperature, precipitation and humidity.
-- **Season** (~20 pts) — whether the fragrance suits the current season (or its flip in
-  the southern hemisphere).
-- **Activity/occasion** (~20 pts) — match against your chosen activity (University, Work,
-  Gym, Date, Night Out, …).
-- **Time of day** (~10 pts) — morning/day/evening/night suitability.
-- **Personal rating** (up to ~12 pts) — your own ratings matter most.
-- **Temperature fit** (±8 pts) — heavy scents are penalised in heat, rewarded in cold.
-- **Rotation freshness** (−25 to +15 pts) — worn today is heavily penalised; untouched
-  for weeks is boosted; never worn gets the largest boost.
-
-The top pick is shown with its reasons ("Suits cold weather", "Works for university",
-"Untouched for 12 days"), followed by 2–3 alternatives.
-
-## Technology stack
-
-- [TanStack Start](https://tanstack.com/start) (React 19, TanStack Router)
-- TypeScript
-- Tailwind CSS 4 + shadcn-style UI primitives
-- Vitest for unit tests
-- Static prerender for GitHub Pages (no server required)
-
-## Architecture
-
-```
-src/
-  routes/        # pages: Today, Collection, Discover, Scan, Guide, Compare,
-                 # Wishlist, Journal, Settings, fragrance details
-  components/    # AppShell navigation, FragranceCard, FragranceForm, ui/ primitives
-  data/          # types, categories (seasons/occasions/etc.), fragrance catalogue
-  lib/           # storage (localStorage abstraction), search, recommend, weather
-  hooks/         # useSillage (app-wide data context)
-tests/           # vitest unit tests for the core logic
-scripts/         # GitHub Pages output preparation
-```
-
-All persistence goes through `src/lib/storage.ts` — pure functions over a single
-versioned `SillageData` object backed by one localStorage key, with import/export
-validation. Components never touch `localStorage` directly.
-
-## Development
+Use Node 24 and Python 3.9+. No npm installation or API keys are needed.
 
 ```sh
-npm install
-npm run dev          # dev server
-npm test             # run the vitest suite
-npm run lint         # eslint
-npm run build        # production build (TanStack Start + nitro)
+node --test explorer/tests/*.test.mjs
+python3 explorer/scripts/fetch-photos.py
+python3 -m http.server 4173 --bind 127.0.0.1 --directory explorer/dist
 ```
 
-## Build & deploy to GitHub Pages
+Open http://localhost:4173. See [explorer documentation](explorer/README.md) for
+features, data sources, privacy and offline behaviour. A missing or changed source
+photo uses the unavailable-photo state rather than an unverified image.
+
+## Build and deploy
 
 ```sh
-npm run build:pages  # static prerender → dist/client (+ .nojekyll, 404.html)
+npm run build:pages
 ```
 
-The site is deployed under `/Sillage/` automatically by
-`.github/workflows/deploy-pages.yml` on every push to `main`. The app sets its router
-base path from the Vite build base, so all asset paths and links work under the
-repository sub-path.
+This copies only the explorer browser files to `dist/client`, adds `.nojekyll`
+and rejects a non-empty public collection seed. Server code and personal backups
+are excluded. Every push to `main` runs the explorer tests, restores verified
+photos and deploys through `.github/workflows/deploy-pages.yml`.
 
-## Testing
+In repository **Settings → Pages**, keep **Source** set to **GitHub Actions**.
+
+## Original React app
+
+The original TanStack Start/React application is retained, but is not the Pages
+entry point. Its screens, backup format and data store are separate from the
+explorer. For that application:
 
 ```sh
+npm ci
+npm run dev
 npm test
+npm run build
 ```
 
-85 unit tests cover fuzzy search, the recommendation engine (weather/season/occasion
-matching, recent-wear penalty, rating influence, determinism), weather-tag mapping,
-season/time derivation, duplicate detection, and backup import validation.
+The catalogue refresh workflow updates the original application's catalogue.
+Review attribution in [catalogue/NOTICE.md](catalogue/NOTICE.md) before reusing data.
 
-## PWA / offline
+## Privacy and services
 
-The app registers a small service worker (`public/sw.js`) that caches the app shell and
-hashed assets, so your collection, search, details, wear logging and last-known-weather
-recommendations keep working offline. Weather cannot refresh offline — the Today page
-shows an error state instead of silently stale data.
-
-## Adding fragrance data
-
-Append well-formed entries to a JSON file in `catalogue/data/` and run `npm run catalogue`
-to validate. Only include facts that are legally shareable (short factual metadata you
-write yourself). Do not bulk-copy descriptions or note pyramids from commercial
-databases. Do not hand-edit `catalogue/imported/` — it is regenerated.
-
-## Licensing
-
-- Sillage's own code and editorial data: MIT.
-- [Open-Meteo](https://open-meteo.com) — used via its free public API, no key required.
-- Fonts are loaded from Google Fonts (Fraunces, Karla) under the SIL Open Font License.
+Personal collection data is never committed to this public repository. Device
+location is requested only after permission; weather/place lookup uses Open-Meteo,
+and device area names use BigDataCloud. See the app's data notice for details.
+Recommendations run locally. Cross-device sync requires the authenticated server
+and database described in [the server integration guide](explorer/server/README.md).
