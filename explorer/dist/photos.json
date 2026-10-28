@@ -1,0 +1,796 @@
+{
+  "bleu-de-chanel-edp": {
+    "url": "https://www.chanel.com/images/t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_autoplus,fl_lossy,dpr_1.1/w_620/bleu-de-chanel-eau-de-parfum-spray-3-4fl-oz--packshot-default-107360-9564894232606.jpg",
+    "source": "https://www.chanel.com/in/fragrance/p/107360/bleu-de-chanel-eau-de-parfum-spray/",
+    "credit": "CHANEL",
+    "path": "assets/bottles/bleu-de-chanel-edp.png",
+    "width": 682,
+    "height": 682,
+    "sha256": "5f19fae5a37941fa8b1073851ae9a11d752b7e703fa763080c0703b96db7f4f0",
+    "retrieved": "2026-10-25"
+  },
+  "maison-margiela-jazz-club": {
+    "url": "https://static.thcdn.com/productimg/original/13183501-8375070863214450.jpg",
+    "source": "https://www.lookfantastic.ie/p/maison-margiela-replica-jazz-club-eau-de-toilette-100ml/13183501/",
+    "credit": "Maison Margiela / LOOKFANTASTIC",
+    "path": "assets/bottles/maison-margiela-jazz-club.jpg",
+    "width": 1600,
+    "height": 1600,
+    "sha256": "27ab8ddaca600fc906b37b0d393fafbd59c62cdd9814a420e9feadc9bda42509",
+    "retrieved": "2026-10-25"
+  },
+  "jomalone-wood-sage-sea-salt": {
+    "url": "https://cosbar.com/cdn/shop/files/690251033713.jpg?v=1752641732",
+    "source": "https://cosbar.com/products/wood-sage-sea-salt-cologne-webp01843001-t",
+    "credit": "Jo Malone London / Cos Bar",
+    "path": "assets/bottles/jomalone-wood-sage-sea-salt.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "831d579b740489f94ecd0c8b82d7cd036d6d358413fca1224148df7f8b66a00c",
+    "retrieved": "2026-10-25"
+  },
+  "dior-homme-intense": {
+    "url": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw7a84cf4a/Y0479201/Y0479201_F047924709_E01_RHC.jpg?sw=800",
+    "source": "https://www.dior.com/en_ca/beauty/products/dior-homme-intense-Y0479201.html",
+    "credit": "Dior",
+    "path": "assets/bottles/dior-homme-intense.jpg",
+    "width": 800,
+    "height": 1200,
+    "sha256": "b10eb80c5a44d7a78ccc6b23d641faa02685281bf23527bbfa83a794eba5136f",
+    "retrieved": "2026-10-25"
+  },
+  "tf-oud-wood": {
+    "url": "https://www.sephora.com/productimages/sku/s1565902-main-zoom.jpg",
+    "source": "https://www.sephora.com/product/oud-wood-P393167",
+    "credit": "Tom Ford / Sephora",
+    "path": "assets/bottles/tf-oud-wood.jpg",
+    "width": 1500,
+    "height": 1500,
+    "sha256": "51d3b60f5c83b9137f9bd4d4b6eb17c0c1f543bf5f1d0d8e0ddcd1d2fcb9581e",
+    "retrieved": "2026-10-25"
+  },
+  "kilian-angels-share": {
+    "url": "https://www.peonymelbourne.com.au/cdn/shop/files/kilian-Angels-Share-100ml.jpg?v=1744019849",
+    "source": "https://www.peonymelbourne.com.au/products/angels-share-100ml",
+    "credit": "Kilian Paris / Peony Melbourne",
+    "path": "assets/bottles/kilian-angels-share.jpg",
+    "width": 1080,
+    "height": 1080,
+    "sha256": "7d484f5b25eb451634e690dade25f568658c2f13e343b3ecc8f23bba4422c016",
+    "retrieved": "2026-10-25"
+  },
+  "chanel-allure-homme-sport": {
+    "url": "https://www.chanel.com/images/t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_autoplus,fl_lossy,dpr_1.1/w_620/allure-homme-sport-eau-de-toilette-spray-3-4fl-oz--packshot-default-123630-9564892856350.jpg",
+    "source": "https://www.chanel.com/gb/fragrance/p/123630/allure-homme-sport-eau-de-toilette-spray/",
+    "credit": "CHANEL",
+    "path": "assets/bottles/chanel-allure-homme-sport.png",
+    "width": 682,
+    "height": 682,
+    "sha256": "689f5efa5d8c2da2286e5c783f67087a660a864f7af87a9b71b0a674a372bc63",
+    "retrieved": "2026-10-25"
+  },
+  "parfums-de-marly-layton": {
+    "url": "https://parfums-de-marly.com/cdn/shop/files/2208_MARLY_LAYTON_125ml_01.jpg?v=1698235440",
+    "source": "https://parfums-de-marly.com/products/layton",
+    "credit": "Parfums de Marly",
+    "path": "assets/bottles/parfums-de-marly-layton.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "15e7928247d58748f54d01b5395807031592c5099317b5943468057cf2cf0097",
+    "retrieved": "2026-10-25"
+  },
+  "hermes-terre-dhermes": {
+    "url": "https://media.sephora.eu/content/dam/gdam/europe/digital/massivpimupload/H/HERMS/172447/85798-media_swatch.jpg?scaleHeight=750&scaleMode=fit&scaleWidth=750",
+    "source": "https://www.sephora.fr/p/terre-d-hermes---eau-de-toilette-172447.html",
+    "credit": "Hermès / Sephora",
+    "path": "assets/bottles/hermes-terre-dhermes.jpg",
+    "width": 750,
+    "height": 750,
+    "sha256": "96e5015aa49ba5b996ec4e29e329b242e69699e2d12e41c8d286d32836aa9078",
+    "retrieved": "2026-10-25"
+  },
+  "dior-sauvage-edt": {
+    "url": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw0149ba1a/Y0685240/Y0685240_F068524009_E01_RHC.jpg?sw=800",
+    "source": "https://www.dior.com/en_int/beauty/products/sauvage-eau-de-toilette-Y0685240.html",
+    "credit": "Dior",
+    "path": "assets/bottles/dior-sauvage-edt.jpg",
+    "width": 800,
+    "height": 1200,
+    "sha256": "9e9e19b81d44c82fdf7b20b324a27ef12d41332bae3ff15cfb60d95dad31dd85",
+    "retrieved": "2026-10-25"
+  },
+  "acqua-di-gio-profumo": {
+    "url": "https://fragranceisland.com/cdn/shop/files/MagicEraser_241115_234524.jpg?v=1731734254&width=2000",
+    "source": "https://fragranceisland.com/products/acqua-di-gio-profumo-mens-edp-spray-4-2oz-125ml",
+    "credit": "Giorgio Armani / FragranceIsland",
+    "path": "assets/bottles/acqua-di-gio-profumo.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "b425ea61a74cf681efd245d501c8ae49cd7cdca0fa630c5b578d21dc70e075bb",
+    "retrieved": "2026-10-25"
+  },
+  "creed-aventus": {
+    "url": "https://www.scentsangel.com/cdn/shop/files/SENTSANGEL_31_87aab0d6-713e-4b81-841c-8383e61354dd.jpg?v=1777916832",
+    "source": "https://www.scentsangel.com/products/creed-aventus-eau-de-parfum",
+    "credit": "Creed / Scents Angel",
+    "path": "assets/bottles/creed-aventus.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "f052f671bf61094a3b52551218f1fc54623b15526c24e0883683b4cdc56f7ddd",
+    "retrieved": "2026-10-25"
+  },
+  "ysl-y-edp": {
+    "url": "https://beautyhouse.com/cdn/shop/files/01bdmtewnr.jpg?v=1771609989&width=1492",
+    "source": "https://beautyhouse.com/products/yves-saint-laurent-y-eau-de-parfum-for-men",
+    "credit": "Yves Saint Laurent / BeautyHouse",
+    "path": "assets/bottles/ysl-y-edp.jpg",
+    "width": 1492,
+    "height": 1492,
+    "sha256": "66544a966b4049bf178a9d8df5b511082edf14c13b15a78e0295917cf60aaa04",
+    "retrieved": "2026-10-25"
+  },
+  "versace-eros": {
+    "url": "https://beautyhouse.com/cdn/shop/files/01xfhrpdkc.png?v=1789156854&width=2048",
+    "source": "https://beautyhouse.com/products/versace-eros-eau-de-toilette-for-men",
+    "credit": "Versace / BeautyHouse",
+    "path": "assets/bottles/versace-eros.png",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "cdef3d7adc501f52cd54e15a8e4280c62350e351c85a3e7c2fd074af7ae5bcf0",
+    "retrieved": "2026-10-25"
+  },
+  "paco-1m": {
+    "url": "https://media.douglas.pl/medias/Ztf2Yc1031082-0-global.jpg?context=bWFzdGVyfGltYWdlc3wxMzg4OTV8aW1hZ2UvanBlZ3xhRFkxTDJnMU9DODFNRFU1TXprNU9UUTFOREl6T0M5YWRHWXlXV014TURNeE1EZ3lYekJmWjJ4dlltRnNMbXB3Wnd8ZWUwZTczNzE3MWEwY2UzMjk2ZjdiMGZhZTk3MzVjODhmMTYxNWY1ZjhjMjQyODI4MDIyYjYxMTU4YTU3NTc3ZQ&grid=true",
+    "source": "https://www.douglas.pl/pl/p/3000027901",
+    "credit": "Rabanne / Douglas",
+    "path": "assets/bottles/paco-1m.jpg",
+    "width": 1500,
+    "height": 1500,
+    "sha256": "1b2a5dbe9c889a8db2468cc74c3ba360cb28eeb87066be4f5284109a71b8a6b8",
+    "retrieved": "2026-10-25"
+  },
+  "jpg-le-male": {
+    "url": "https://beautyhouse.com/cdn/shop/files/01uovwoyan.png?v=1750805408&width=2048",
+    "source": "https://beautyhouse.com/products/jean-paul-gaultier-le-male-eau-de-toilette-for-men",
+    "credit": "Jean Paul Gaultier / BeautyHouse",
+    "path": "assets/bottles/jpg-le-male.png",
+    "width": 1600,
+    "height": 1600,
+    "sha256": "499c4e4a5d6377477c584db3e25a47b6b0d2a072a97f59dbcb03bf98a806fae6",
+    "retrieved": "2026-10-25"
+  },
+  "dg-light-blue-pour-homme": {
+    "url": "https://www.perfumenz.co.nz/cdn/shop/files/dolce-gabbana-light-blue-men-100ml_1400x1400.png?v=1752722115",
+    "source": "https://www.perfumenz.co.nz/products/light-blue-pour-homme-by-dolce-gabbana-100ml-edt",
+    "credit": "Dolce & Gabbana / Perfume NZ",
+    "path": "assets/bottles/dg-light-blue-pour-homme.png",
+    "width": 1400,
+    "height": 1400,
+    "sha256": "6ecc6262cf5306f4741fe75bf004af37c4318db0e27dac9c25ba045b62b9efc1",
+    "retrieved": "2026-10-25"
+  },
+  "tf-tobacco-vanille": {
+    "url": "https://www.tomfordbeauty.com/cdn/shop/files/tf_sku_T01K01_2000x2000_0.png?v=1782503419&width=3840",
+    "source": "https://tomfordbeauty.com/products/tobacco-vanille-eau-de-parfum",
+    "credit": "Tom Ford Beauty",
+    "path": "assets/bottles/tf-tobacco-vanille.png",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "0e9249f660ca2b374aeccc7daa5bb904ad51796556872c5d214e4e3d1a140431",
+    "retrieved": "2026-10-25"
+  },
+  "mfk-bacarat-rouge-540": {
+    "url": "https://www.crepslocker.com/cdn/shop/products/Maison-Francis-Kurkdjian-Baccarat-Rouge-540-Crepslocker-Front_0db4575c-b406-4e26-9dce-541309326fe9.jpg?v=1646217404",
+    "source": "https://www.crepslocker.com/products/maison-francis-kurkdjian-baccarat-rouge-540-eau-de-parfum",
+    "credit": "Maison Francis Kurkdjian / Crepslocker",
+    "path": "assets/bottles/mfk-bacarat-rouge-540.jpg",
+    "width": 2048,
+    "height": 2048,
+    "sha256": "181cfade7ba9b8427f3443d4c04e742a1d55b27920abbb6dc50af8d5dd63756c",
+    "retrieved": "2026-10-25"
+  },
+  "mfk-grand-soir": {
+    "url": "https://www.franciskurkdjian.com/dw/image/v2/BJSB_PRD/on/demandware.static/-/Sites-mfk-master-catalog/default/dwf271d704/GRAND_SOIR/FRAGRANCE/3700559614242_GRAND_SOIR_EDP_70ML_1.png?sw=640&sh=640&strip=false",
+    "source": "https://www.franciskurkdjian.com/uk-en/p/grand-soir-eau-de-parfum-10225021.html",
+    "credit": "Maison Francis Kurkdjian",
+    "path": "assets/bottles/mfk-grand-soir.png",
+    "width": 640,
+    "height": 640,
+    "sha256": "7f807c7082d4852b244e5fdbd2c3aecb82b017eb93580fd92aa1ee6143876ddc",
+    "retrieved": "2026-10-25"
+  },
+  "prada-luna-rossa-carbon": {
+    "url": "https://cdn2.primor.eu/media/catalog/product/8/4/8435137759811_1_dbfa.jpg",
+    "source": "https://www.primor.eu/pt_pt/prada-prada-luna-rossa-carbon-eau-de-toilette-para-homem-112352.html",
+    "credit": "Prada / Primor",
+    "path": "assets/bottles/prada-luna-rossa-carbon.jpg",
+    "width": 3000,
+    "height": 3000,
+    "sha256": "2291f364d9a58edf93f52ad86c30843c8213cbc961183c5a8b110e1e7405869f",
+    "retrieved": "2026-10-25"
+  },
+  "guerlain-vetiver": {
+    "url": "https://escentual.com/cdn/shop/files/guerlain_vetiver_eau_de_toilette_spray_100ml_1.png?v=1729190320&width=2200",
+    "source": "https://escentual.com/products/guerlain-vetiver-eau-de-toilette-spray",
+    "credit": "Guerlain / Escentual",
+    "path": "assets/bottles/guerlain-vetiver.png",
+    "width": 1080,
+    "height": 1080,
+    "sha256": "8d153d7210dca7b6363acbc42d78faeffa020c7cadfc195ca8eb1cbcd0c2ac94",
+    "retrieved": "2026-10-25"
+  },
+  "chanel-no5": {
+    "url": "https://scentoria.co.in/cdn/shop/files/Chanel_No_5_100_ML_EDP_Tester.jpg?v=1713941378&width=720",
+    "source": "https://scentoria.co.in/products/no-5-edp",
+    "credit": "CHANEL / Scentoria",
+    "path": "assets/bottles/chanel-no5.jpg",
+    "width": 720,
+    "height": 720,
+    "sha256": "b146e3122910e793b4933fd639b7657f63059e7c0c17dcf301d6fd662eb116f0",
+    "retrieved": "2026-10-25"
+  },
+  "chanel-coco-mademoiselle": {
+    "url": "https://img.vivantiscdn.net/photos/-/p/_orig/CA/chanel-coco-mademoiselle-edp_14083563100923.jpg",
+    "source": "https://www.vivantis.ro/parfumuri/chanel-coco-mademoiselle-edp.html",
+    "credit": "CHANEL / Vivantis",
+    "path": "assets/bottles/chanel-coco-mademoiselle.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "e48ebde5daaf36a5617d12e09a29d4e5178ba1e60c1a985bac633859ebfcd6f8",
+    "retrieved": "2026-10-25"
+  },
+  "dior-jadore": {
+    "url": "https://www.perfumenz.co.nz/cdn/shop/products/dior-j_adore-100ml-edp---2_1024x1024.png?v=1570070441",
+    "source": "https://www.perfumenz.co.nz/products/jadore-by-christian-dior-100ml-edp",
+    "credit": "Dior / Perfume NZ",
+    "path": "assets/bottles/dior-jadore.png",
+    "width": 765,
+    "height": 765,
+    "sha256": "e73380de3e0e3bfd2d3dae6bc6d32cb92c2579daba118ddbd8d3d5fce09f0ed1",
+    "retrieved": "2026-10-25"
+  },
+  "ysl-libre": {
+    "url": "https://www.sephora.com/productimages/sku/s2249746-main-zoom.jpg",
+    "source": "https://www.sephora.com/product/libre-eau-de-parfum-P448102",
+    "credit": "Yves Saint Laurent / Sephora",
+    "path": "assets/bottles/ysl-libre.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "07364ad06ddb8370d16df7dc0f9f382fbea10bc23124ccc4a6076e9876349dd9",
+    "retrieved": "2026-10-25"
+  },
+  "lancome-la-vie-est-belle": {
+    "url": "https://perfumy.pl/hpeciai/a887db7f91ca43b0420cdf3201cc6c60/pol_pl_Lancome-La-Vie-Est-Belle-woda-perfumowana-100-ml-1343_1.jpg",
+    "source": "https://perfumy.pl/Perfumy-o-zapachu-paczuli-blog-pol-1592996645.html",
+    "credit": "Lancôme / Perfumy.pl",
+    "path": "assets/bottles/lancome-la-vie-est-belle.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "9cd0e3316d5963e5c84b2adf2c15c1ea9a5437de8eb6b7d4be391fc1b50d7a58",
+    "retrieved": "2026-10-25"
+  },
+  "byredo-gypsy-water": {
+    "url": "https://www.doverstreetparfumsmarket.com/cdn/shop/files/962279_NA_1__33004.jpg?v=1698333644",
+    "source": "https://www.doverstreetparfumsmarket.com/products/copy-of-byredo-gypsy-water-eau-de-parfum-100ml",
+    "credit": "Byredo / Dover Street Parfums Market",
+    "path": "assets/bottles/byredo-gypsy-water.jpg",
+    "width": 1792,
+    "height": 1792,
+    "sha256": "0f331dfd83ac5dcfbe0df1f50a99bec5c7a680b35bc388b032862cc293beab62",
+    "retrieved": "2026-10-25"
+  },
+  "lelabo-santal-33": {
+    "url": "https://cdn.ludwigbeck.de/products/102052172/102052172-1.jpg?vh=9e9bd6",
+    "source": "https://www.ludwigbeck.de/le-labo-santal-33-102052172.html",
+    "credit": "Le Labo / Ludwig Beck",
+    "path": "assets/bottles/lelabo-santal-33.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "8c8ee0dbdbcc3c6d363bfebfacbe77a9a2dad07b86e63cfe412bd256a51903ff",
+    "retrieved": "2026-10-25"
+  },
+  "mugler-angel": {
+    "url": "https://marionnaud.ma/cdn/shop/files/Captured_ecran2024-11-02a14.52.03_1080x.png?v=1730555530",
+    "source": "https://marionnaud.ma/products/mugler-angel-edp",
+    "credit": "Mugler / Marionnaud",
+    "path": "assets/bottles/mugler-angel.png",
+    "width": 902,
+    "height": 844,
+    "sha256": "25c9ac8384632d9ffc7f569606726b57421d1b9a2efdd732dea1a043ae26e86d",
+    "retrieved": "2026-10-25"
+  },
+  "issey-lemc": {
+    "url": "https://marionnaud.ma/cdn/shop/files/IMEHEDT2022-125ml_pack_withoutshadow_3423470311365_800x.png?v=1736263443",
+    "source": "https://marionnaud.ma/products/issey-miyake-leau-dissey-edt",
+    "credit": "Issey Miyake / Marionnaud",
+    "path": "assets/bottles/issey-lemc.png",
+    "width": 800,
+    "height": 800,
+    "sha256": "7db12ffa5dda2b54ced005348050ec84f33e5f6524dcea027be6dbab39b5306e",
+    "retrieved": "2026-10-25"
+  },
+  "nautica-voyage": {
+    "url": "https://fragmetics.com/cdn/shop/files/nautica_voyage_for_men_eau_de_toilette_100ml_1.jpg?v=1755008626",
+    "source": "https://fragmetics.com/en-kw/products/nautica-voyage-edt-for-men-by-nautica-voyage-100-ml",
+    "credit": "Nautica / Fragmetics",
+    "path": "assets/bottles/nautica-voyage.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "bad8bb30deb549c4fa7332843fc45dfb24b931a521c6c81217baff5ee8e23d23",
+    "retrieved": "2026-10-25"
+  },
+  "montblanc-explorer": {
+    "url": "https://www.sephora.com/productimages/sku/s2227908-main-zoom.jpg",
+    "source": "https://www.sephora.com/product/explorer-P450810",
+    "credit": "Montblanc / Sephora",
+    "path": "assets/bottles/montblanc-explorer.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "1d9ef73bfdc17aa02152d066732245c59d947a2e65c431c7cab12c59b3a1758b",
+    "retrieved": "2026-10-25"
+  },
+  "armaf-club-de-nuit-intense": {
+    "url": "https://issgroup.com.py/1336-large_default/perfume-armaf-club-de-nuit-intense.jpg",
+    "source": "https://issgroup.com.py/perfume/1994-perfume-armaf-club-de-nuit-intense.html",
+    "credit": "Armaf / ISS Group",
+    "path": "assets/bottles/armaf-club-de-nuit-intense.jpg",
+    "width": 800,
+    "height": 800,
+    "sha256": "90611b44d624cf45624b67da493c7d157965bc79c40a135f7b73708e3db83a55",
+    "retrieved": "2026-10-25"
+  },
+  "zara-vibrant-leather": {
+    "status": "unavailable",
+    "note": "No verified photo for the Eau de Toilette concentration listed in the repository. Similar EDP packaging is not substituted."
+  },
+  "hugo-boss-bottled": {
+    "url": "https://respecthealth.com.au/cdn/shop/files/HugoBossBottledEaudeToiletteSpray100mLhighres2.jpg?v=1754876132",
+    "source": "https://respecthealth.com.au/products/hugo-boss-bottled-eau-de-toilette-spray-100ml",
+    "credit": "Hugo Boss / RespectHealth",
+    "path": "assets/bottles/hugo-boss-bottled.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "39713d6065942ab5f5812b2fad555d2ddabd02f0132177201b982b363253928f",
+    "retrieved": "2026-10-25"
+  },
+  "davidoff-cool-water": {
+    "url": "https://cdn11.bigcommerce.com/s-9bpso0fzph/images/stencil/1280x1280/products/195/499/cool_water__77873.1702320236.jpg?c=1",
+    "source": "https://arola.rs/proizvod/cool-water/",
+    "credit": "Davidoff / Arola",
+    "path": "assets/bottles/davidoff-cool-water.webp",
+    "width": 1280,
+    "height": 1280,
+    "sha256": "72a71aa4a8437e1513adc71cecb79c44a42ed96530cb6e402ad522b021748af6",
+    "retrieved": "2026-10-25"
+  },
+  "acqua-di-parma-colonia": {
+    "url": "https://res.cloudinary.com/gentscloud/image/upload/f_auto/q_auto/upload/product_images/06/43806.jpg",
+    "source": "https://www.gents.com/acqua-di-parma-colonia-eau-de-cologne",
+    "credit": "Acqua di Parma / Gents",
+    "path": "assets/bottles/acqua-di-parma-colonia.jpg",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "f1520d1d691a0228f0759e2458458caf8a2dc01bda0577fcf172b777ac553ef8",
+    "retrieved": "2026-10-25"
+  },
+  "afnan-collectors-edp": {
+    "url": "https://uk.afnan.com/cdn/shop/files/Supremacy_Collections_Edition_Front_1.png?v=1783344203&width=2048",
+    "source": "https://uk.afnan.com/products/supremacy-collectors-edition",
+    "credit": "Afnan",
+    "path": "assets/bottles/afnan-collectors-edp.png",
+    "width": 2048,
+    "height": 2048,
+    "sha256": "f04a9e292a46cc6cf345354ac402149844b93e8a26bb080e7992d209ba494d3f",
+    "retrieved": "2026-10-25"
+  },
+  "lattafa-oud-for-glory-edp": {
+    "url": "https://oudhmusk.pl/hpeciai/354e00f6ef4c0c16dd64580e4d0bbd14/pol_pl_Lattafa-Badee-Al-Oud-OUD-FOR-GLORY-100-ml-5204_1.jpg",
+    "source": "https://oudhmusk.pl/produkt/lattafa/badee-al-oud-edp",
+    "credit": "Lattafa / Oudh & Musk",
+    "path": "assets/bottles/lattafa-oud-for-glory-edp.jpg",
+    "width": 1600,
+    "height": 1600,
+    "sha256": "77c6ab30873eea46b99499236b253334bc85b44dcebbc2419827c6d4b9407bf0",
+    "retrieved": "2026-10-25"
+  },
+  "french-avenue-liquid-brun-edp": {
+    "url": "https://cdn11.bigcommerce.com/s-d75m9rit2s/images/stencil/1280x1280/products/22585/4452533/6290360375694-1__75180.1774311869.jpg?c=1",
+    "source": "https://www.yourdiscountchemist.com.au/liquid-brun-100ml-edp-by-french-avenue-men-s/",
+    "credit": "French Avenue / Your Discount Chemist",
+    "path": "assets/bottles/french-avenue-liquid-brun-edp.webp",
+    "width": 1280,
+    "height": 1280,
+    "sha256": "0f0099de320a28793f2569275e9aede2ca9fb9e08afe8512712225cd457cd71f",
+    "retrieved": "2026-10-25"
+  },
+  "khadlaj-island-extrait": {
+    "url": "https://perfumeriasublime.com/cdn/shop/files/MISL_1200x1200.jpg?v=1774888916",
+    "source": "https://perfumeriasublime.com/products/island-by-khadlaj-extrait-de-parfum-100ml-unisex",
+    "credit": "Khadlaj / Perfumería Sublime",
+    "path": "assets/bottles/khadlaj-island-extrait.jpg",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "cf70ef2f2f117352911ec1453c804ce206807abc88c4a5f53661b675a8fb01ef",
+    "retrieved": "2026-10-25"
+  },
+  "armaf-club-de-nuit-intense-man": {
+    "url": "https://armaf.com/cdn/shop/files/Q-106DCLUBDENUITINTENSE_M_FIF_900x_f04752b1-087d-4206-8985-e13e96c5896d.webp?v=1762289750&width=2048",
+    "source": "https://armaf.com/products/club-de-nuit-intense-for-man",
+    "credit": "Armaf",
+    "path": "assets/bottles/armaf-club-de-nuit-intense-man.jpg",
+    "width": 900,
+    "height": 900,
+    "sha256": "5ca797e18add8d59d8adbefc191f55cddcb1c25e2e3df655a3a5a39a4e57df95",
+    "retrieved": "2026-10-25"
+  },
+  "joop-go-edt": {
+    "url": "https://www.perfumeuk.co.uk/user/products/large/joop_go_for_men_edt_eau_de_toilette_200ml.jpg",
+    "source": "https://www.perfumeuk.co.uk/joop-go-eau-de-toilette-200ml",
+    "credit": "JOOP! / Perfume UK",
+    "path": "assets/bottles/joop-go-edt.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "cd783ff56eba708dcb9500d156fa835654cf00974b7bd384c740e294765c6fc8",
+    "retrieved": "2026-10-25"
+  },
+  "joop-homme-edt": {
+    "url": "https://emiratesfragrance.com/cdn/shop/files/joop-homme-eau-de-toilette-for-men___25_b0d96908-6ffa-4d3b-9322-1b0b9b44bb58.jpg?v=1729332459&width=1280",
+    "source": "https://emiratesfragrance.com/products/joop-joop-homme-eau-de-toilette-200ml-for-men",
+    "credit": "JOOP! / Emirates Fragrance",
+    "path": "assets/bottles/joop-homme-edt.jpg",
+    "width": 1280,
+    "height": 1280,
+    "sha256": "6e7eee0fcd30c143d02dac840e6d56a2c219de31ecc721f7c233212cf5c24904",
+    "retrieved": "2026-10-25"
+  },
+  "ysl-myslf-edp": {
+    "url": "https://www.perfumeuk.co.uk/user/products/large/yves_saint_laurent_ysl_perfume_MYSELF_eau_de_parfum_edp_60ml.jpg",
+    "source": "https://www.perfumeuk.co.uk/yves-saint-laurent-myslf-eau-de-parfum-60ml",
+    "credit": "Yves Saint Laurent / Perfume UK",
+    "path": "assets/bottles/ysl-myslf-edp.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "51c422befb419057bd5d5b2dbf495056a0139f49c163a7e0edaeb2ba6bd72ace",
+    "retrieved": "2026-10-25"
+  },
+  "azzaro-the-most-wanted-parfum": {
+    "url": "https://aarfragrances.com/public/uploads/all/F5iN1VImZehLJngpFXrZtROa4aTYCuih7IJBooV9.jpg",
+    "source": "https://www.aarfragrances.com/product/azzaro-the-most-wanted-parfum",
+    "credit": "Azzaro / Aar Fragrances",
+    "path": "assets/bottles/azzaro-the-most-wanted-parfum.jpg",
+    "width": 1200,
+    "height": 1195,
+    "sha256": "0e036ce3436935a1e670ac215c58ca92c78ee5d1ee220bf9b4206a1b9a2d30f6",
+    "retrieved": "2026-10-25"
+  },
+  "montblanc-legend-spirit": {
+    "url": "https://casademonaco.com/cdn/shop/files/Untitled_-_2025-07-23T161856.019.png?v=1753301979",
+    "source": "https://casademonaco.com/products/montblanc-legend-spirit",
+    "credit": "Montblanc / Casa de Monaco",
+    "path": "assets/bottles/montblanc-legend-spirit.png",
+    "width": 1080,
+    "height": 1080,
+    "sha256": "ae7e35749bcb560e757162be5dd54f942943adbb1f248068d325eb5d2a7ae8f1",
+    "retrieved": "2026-10-25"
+  },
+  "versace-eros-eau-de-parfum": {
+    "url": "https://media.sephora.eu/content/dam/gdam/europe/digital/pim/published/V/VERSACE/528281/222479-media_swatch-1.jpg?scaleHeight=750&scaleMode=fit&scaleWidth=750",
+    "source": "https://www.sephora.fr/p/versace-eros---eau-de-parfum-P10010905.html",
+    "credit": "Versace / Sephora",
+    "path": "assets/bottles/versace-eros-eau-de-parfum.jpg",
+    "width": 750,
+    "height": 750,
+    "sha256": "613114ec2764c918655e9b036f76f53f7422e7d8b8fbd5aa8de674fe99d7e9b3",
+    "retrieved": "2026-10-25"
+  },
+  "dior-sauvage-elixir": {
+    "url": "https://www.sephora.com/productimages/sku/s2890119-main-zoom.jpg",
+    "source": "https://www.sephora.com/product/dior-sauvage-elixir-P475526",
+    "credit": "Dior / Sephora",
+    "path": "assets/bottles/dior-sauvage-elixir.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "ea0137995f5ca9f5c56232ec217171c5ec4a97ae9996e5e4a7447b440aead89d",
+    "retrieved": "2026-10-25"
+  },
+  "armani-emporio-armani-stronger-with-you-intensely": {
+    "url": "https://media.sephora.eu/content/dam/gdam/europe/digital/pim/published/A/ARMANI/462049/110817-media_swatch-1.jpg?scaleHeight=750&scaleMode=fit&scaleWidth=750",
+    "source": "https://www.sephora.com.tr/p/emporio-armani-stronger-with-you-intensely-edp-P3592118.html",
+    "credit": "Giorgio Armani / Sephora",
+    "path": "assets/bottles/armani-emporio-armani-stronger-with-you-intensely.jpg",
+    "width": 750,
+    "height": 750,
+    "sha256": "da631764a414bd06cc7c84c76f02978d6d59679e8155eaebd48d92d4c2225cfb",
+    "retrieved": "2026-10-25"
+  },
+  "lattafa-khamrah": {
+    "url": "https://www.perfumenz.co.nz/cdn/shop/files/lattafa-khamrah_903x903.png?v=1684105771",
+    "source": "https://www.perfumenz.co.nz/products/khamrah-by-lattafa-100ml-edp",
+    "credit": "Lattafa / Perfume NZ",
+    "path": "assets/bottles/lattafa-khamrah.png",
+    "width": 903,
+    "height": 903,
+    "sha256": "443d4cc647859dc150a54023baf1b8341ebab43fd66777906b3c4c442166873b",
+    "retrieved": "2026-10-25"
+  },
+  "beckham-instinct-edp": {
+    "url": "https://www.edgars.co.za/cdn/shop/files/3616304892776_1_1.jpg?v=1717170963",
+    "source": "https://www.edgars.co.za/products/beckham-instinct-edp-36725402-3672540",
+    "credit": "David Beckham / Edgars",
+    "path": "assets/bottles/beckham-instinct-edp.jpg",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "6f862872923fe77d93d70085ca1ead3d2aee834381e732e26a217ad114dbb8ef",
+    "retrieved": "2026-10-25"
+  },
+  "allsaints-shoreditch-leather-edp": {
+    "url": "https://i5.walmartimages.com/asr/e7742c4c-d472-455a-8c47-9ac3ef041fc4.087d84033378cdd7e8fbace31e8bc9e9.jpeg",
+    "source": "https://www.bodegaaurrera.com.mx/ip/perfumes-y-lociones/eau-de-parfum-allsaints-shoreditch-leather-100-ml-unisex/00081002367722",
+    "credit": "AllSaints / Bodega Aurrera",
+    "path": "assets/bottles/allsaints-shoreditch-leather-edp.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "02644a41f0453dcb1210fcf0c63023e943b8b841ca8f20ef120950bbf80decb9",
+    "retrieved": "2026-10-25"
+  },
+  "rabanne-million-gold-intense": {
+    "url": "https://www.passionbeaute.fr/media/catalog/product/cache/e6ed328efca5e1422e91b6cfcc0b0813/r/a/rabanne_3349668630332_v2.jpg",
+    "source": "https://www.passionbeaute.fr/million-gold-738-17-42-mgedpi.html",
+    "credit": "Rabanne / Passion Beauté",
+    "path": "assets/bottles/rabanne-million-gold-intense.jpg",
+    "width": 700,
+    "height": 700,
+    "sha256": "bf4fd36d3d030afa07946d672471107df20ab3141f2720d75556b8d1d7db1618",
+    "retrieved": "2026-10-25"
+  },
+  "armani-acqua-di-gio-parfum": {
+    "url": "https://scentoria.co.in/cdn/shop/files/e389-CAir_-000000000493389402_2.jpg?v=1714627392&width=1080",
+    "source": "https://scentoria.co.in/products/acqua-di-gio-parfum",
+    "credit": "Giorgio Armani / Scentoria",
+    "path": "assets/bottles/armani-acqua-di-gio-parfum.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "a944e4198ee568cdb0ab429e74a7cad0428df71a8b03ac5bd621a34f5a2bad30",
+    "retrieved": "2026-10-25"
+  },
+  "penhaligons-sports-car-club-edp": {
+    "url": "https://latelierdesparfums.jp/cdn/shop/files/PEN-SportsCarClub26-100mLwBox-2000x2000_1200x1200.jpg?v=1778216954",
+    "source": "https://latelierdesparfums.jp/products/sports-car-club-edp-spray?variant=42081126645955",
+    "credit": "Penhaligon’s / L’Atelier des Parfums",
+    "path": "assets/bottles/penhaligons-sports-car-club-edp.jpg",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "c812c3ac88a4d314ffa30c047a87adb169044c0d0ba8e3f6e67294c3425de15f",
+    "retrieved": "2026-10-25"
+  },
+  "boss-bottled-absolu-intense": {
+    "url": "https://drogariasp.vteximg.com.br/arquivos/ids/1253021-1000-1000/image-f2c687e54ed8449abbbedc4cd8a1072d.jpg?v=638877558888800000",
+    "source": "https://www.drogariasaopaulo.com.br/hugo-boss-bottled-absolu-parfum-intense---perfume-masculino-50ml-935359474/p",
+    "credit": "Hugo Boss / Drogaria São Paulo",
+    "path": "assets/bottles/boss-bottled-absolu-intense.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "a04bdf7ef16ff7d614b682f62bae391e89cced2b1be6cd9e3b2c5dc1431d1abb",
+    "retrieved": "2026-10-25"
+  },
+  "prada-lhomme-edt": {
+    "url": "https://www.justmylook.com/cdn/shop/files/prada-lhomme-eau-de-toilette-100ml-p27959-69771_image.jpg?v=1721322310",
+    "source": "https://www.justmylook.com/products/prada-lhomme-eau-de-toilette-100ml",
+    "credit": "Prada / Justmylook",
+    "path": "assets/bottles/prada-lhomme-edt.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "934c0038dfb4cee128ef50d5e33d1c4d5a187323ac72b6f1428d9052f7b9c125",
+    "retrieved": "2026-10-25"
+  },
+  "cerruti-1881-pour-homme-edt": {
+    "url": "https://aarperfumes.com/cdn/shop/files/cerruti-1881-pour-homme-eau-de-toilette-spray.png?v=1699796500",
+    "source": "https://aarperfumes.com/products/cerruti-1881-pour-homme-eau-de-toilette-spray",
+    "credit": "Cerruti / A & R Perfumes",
+    "path": "assets/bottles/cerruti-1881-pour-homme-edt.png",
+    "width": 800,
+    "height": 800,
+    "sha256": "3396408fe9389f59ae2acea28990e7557ad3688aa35f58f39288be5f402047c2",
+    "retrieved": "2026-10-25"
+  },
+  "afnan-9pm-edp": {
+    "url": "https://uk.afnan.com/cdn/shop/files/9PM-Product-01_ac1d61da-68bc-4cf8-8086-8cdc3accfbdf.jpg?v=1728582765&width=2048",
+    "source": "https://uk.afnan.com/products/9-pm",
+    "credit": "Afnan",
+    "path": "assets/bottles/afnan-9pm-edp.jpg",
+    "width": 1080,
+    "height": 1080,
+    "sha256": "ab8ea774c30b99a1278e666e9941479c79c7f3c838baa4c75412881ffb3e9d11",
+    "retrieved": "2026-10-26"
+  },
+  "afnan-9pm-rebel-edp": {
+    "url": "https://uk.afnan.com/cdn/shop/files/Untitled_design_51.png?v=1731064455&width=2048",
+    "source": "https://uk.afnan.com/products/9-pm-rebel",
+    "credit": "Afnan",
+    "path": "assets/bottles/afnan-9pm-rebel-edp.png",
+    "width": 1080,
+    "height": 1080,
+    "sha256": "f41dde78c54af8321accb953c4f2bbb024160086abac3ff5d494c6fb30715e42",
+    "retrieved": "2026-10-26"
+  },
+  "lacoste-red-edt": {
+    "url": "https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-GB-Site/Sites-master/en/dwce740975/LC012A01_000_24.jpg",
+    "source": "https://www.lacoste.com/gb/lacoste/men/accessories/fragrance/LC012A01-000.html",
+    "credit": "Lacoste",
+    "path": "assets/bottles/lacoste-red-edt.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "b2b95d0f458799bcb15472567310be415e07460739dc59f6924d1947c0d22b15",
+    "retrieved": "2026-10-26"
+  },
+  "bonanza-reflection": {
+    "url": "https://bonanzasatrangi.com/cdn/shop/files/Reflection.jpg?v=1772001385",
+    "source": "https://bonanzasatrangi.com/products/reflc100ml",
+    "credit": "Bonanza Satrangi",
+    "path": "assets/bottles/bonanza-reflection.jpg",
+    "width": 3600,
+    "height": 5400,
+    "sha256": "dd84eb63f986f4eb3f19f6815aa69870f533172ff0114ea5df987322801cc02e",
+    "retrieved": "2026-10-26"
+  },
+  "versace-dylan-blue-pour-homme": {
+    "url": "https://hollywoodperfumeria.com/cdn/shop/files/PORTADA_9d5fc4f4-ae6e-45d2-8d3d-14f8af535eea.jpg?v=1692159656&width=1445",
+    "source": "https://hollywoodperfumeria.com/products/dylan-blue-hombre",
+    "credit": "Hollywood Perfumería / Versace",
+    "path": "assets/bottles/versace-dylan-blue-pour-homme.jpg",
+    "width": 1445,
+    "height": 1445,
+    "sha256": "58898887cd916cfaac66d4d081adf65e22f34847ceaac8a638d61f7d7e9b7fbb",
+    "retrieved": "2026-10-26"
+  },
+  "prada-luna-rossa-ocean-edt": {
+    "url": "https://www.justmylook.com/cdn/shop/files/luna-rossa-ocean-eau-de-toilette-50ml-p27948-91241_image.jpg?v=1721322312",
+    "source": "https://www.justmylook.com/products/prada-luna-rossa-ocean-eau-de-toilette-50ml",
+    "credit": "Justmylook / Prada",
+    "path": "assets/bottles/prada-luna-rossa-ocean-edt.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "edc5877a3203a879b0ad9f138fa5c6aa51cc1efed7cafd4c47287e36787bd717",
+    "retrieved": "2026-10-26"
+  },
+  "ralph-lauren-ralphs-club-edp": {
+    "url": "https://media.kohlsimg.com/is/image/kohls/365ef138b91b05134eeeb8e9efc9e2a37212952e",
+    "source": "https://www.kohls.com/product/prd-5567822/ralph-lauren-ralphs-club-eau-de-parfum.jsp",
+    "credit": "Kohl’s / Ralph Lauren",
+    "path": "assets/bottles/ralph-lauren-ralphs-club-edp.jpg",
+    "width": 1500,
+    "height": 1500,
+    "sha256": "ad466b047522ebf8619154b079bee37dcb602f645a1a91a05c92d046b60fcc58",
+    "retrieved": "2026-10-26"
+  },
+  "hermes-terre-dhermes-parfum": {
+    "url": "https://www.sephora.com/productimages/sku/s1231869-av-20-zoom.jpg",
+    "source": "https://www.sephora.com/product/terre-d-hermes-pure-perfume-P416349",
+    "credit": "Sephora / Hermès",
+    "path": "assets/bottles/hermes-terre-dhermes-parfum.jpg",
+    "width": 1500,
+    "height": 1500,
+    "sha256": "d79d86869023269ede8a5cc83e3a90251a7addbb79bc3ec08edb08f98b2f07fb",
+    "retrieved": "2026-10-26"
+  },
+  "burberry-hero-eau-de-parfum": {
+    "url": "https://www.adorebeauty.com.au/pim_media/000/446/905/Burberry_Hero_Eau_de_Parfum_50ml.png?fmt=webp&h=386&w=386",
+    "source": "https://www.adorebeauty.com.au/p/burberry/burberry-hero-eau-de-parfum-50ml.html",
+    "credit": "Adore Beauty / Burberry",
+    "path": "assets/bottles/burberry-hero-eau-de-parfum.webp",
+    "width": 386,
+    "height": 386,
+    "sha256": "bdfc2c7f402d45a4e693febdd503b18c69cb0c41afb2399401f60462adfd11b9",
+    "retrieved": "2026-10-26"
+  },
+  "armani-armani-code": {
+    "url": "https://www.perfumenz.co.nz/cdn/shop/files/armani-code-125ml-edp_1778x1778.png?v=1724296246",
+    "source": "https://www.perfumenz.co.nz/products/armani-code-by-giorgio-armani-125ml-edp",
+    "credit": "Perfume NZ / Giorgio Armani",
+    "path": "assets/bottles/armani-armani-code.png",
+    "width": 1778,
+    "height": 1778,
+    "sha256": "ec92267061abd145cab90f81d4b7dd59451091dfea419fc5ad2c0d0d8dba29fa",
+    "retrieved": "2026-10-26"
+  },
+  "valentino-uomo-born-in-roma-intense": {
+    "url": "https://www.scentubeauty.co.uk/user/products/large/valentino_fragrance_men_born_in_roma_uomo_intense_eau_de_parfum_edp_100ml.jpg",
+    "source": "https://www.scentubeauty.co.uk/valentino-born-in-roma-uomo-intense-edp-100ml",
+    "credit": "Scent U Beauty / Valentino",
+    "path": "assets/bottles/valentino-uomo-born-in-roma-intense.jpg",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "4a6cdb76be8de9154557690d5e0df280a0b11fc7ae7f5e0485b96c3290da62bd",
+    "retrieved": "2026-10-26"
+  },
+  "ysl-la-nuit-de-lhomme-edt": {
+    "url": "https://es-bp.iledebeaute.ru/catalog/products/86/7d/ThjZWIVZTgRm2emCzhyq.jpg",
+    "source": "https://iledebeaute.ru/product/yves_saint_laurent-ysl-la-nuit-de-l-homme-tualetnaya-voda-100-ml-2/111563/",
+    "credit": "Ile de Beauté / YSL",
+    "path": "assets/bottles/ysl-la-nuit-de-lhomme-edt.jpg",
+    "width": 1507,
+    "height": 1507,
+    "sha256": "f2ca9e06200935933de73c22eec3cce29703deca7c3fac879994b8fc2d050698",
+    "retrieved": "2026-10-26"
+  },
+  "azzaro-the-most-wanted-eau-de-parfum-intense": {
+    "url": "https://media.marionnaud.at/medias/sys_master/prd-images/h71/h82/12437417525278/zoom-side-13409591_2000x2000/zoom-side-13409591-2000x2000",
+    "source": "https://www.marionnaud.at/azzaro/the-most-wanted-intense/eau-de-parfum-intense/p/AzzTheMostWantedIntenseEdP?varSel=13409591",
+    "credit": "Marionnaud / Azzaro",
+    "path": "assets/bottles/azzaro-the-most-wanted-eau-de-parfum-intense.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "41d6a618c8ea00a85dda3d03025ea91570b2a37b40da0d8637270a692df230e1",
+    "retrieved": "2026-10-26"
+  },
+  "calvin-klein-man-edt": {
+    "url": "https://arome.mx/cdn/shop/files/CALVINKLEIN-CalvinKleinManparaHombreEDT2_1000x.png?v=1778878087",
+    "source": "https://arome.mx/collections/calvin-klein/products/calvin-klein-calvin-klein-man-para-hombre-edt-100ml",
+    "credit": "Arome México / Calvin Klein",
+    "path": "assets/bottles/calvin-klein-man-edt.png",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "05a932eda09b54a9e60cba8b84f76748ca33334832897edfa906eb369064ce0f",
+    "retrieved": "2026-10-26"
+  },
+  "tom-ford-noir-extreme": {
+    "url": "https://cdn2.parfumdreams.de/image/product/51664-194022-0-8.webp",
+    "source": "https://en.parfumdreams.de/Tom-Ford/Fragrance/Signature/Eau-de-Parfum-Spray/index_51664.aspx",
+    "credit": "Parfumdreams / Tom Ford",
+    "path": "assets/bottles/tom-ford-noir-extreme.jpg",
+    "width": 900,
+    "height": 900,
+    "sha256": "1cf2f49ac38f5063b4166951467e8df7a5f6c740eca9a65cc4a0669a36d35265",
+    "retrieved": "2026-10-28"
+  },
+  "valentino-uomo-born-in-roma-ivory-edt": {
+    "url": "https://static.thcdn.com/productimg/original/16962126-8175279758605342.jpg",
+    "source": "https://www.lookfantastic.com/p/valentino-born-in-roma-ivory-uomo-eau-de-toilette-spray-100ml/16962126/",
+    "credit": "LOOKFANTASTIC / Valentino",
+    "path": "assets/bottles/valentino-uomo-born-in-roma-ivory-edt.jpg",
+    "width": 2000,
+    "height": 2000,
+    "sha256": "412071ea7af238840a4d750f00f9c88dc680d619a9c29ddd8cb5042a1ef0cdb4",
+    "retrieved": "2026-10-28"
+  },
+  "davidoff-cool-water-caribbean-summer-edt": {
+    "url": "https://static.thcdn.com/images/large/original/productimg/1600/1600/11658677-1084658700794730.jpg",
+    "source": "https://www.mankind.co.uk/davidoff-cool-water-man-caribbean-summer-limited-edition-125ml-edt/11658677.html",
+    "credit": "Mankind / Davidoff",
+    "path": "assets/bottles/davidoff-cool-water-caribbean-summer-edt.jpg",
+    "width": 1500,
+    "height": 1500,
+    "sha256": "8368cf011563cc207035716ef5d66c7bf9a6e9c0c2b86c6fe13c8a186cb584a7",
+    "retrieved": "2026-10-28"
+  },
+  "gucci-guilty-black-pour-homme-edt": {
+    "url": "https://perfumeoasis.co.uk/cdn/shop/products/gucci-guilty-black-pour-homme-eau-de-toilette-for-men___26_grande.jpg?v=1751976443",
+    "source": "https://perfumeoasis.co.uk/products/gucci-guilty-black-pour-homme-edt-men",
+    "credit": "Perfume Oasis / Gucci",
+    "path": "assets/bottles/gucci-guilty-black-pour-homme-edt.jpg",
+    "width": 508,
+    "height": 600,
+    "sha256": "0432b2c7c9dc9520245af1e1098e1b3c6dcb59409c4fc8b6a7c92b08ec31bc71",
+    "retrieved": "2026-10-28"
+  },
+  "calvin-klein-obsession-for-men-edt": {
+    "url": "https://allbeauty.com/cdn/shop/files/3326.jpg?v=1755875385",
+    "source": "https://allbeauty.com/products/p-calvin-klein-obsession-for-men-eau-de-toilette-125ml-11079263",
+    "credit": "allbeauty / Calvin Klein",
+    "path": "assets/bottles/calvin-klein-obsession-for-men-edt.jpg",
+    "width": 1600,
+    "height": 1600,
+    "sha256": "373c1f19a5d58565b37b443e48124e3d40a6801e8bc839973e1722da96e0b650",
+    "retrieved": "2026-10-28"
+  },
+  "givenchy-gentleman-original-edt": {
+    "url": "https://www.givenchybeauty.com/dw/image/v2/BBZW_PRD/on/demandware.static/-/Sites-givenchy-beauty-master/default/dwa1641a9a/images/P000378/3274872487376_P000378_GIVENCHY_GENTLEMAN_EDT_ORIGINALE_100ML_REPACK_a_3.png?sh=1500&sm=fit&sw=1200",
+    "source": "https://www.givenchybeauty.com/gb/p/gentleman-original-F10100020.html",
+    "credit": "Givenchy Beauty",
+    "path": "assets/bottles/givenchy-gentleman-original-edt.png",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "e0a26df8a80ec877d994cbbb49ac6a9db69b3c9e0f794a1426a6419490acdea8",
+    "retrieved": "2026-10-28"
+  }
+}

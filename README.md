@@ -3,6 +3,12 @@
 A personal fragrance collection app. Track what you own, log every wear, and get a
 daily suggestion of what to wear based on the live weather and what you have planned.
 
+## Standalone explorer
+
+The browser-local fragrance explorer is available in [`explorer/`](explorer/README.md)
+with its own setup instructions and tests. It starts with an empty collection and
+is independent of this app and its GitHub Pages deployment.
+
 ## What it does
 
 - **Today** — suggestions drawn from your own collection, scored against the current
