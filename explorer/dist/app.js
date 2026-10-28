@@ -3,6 +3,8 @@ import {mergeCollection,eligibleOwnedProfiles,duplicateRecord,searchCollection,n
 
 import {storageKeys,emptyChanges,normaliseChanges,makeBackup,parseBackup,backupSummary,restoreBackup} from './storage.mjs';
 
+import {devicePosition,nameDevicePosition,locationPermissionGranted} from './location.mjs';
+
 import {defaultLocation,validLocation,conditionLabel,contextFromWeather,weatherIsFresh,fetchWeather,searchLocations} from './weather.mjs';
 
 const $ = s => document.querySelector(s);
@@ -37,6 +39,8 @@ let dayPrefs={};try {dayPrefs=JSON.parse(localStorage.getItem(storageKeys.day)||
 let weatherMode=dayPrefs.weatherMode==='manual'?'manual':'live';
 let weatherLocation=validLocation(dayPrefs.location)?dayPrefs.location:{...defaultLocation};
 let weatherSnapshot=dayPrefs.snapshot&&Number.isFinite(dayPrefs.snapshot.current?.temperature_2m)?dayPrefs.snapshot:null;
+let locationMode=dayPrefs.locationMode==='device'?'device':'place';
+let locationBusy=false,locationFailure='',locationRequest=0;
 let weatherBusy=false,weatherError='',weatherRequest=0;
 let cityOpen=false,cityQuery='',cityResults=[],cityBusy=false,cityError='',cityRequest=0;
 let manualWeather=weathers.includes(dayPrefs.weather)?dayPrefs.weather:'Cool';
@@ -46,7 +50,7 @@ const activeWeather=()=>weatherMode==='live'&&weatherIsFresh(weatherSnapshot)&&w
 function recommendationContext() {
   return {...state.context,...(activeWeather()?contextFromWeather(weatherSnapshot):{weather:manualWeather,weatherTags:[],temperature:null,dayKey:new Date().toLocaleDateString('en-CA')})};
 }
-function persistDay() {try {localStorage.setItem(storageKeys.day,JSON.stringify({weatherMode,location:weatherLocation,snapshot:weatherSnapshot,weather:manualWeather,occasion:state.context.occasion,note:state.context.note}));}catch{}}
+function persistDay() {try {localStorage.setItem(storageKeys.day,JSON.stringify({weatherMode,locationMode,location:weatherLocation,snapshot:weatherSnapshot,weather:manualWeather,occasion:state.context.occasion,note:state.context.note}));}catch{}}
 async function refreshWeather(force=false) {
   if(weatherBusy&&!force)return;
   const request=++weatherRequest,place={...weatherLocation};weatherBusy=true;weatherError='';
@@ -55,6 +59,22 @@ async function refreshWeather(force=false) {
   catch {if(request===weatherRequest)weatherError='Current weather could not be refreshed. Retry, or use a manual setting.';}
   finally {if(request===weatherRequest){weatherBusy=false;if(state.view==='recommend')renderRecommendations();}}
 }
+async function useDeviceLocation() {
+  if(locationBusy)return;
+  const request=++locationRequest;locationBusy=true;locationFailure='';
+  if(state.view==='recommend')renderRecommendations();
+  try {
+    const position=await devicePosition();if(request!==locationRequest)return;
+    locationMode='device';weatherLocation=position;weatherSnapshot=null;weatherMode='live';cityOpen=false;persistDay();
+    refreshWeather(true);
+    try {const named=await nameDevicePosition(position);if(request===locationRequest&&locationMode==='device'){weatherLocation=named;persistDay();}}catch{if(request===locationRequest)locationFailure='Weather uses your current coordinates. The nearby area name could not be loaded.';}
+  }catch(error){if(request===locationRequest)locationFailure=error.message;}
+  finally{if(request===locationRequest){locationBusy=false;if(state.view==='recommend')renderRecommendations();}}
+}
+async function refreshRememberedLocation() {
+  if(locationMode==='device'&&await locationPermissionGranted())return useDeviceLocation();
+  if(weatherMode==='live')return refreshWeather();
+}
 function renderDayWeather() {
   const live=activeWeather(),current=live?weatherSnapshot.current:null;
   const place=[weatherLocation.admin1,weatherLocation.country].filter(Boolean).join(', ')||weatherLocation.name;
@@ -62,7 +82,7 @@ function renderDayWeather() {
   const low=weatherSnapshot?.daily?.temperature_2m_min?.[0],high=weatherSnapshot?.daily?.temperature_2m_max?.[0];
   const summary=live?`${Math.round(current.temperature_2m)}°C · ${conditionLabel(current.weather_code)} · Feels like ${Math.round(current.apparent_temperature??current.temperature_2m)}°C`:weatherBusy&&weatherMode==='live'?'Checking current weather…':'Your weather, your choice.';
   const detail=live?`Conditions at ${time} · ${weatherSnapshot.timezone}${Number.isFinite(low)&&Number.isFinite(high)?` · Today ${Math.round(low)}–${Math.round(high)}°C`:''}`:weatherMode==='manual'?`Manual ${manualWeather.toLowerCase()} scenario. Switch to current weather whenever you like.`:`Using the manual ${manualWeather.toLowerCase()} setting until current weather is available.`;
-  return `<section class="day-weather" aria-label="Weather for recommendations"><div class="day-weather-top"><div><p class="eyebrow">${live?'CURRENT WEATHER':'SET THE SCENE'}</p><h2>${esc(weatherLocation.name)}</h2><p class="weather-now" role="status">${esc(summary)}</p><p class="weather-place">${esc(place)} · <button class="text-button" data-change-city>Change city</button></p></div><div class="weather-actions"><div class="weather-mode" role="group" aria-label="Weather source"><button data-weather-mode="live" aria-pressed="${weatherMode==='live'}" class="${weatherMode==='live'?'active':''}">Current weather</button><button data-weather-mode="manual" aria-pressed="${weatherMode==='manual'}" class="${weatherMode==='manual'?'active':''}">Set manually</button></div><button class="text-button" data-refresh-weather ${weatherBusy?'disabled':''}>${weatherBusy?'Updating…':'Refresh ↻'}</button></div></div>${weatherError&&weatherMode==='live'?`<p class="weather-error" role="status">${esc(weatherError)}${live?' The last available conditions are still shown.':''}</p>`:''}${cityOpen?`<form id="city-form" class="city-form"><label for="city-query">Find a city or town</label><div><input id="city-query" type="search" placeholder="City or town" autocomplete="off" minlength="2" maxlength="100" required value="${esc(cityQuery)}"><button class="button small" ${cityBusy?'disabled':''}>${cityBusy?'Searching…':'Search cities'}</button></div><p class="hint">Choose a city below. Your selection stays on this browser.</p>${cityError?`<p role="status" class="weather-error">${esc(cityError)}</p>`:''}<div class="city-results">${cityResults.map((city,i)=>`<button type="button" data-city-index="${i}">${esc([city.name,city.admin1,city.country].filter(Boolean).join(', '))} <span aria-hidden="true">↗</span></button>`).join('')}</div></form>`:''}<details class="weather-details"><summary>Weather details &amp; source</summary><p class="weather-meta">${esc(detail)}</p><p class="weather-credit">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a>. City-level conditions; refreshes while this page is open. Manual settings always remain available.</p></details></section>`;
+  return `<section class="day-weather" aria-label="Weather for recommendations"><div class="day-weather-top"><div><p class="eyebrow">${live?'CURRENT WEATHER':'SET THE SCENE'}</p><h2>${esc(weatherLocation.name)}</h2><p class="weather-now" role="status">${esc(summary)}</p><p class="weather-place">${esc(place)} · <button class="text-button" data-change-city>Change town</button></p><div class="location-actions"><button class="button outline small" data-use-location ${locationBusy?'disabled':''}>${locationBusy?'Finding your location…':'Use my location ↗'}</button>${locationMode==='device'?'<span class="hint">Device location · refreshed while you use Sillage</span>':''}</div></div><div class="weather-actions"><div class="weather-mode" role="group" aria-label="Weather source"><button data-weather-mode="live" aria-pressed="${weatherMode==='live'}" class="${weatherMode==='live'?'active':''}">Current weather</button><button data-weather-mode="manual" aria-pressed="${weatherMode==='manual'}" class="${weatherMode==='manual'?'active':''}">Set manually</button></div><button class="text-button" data-refresh-weather ${weatherBusy?'disabled':''}>${weatherBusy?'Updating…':'Refresh ↻'}</button></div></div>${locationFailure?`<p class="weather-error" role="status">${esc(locationFailure)}</p>`:''}${weatherError&&weatherMode==='live'?`<p class="weather-error" role="status">${esc(weatherError)}${live?' The last available conditions are still shown.':''}</p>`:''}${cityOpen?`<form id="city-form" class="city-form"><label for="city-query">Find a city or town</label><div><input id="city-query" type="search" placeholder="City or town" autocomplete="off" minlength="2" maxlength="100" required value="${esc(cityQuery)}"><button class="button small" ${cityBusy?'disabled':''}>${cityBusy?'Searching…':'Search cities'}</button></div><p class="hint">Choose a city below. Your selection stays on this browser.</p>${cityError?`<p role="status" class="weather-error">${esc(cityError)}</p>`:''}<div class="city-results">${cityResults.map((city,i)=>`<button type="button" data-city-index="${i}">${esc([city.name,city.admin1,city.country].filter(Boolean).join(', '))} <span aria-hidden="true">↗</span></button>`).join('')}</div></form>`:''}<details class="weather-details"><summary>Weather details &amp; source</summary><p class="weather-meta">${esc(detail)}</p><p class="weather-credit">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a>. Local forecast conditions; refreshes while this page is open. Use my location asks permission and shares coordinates with Open-Meteo for weather and <a href="https://www.bigdatacloud.com/" target="_blank" rel="noopener noreferrer">BigDataCloud</a> for the area name. Coordinates are rounded to about 100 m; device and forecast accuracy vary. There is no background tracking. Manual settings always remain available.</p></details></section>`;
 }
 function bindDayWeather() {
   $('#city-query')?.addEventListener('input',e=>{cityQuery=e.target.value;});
@@ -231,7 +251,7 @@ function renderRecommendations() {
   const ranked=rankFragrances(pool,context).slice(0,3);
   const scenario=activeWeather()?`${weatherLocation.name} · ${Math.round(weatherSnapshot.current.temperature_2m)}°C · ${conditionLabel(weatherSnapshot.current.weather_code)}`:`Manual weather · ${context.weather}`;
   $('#main').innerHTML=`<div class="view-enter">${intro('Let the day lead.','A few thoughtful suggestions, shaped around your setting.','FOR YOUR DAY')}${renderDayWeather()}<div class="recommend-scope" role="group" aria-label="Recommendation source"><button class="scope-button ${recommendationScope==='owned'?'active':''}" data-rec-scope="owned" aria-pressed="${recommendationScope==='owned'}">My collection · ${ownedProfiles().length} ready</button><button class="scope-button ${recommendationScope==='catalogue'?'active':''}" data-rec-scope="catalogue" aria-pressed="${recommendationScope==='catalogue'}">Whole catalogue</button></div><section class="context-panel ${activeWeather()?'live-context':''}" aria-label="Recommendation preferences"><div class="context-field weather-setting" ${activeWeather()?'hidden':''}><label for="rec-weather">01 / Weather setting</label><select id="rec-weather" ${activeWeather()?'disabled':''}>${selectOptions(weathers,context.weather,null,weatherLabels)}</select>${activeWeather()?'<span class="hint">From current weather · choose Set manually to override.</span>':''}</div><div class="context-field"><label for="rec-occasion">02 / Choose your plans</label><select id="rec-occasion">${selectOptions(occasions,state.context.occasion)}</select></div><div class="context-field"><label for="rec-note">03 / Follow a note</label><select id="rec-note">${selectOptions(popularNotes,state.context.note,'Surprise me · any note')}</select></div></section><div id="recommend-results"><div class="recommend-head"><h2>${ranked.length===3?'Your day, in three scents.':ranked.length?'Your day, in your collection.':'Your next pick starts here.'}</h2><p>${esc(scenario)} · ${esc(state.context.occasion)}${state.context.note?' · '+esc(state.context.note):''}</p></div><div class="recommend-grid">${ranked.length?ranked.map((r,i)=>recommendCard(r,i)).join(''):'<div class="empty"><h2>Add a bottle to begin.</h2><p>Daily picks use your confirmed fragrances with a wearing profile.</p><button class="button" data-go="collection">Open My Collection ↗</button></div>'}</div></div><div class="how-it-works"><h3>Instinct, with a little logic.</h3><p>Plans come first, then temperature, conditions and your chosen note. Strong trails are deprioritised for heat, work and the gym. Every match explains its fit; alternatives are labelled. ${recommendationScope==='owned'?'Only confirmed fragrances in your collection appear here. Body sprays and aftershave stay separate.':'You are exploring the full catalogue, including fragrances outside your collection.'}</p></div><p class="data-note">Occasion, weather and strength are subjective wearing guidance, reviewed against each scent’s character. A fragrance can suit several occasions. Changes to your plans, city and manual settings stay on this browser.</p></div>`;
-  $('#rec-weather').addEventListener('change',e=>{manualWeather=e.target.value;weatherMode='manual';state.context.weather=manualWeather;persistDay();renderRecommendations();$('#rec-weather').focus();});
+  $('#rec-weather').addEventListener('change',e=>{++locationRequest;locationBusy=false;manualWeather=e.target.value;weatherMode='manual';state.context.weather=manualWeather;persistDay();renderRecommendations();$('#rec-weather').focus();});
   [['#rec-occasion','occasion'],['#rec-note','note']].forEach(([selector,key])=>$(selector).addEventListener('change',e=>{state.context[key]=e.target.value;persistDay();renderRecommendations();$(selector).focus();}));
   bindDayWeather();
 }
@@ -297,7 +317,7 @@ function dataBackup() {
     } catch(error){draft=null;$('#backup-review').textContent=error.message;}
   };
   $('#export-backup').addEventListener('click',()=>{
-    const data=makeBackup(collectionChanges,state.saved,{...state.context,weatherMode,location:weatherLocation,weather:manualWeather});
+    const data=makeBackup(collectionChanges,state.saved,{...state.context,weatherMode,locationMode,location:weatherLocation,weather:manualWeather});
     const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
     const link=document.createElement('a');link.href=url;link.download=`Sillage-backup-${new Date().toISOString().slice(0,10)}.json`;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
     $('#backup-export-status').textContent='Backup download started. Keep the file somewhere you can find it on your next device.';
@@ -316,10 +336,11 @@ document.addEventListener('click',e=>{
   if(b.dataset.view) go(b.dataset.view);
   else if(b.dataset.go) {$('#detail').close();go(b.dataset.go);}
   else if(b.dataset.open) openDetail(b.dataset.open);
-  else if(b.dataset.weatherMode) {weatherMode=b.dataset.weatherMode;if(weatherMode==='manual')state.context.weather=manualWeather;persistDay();renderRecommendations();if(weatherMode==='live')refreshWeather();}
-  else if(b.hasAttribute('data-refresh-weather')) {weatherMode='live';persistDay();refreshWeather();}
+  else if(b.dataset.weatherMode) {weatherMode=b.dataset.weatherMode;if(weatherMode==='manual'){++locationRequest;locationBusy=false;state.context.weather=manualWeather;}persistDay();renderRecommendations();if(weatherMode==='live')refreshWeather();}
+  else if(b.hasAttribute('data-refresh-weather')) {weatherMode='live';persistDay();locationMode==='device'?useDeviceLocation():refreshWeather();}
+  else if(b.hasAttribute('data-use-location')) useDeviceLocation();
   else if(b.hasAttribute('data-change-city')) {cityOpen=!cityOpen;++cityRequest;cityBusy=false;cityResults=[];cityError='';renderRecommendations();$('#city-query')?.focus();}
-  else if(b.hasAttribute('data-city-index')) {const city=cityResults[Number(b.dataset.cityIndex)];if(city){weatherLocation=city;weatherSnapshot=null;cityOpen=false;cityResults=[];weatherMode='live';persistDay();refreshWeather(true);}}
+  else if(b.hasAttribute('data-city-index')) {const city=cityResults[Number(b.dataset.cityIndex)];if(city){++locationRequest;locationBusy=false;locationFailure='';locationMode='place';weatherLocation=city;weatherSnapshot=null;cityOpen=false;cityResults=[];weatherMode='live';persistDay();refreshWeather(true);}}
   else if(b.dataset.recScope) {recommendationScope=b.dataset.recScope;renderRecommendations();}
   else if(b.dataset.ownedOpen) openOwnedDetail(b.dataset.ownedOpen);
   else if(b.dataset.editOwned) editOwned(b.dataset.editOwned);
@@ -357,9 +378,9 @@ try {
   state.saved=state.saved.filter(id=>catalogue.some(f=>f.id===id));
   const view=location.hash.slice(1);if(views.includes(view))state.view=view;
   render();
-  if(weatherMode==='live')refreshWeather();
+  if(weatherMode==='live')refreshRememberedLocation();
   setInterval(()=>{if(document.visibilityState==='visible'&&weatherMode==='live')refreshWeather();},30*60*1000);
-  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&weatherMode==='live'&&(!weatherSnapshot||Date.now()-weatherSnapshot.fetchedAt>20*60*1000))refreshWeather();});
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&weatherMode==='live'&&(!weatherSnapshot||Date.now()-weatherSnapshot.fetchedAt>20*60*1000))refreshRememberedLocation();});
 } catch(error) {
   $('#main').innerHTML='<div class="empty"><h1>The library needs a moment.</h1><p>The catalogue could not be loaded. Refresh to try again.</p><button class="button" id="retry">Try again</button></div>';
   $('#retry').addEventListener('click',()=>location.reload());
