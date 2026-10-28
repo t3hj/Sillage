@@ -1,13 +1,13 @@
 # Sillage Explorer
 
-The standalone HTML/CSS/JavaScript explorer developed alongside Sillage. It is kept
-here so it can be reviewed and developed without replacing the original React app.
-This directory is not connected to the repository's GitHub Pages deployment.
+The standalone fragrance explorer lives alongside the original React app. It has
+its own source, tests and optional account-state server contract; the existing
+GitHub Pages app remains independent.
 
 ## Run locally
 
-Requires Node.js 20+ for tests and Python 3.9+ for image restoration and the local
-server. No npm packages, API keys or build step are needed.
+Use Node 22.13+ for tests and Python 3.9+ for the static server/photo downloads.
+No npm packages, API keys or build step are needed for the browser preview.
 
 ```sh
 cd explorer
@@ -15,54 +15,56 @@ python3 scripts/fetch-photos.py
 python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-Open http://localhost:4173. Bottle images are recoverable downloads excluded from
-git; `dist/photos.json` records their original HTTPS sources, credits, dimensions
-and SHA-256 checksums. Restoration rejects a changed source image instead of
-silently displaying a different product. A failed download leaves the existing
-photo-unavailable state; the rest of the explorer remains usable. Product images
-retain their brands' or retailers' rights; they are not relicensed as app code.
+Open http://localhost:4173. Bottle images are downloaded from credited sources,
+verified against pinned SHA-256 checksums, and excluded from git. A changed or
+unavailable image receives the photo-unavailable state. Product image rights
+remain with the original brands/retailers.
 
 ```sh
 node --test tests/*.test.mjs
 python3 scripts/fetch-photos.py --verify-only
 ```
 
-## Features and data
+## Everyday use
 
-- Search catalogue names, brands and notes, including accents and small typos.
-- Filter by notes, weather, occasion and scent family; compare up to three scents.
-- Add, edit and remove bottles; prevent duplicates; confirm exact concentrations.
-- Rank owned profiles or the catalogue for current city weather, plans and notes,
-  with manual scenarios, match explanations and heat/shared-space penalties.
-- Save discoveries and export/restore validated browser backups with a review step.
-- Responsive phone navigation, accessible controls and scrollable comparison.
+- Search names, brands and notes, filter by setting, and compare three scents.
+- Manage bottles independently of saved discoveries, with duplicate prevention.
+- Use current-location weather after permission, or choose a town/manual scenario.
+- Log today's wear, edit its date/occasion/note, filter the Journal and rate bottles.
+- Rank suitable daily picks using scent character, weather, plans, ratings and rotation.
+- Sync account data when an authenticated server is configured; review conflicts
+  and download a recovery copy before replacing device changes.
+- Install supported home-screen shortcuts and use the collection/manual picks
+  offline after an initial online visit. Viewed bottle images are cached as you browse.
+- Export/restore versioned backups including wear history and ratings.
 
-`dist/collection.json` deliberately starts empty. No personal ownership list,
-private notes, backups, site identifier or credentials are included. Tests use
-synthetic records generated from the whole public catalogue. Catalogue entries
-describe fragrances and never establish ownership. The private deployment can
-maintain its own collection seed separately; do not commit it into this directory.
-Backups from that deployment contain changes relative to its private seed and
-cannot transfer the complete seed to this empty distribution.
+The distribution starts with an empty collection. No personal seed, private notes,
+backups, production identifiers or credentials are included. Tests use synthetic
+records and identities. Catalogue entries do not establish ownership. The private
+hosted version keeps its supplied collection seed separately.
 
-The 38 core profiles come from `catalogue/data/core.json`. Additional profiles
-use credited Scento data (CC BY 4.0) and linked brand/retailer sources. Wearing
-guidance is subjective editorial metadata; unknown facts remain unspecified.
-See `dist/data-notice.html` and the source links in each profile.
+## Account sync and privacy
 
-Weather uses Open-Meteo's keyless public API. London is an editable default city,
-not a saved user location. Collection data remains in browser storage and never
-goes to the weather provider. There is no cross-device sync or authentication
-layer in this static source. Host-level access controls are required for private
-hosting; a `noindex` tag does not restrict access.
+Static hosting alone remains device-local. Account sync needs the authenticated
+server adapter and database described in [server/README.md](server/README.md).
+The private hosted explorer already has that integration. Each account is isolated
+and stale writes are rejected; conflicting copies require an explicit choice.
+Device location, permissions and weather preferences are excluded from sync.
 
-## Scope
+Weather/town search uses Open-Meteo. Device area names use BigDataCloud only with
+a newly obtained device position after permission. There is no background location
+tracking. The catalogue combines original repository profiles, credited Scento
+data (CC BY 4.0) and sourced brand facts. See `dist/data-notice.html`.
 
-This smaller explorer does not implement the original React app's wear logging,
-ratings, journal, scanner, offline/PWA support, or season/time/rating/rotation
-scoring. The original app and its existing deployment remain independent.
-Pushing this branch does not update the private hosted explorer automatically.
+## Installation and offline limits
 
-The private ancestor passed desktop/mobile browser checks. This empty-seed export
-is checked separately by its Node tests; physical mobile Safari testing remains
-outstanding. Run browser checks again before deploying a modified version.
+Serve over HTTPS for installation, or localhost for local development. On iPhone
+or iPad use Safari → Share → Add to Home Screen. Other browsers expose an Install
+Sillage action when supported. An online visit prepares the offline shell; live
+weather and account sync require connectivity. Account APIs, external services and
+sign-in pages are never cached. Signing out clears the cached application copy.
+
+The original React app remains separate. Scanning, external database lookup,
+explicit season/time-of-day scoring and fuller Guide controls are outside this
+explorer. Physical GPS, Safari installation and a real two-device account session
+still need testing on those devices.

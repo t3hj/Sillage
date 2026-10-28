@@ -14,7 +14,7 @@ export async function handleState(request,db,verifiedUserId) {
   if(!request.headers.get('Content-Type')?.includes('application/json'))return json({error:'Send a JSON state.'},415);
   const raw=await request.text();if(new TextEncoder().encode(raw).byteLength>1_800_000)return json({error:'This collection is too large to sync. Export a backup to keep all your data.'},413);
   let body;try{body=JSON.parse(raw);}catch{return json({error:'Invalid JSON.'},400);}
-  if(!Number.isSafeInteger(body.revision)||body.revision<0||typeof body.operationId!=='string'||!body.operationId.length||body.operationId.length>120||!validState(body.payload))return json({error:'The saved data is incomplete or invalid.'},400);
+  if(!body||typeof body!=='object'||Array.isArray(body)||!Number.isSafeInteger(body.revision)||body.revision<0||typeof body.operationId!=='string'||!body.operationId.length||body.operationId.length>120||!validState(body.payload))return json({error:'The saved data is incomplete or invalid.'},400);
   const now=new Date().toISOString(),payload=JSON.stringify(body.payload);
   const result=body.revision===0
     ?await db.prepare('INSERT INTO user_state (user_id,revision,payload,operation_id,updated_at) VALUES (?,1,?,?,?) ON CONFLICT(user_id) DO NOTHING').bind(verifiedUserId,payload,body.operationId,now).run()

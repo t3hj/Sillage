@@ -19,4 +19,5 @@ test('concurrent and stale writes cannot overwrite newer state, while retries ar
   assert.equal((await handleState(req(1,'next',{...payload,saved:['example']}),db,'alice')).status,200);
   assert.equal((await handleState(req(1,'stale'),db,'alice')).status,409);
   assert.equal((await handleState(req(2,'bad',{...payload,journal:{}}),db,'alice')).status,400);
+  for(const value of ['null','[]'])assert.equal((await handleState(new Request('https://sillage.test/api/state',{method:'PUT',headers:{Origin:'https://sillage.test','Content-Type':'application/json'},body:value}),db,'alice')).status,400);
 });
