@@ -156,3 +156,5 @@ footer .footer-logo { color: var(--ink); }
   .filters { background: var(--paper); border: 1px solid #34486f; }
   .comparison tr > th:first-child { background: var(--bg); box-shadow: 3px 0 7px #0006; }
 }
+
+.location-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}.location-actions .hint{margin:0}.location-actions .button{min-height:44px}

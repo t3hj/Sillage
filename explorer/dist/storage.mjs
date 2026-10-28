@@ -13,7 +13,7 @@ export function normaliseChanges(value) {
   return result;
 }
 export function makeBackup(changes,saved,day,now=new Date()) {
-  return {format:'sillage-explorer',version:1,exportedAt:now.toISOString(),collection:normaliseChanges(changes),saved:[...new Set(saved)],day:{weatherMode:day.weatherMode,location:day.location,weather:day.weather,occasion:day.occasion,note:day.note}};
+  return {format:'sillage-explorer',version:1,exportedAt:now.toISOString(),collection:normaliseChanges(changes),saved:[...new Set(saved)],day:{weatherMode:day.weatherMode,locationMode:day.locationMode==='device'?'device':'place',location:day.location,weather:day.weather,occasion:day.occasion,note:day.note}};
 }
 export function parseBackup(text) {
   if(typeof text!=='string'||text.length>2_000_000)throw Error('Choose a Sillage explorer JSON backup smaller than 2 MB.');
