@@ -2,8 +2,8 @@
   "source": "Scento Perfume Database",
   "url": "https://www.scento.com/perfume-database",
   "license": "CC BY 4.0",
-  "snapshotDate": "21 October 2026",
-  "imported": 1295,
+  "snapshotDate": "27 October 2026",
+  "imported": 1451,
   "skippedAsHandWritten": [
     "ysl-libre",
     "tom-ford-oud-wood",
@@ -15,6 +15,7 @@
     "dior-jadore",
     "kilian-angels-share",
     "tom-ford-tobacco-vanille",
+    "mugler-angel",
     "jo-malone-wood-sage-and-sea-salt",
     "mfk-grand-soir",
     "prada-luna-rossa-carbon",
@@ -27,9 +28,11 @@
     "acqua-di-parma-colonia-cologne",
     "davidoff-cool-water-toilette",
     "dior-sauvage-eau-de-toilette",
+    "jean-paul-gaultier-le-male-toilette",
     "lancome-la-vie-est-belle-parfum",
     "maison-margiela-jazz-club",
-    "maison-margiela-replica-jazz-club-toilette"
+    "maison-margiela-replica-jazz-club-toilette",
+    "rabanne-1-million-toilette"
   ],
-  "notes": 404
+  "notes": 420
 }
