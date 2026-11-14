@@ -5,6 +5,12 @@
 A fragrance wardrobe for organising bottles, finding what to wear and keeping a
 wear journal. The live app uses midnight black, cobalt blue and lime accents.
 
+## Interface preview
+
+![Sillage public fragrance explorer](https://raw.githubusercontent.com/t3hj/portfolio-website/main/assets/projects/sillage-current.jpg)
+
+Public explorer capture from 29 October 2026; catalogue demonstration only.
+
 ## Use the app
 
 - Add bottles from the catalogue or enter an unlisted fragrance manually.
@@ -87,3 +93,33 @@ location is requested only after permission; weather/place lookup uses Open-Mete
 and device area names use BigDataCloud. See the app's data notice for details.
 Recommendations run locally. Cross-device sync requires the authenticated server
 and database described in [the server integration guide](explorer/server/README.md).
+
+## Review the engineering
+
+The live explorer is the best starting point for a recruiter or contributor:
+
+- [Explorer source](explorer/dist/) contains the browser application and offline assets.
+- [Tests](explorer/tests/) exercise recommendations, backups, sync conflicts,
+  weather parsing and account-state isolation using synthetic inputs.
+- [Pages packaging](scripts/build-explorer-pages.mjs) prevents publishing a
+  personal collection seed and excludes the account server from static output.
+
+### Two catalogues, two delivery paths
+
+The scheduled **Refresh catalogue** workflow updates `catalogue/` for the original
+React application. It does **not** refresh the catalogue used by the live
+`explorer/dist/` application. A successful scheduled refresh is therefore not
+proof that the public explorer has new bottles. Review the explorer data and
+photo-attribution manifest separately before changing its catalogue.
+
+To verify the live application without downloading dependencies or contacting
+weather services:
+
+```sh
+node --test explorer/tests/*.test.mjs
+npm run build:pages
+```
+
+Tests use fixtures; they do not verify today's upstream weather availability.
+Use an empty browser profile for screenshots and demonstrate only public
+catalogue entries, never a restored personal backup.
